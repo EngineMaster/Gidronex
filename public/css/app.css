@@ -1246,7 +1246,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .basket_container .basket_container_wrapper .basket_container_search {
-  align-content: center;
+  background-color: grey;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1280,6 +1280,6 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .basket_container .basket_container_personal_reccomendations {
-  background-color: grey;
+  background-color: yellow;
 }
 

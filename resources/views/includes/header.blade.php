@@ -20,7 +20,7 @@
                 <li><a href="/" class="contact_menu">Главная</a></li>
                 <li><a href="/categories" class="contact_menu">Ассортимент</a></li>
                 <li><a href="{{route('contact')}}" class="contact_menu">Связаться с нами</a></li>
-                <li><a href="{{route('search')}}" class="contact_menu"><span class="material-icons search" style=" color: white; margin-bottom: 50px">search</span></a></li>
+                <li><a href="{{route('basket')}}" class="contact_menu"><span class="material-icons search" style=" color: white; margin-bottom: 50px">search</span></a></li>
                 <li><a href="{{route('basket')}}" class="contact_menu"><span class="material-icons search" style="color: white">shopping_basket</span><span>{{\Cart::session($_COOKIE['sessionIds'])->getTotalQuantity()}}</span></a></li>
             </ul>
         </div>

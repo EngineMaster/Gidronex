@@ -144,21 +144,20 @@
             <ul>
                 <li>
                     <div class="card"><img src="https://sun9-70.userapi.com/impf/SLlG_aMvtE9LZdxTeQx8CE8jakzChufNFUb4gA/icHNzIkvE-s.jpg?size=370x205&quality=96&proxy=1&sign=fa89fa82bccf70e5030f4cda5774ed1a" alt="" class="news_image">
-                        <button class="btn_read_news"><span class="read">Читать</span></button>
+                        <button class="btn_read_news"><span class="read"><a href="{{route('posts')}}">Читать</a></span></button>
                         <div class="new_info">Новость такая то такая то, описание</div>
-                        <p>29 октября 2020г.</p>
                     </div>
                 </li>
                 <li>
                     <div class="card"><img src="https://sun9-32.userapi.com/impf/BEo9w6kfkFwB3n1lcXrewU4UwxpuXT9Wr_1Aaw/m5Nen-vBr8g.jpg?size=370x205&quality=96&proxy=1&sign=455921136ef55b296b39a7a6e5666654" alt="" class="news_image">
-                        <button class="btn_read_news"><span class="read">Читать</span></button>
+                        <button class="btn_read_news"><span class="read"><a href="{{route('posts')}}">Читать</a>ь</span></button>
                         <div class="new_info">Новость такая то такая то, описание</div>
                         <p>29 октября 2020г.</p>
                     </div>
                 </li>
                 <li>
                     <div class="card"><img src="https://sun9-67.userapi.com/impf/FyZ_aYexbGWy6XzLB4l1TflEpW3WucZ8qYYrmA/hy-yiYl64tE.jpg?size=370x205&quality=96&proxy=1&sign=de757bab9beb8f25c0d40ca782c42127" alt="" class="news_image">
-                        <button class="btn_read_news"><span class="read">Читать</span></button>
+                        <button class="btn_read_news"><span class="read"><a href="{{route('posts')}}">Читать</a></span></button>
                         <div class="new_info">Новость такая то такая то, описание</div>
                         <p>29 октября 2020г.</p>
                     </div>
@@ -170,25 +169,6 @@
 
 <section class="map-container">
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4bd09699954667873980eaa52811195248fb2431624d9348322a3b5084e2b5c6&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
-    <div id="contact_info">
-            <form class="contact_info_wrapper">
-                <div class="input">
-                    <label for="check1">Имя<sup>*</sup></label>
-                    <input type="text" id="check1" name="name">
-                </div>
-                <div class="input">
-                    <label for="check1">Телефон<sup>*</sup></label>
-                    <input type="text" id="check1" name="phone">
-                </div>
-                <div class="input">
-                    <label for="check1">Email<sup>*</sup></label>
-                    <input type="text" id="check1" name="email">
-                </div>
-                @csrf
-                <button type="submit" class="btn_contact">Оставить заявку</button>
-            </form>
-        </div>
-    </div>
 </section>
 
 @include('includes.footer')

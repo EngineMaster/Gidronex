@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Posts;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -79,6 +80,15 @@ class ShopController extends Controller
 
     public function admin(){
         return view('admin');
+    }
+
+    public function posts(){
+        $posts = DB::table('posts')->paginate(1);
+        return view('posts',compact('posts'));
+    }
+    public function article($id){
+            $post = Posts::where('id',$id)->first();
+            return view('article', compact('post'));
     }
 
 }

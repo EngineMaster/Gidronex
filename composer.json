@@ -18,7 +18,9 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.1",
         "spatie/laravel-permission": "^3.18",
-        "wildbit/swiftmailer-postmark": "^3.3"
+        "wildbit/swiftmailer-postmark": "^3.3",
+        "ext-mysql_xdevapi": "*",
+      "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

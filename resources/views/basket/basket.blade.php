@@ -7,8 +7,8 @@
 
         <div class="basket_container_search">
             <div class="search_form">
-                <form action="#search">
-                    <input type="text" placeholder="Искать товары">
+                <form action="{{route('search')}}">
+                    <input type="text" placeholder="Искать товары" name="search">
                         <button><span class="material-icons search" style=" color: white; margin-bottom: 50px">search</span></button>
                 </form>
             </div>

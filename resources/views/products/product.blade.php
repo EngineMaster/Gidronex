@@ -7,7 +7,10 @@
             <p class="first_p">{{$product->description}}</p>
          <div class="option_and_buy">
             <p>{{$product->option}}</p>
-            <button class="redir_to_contact"><a href="/contact">Узнать Цену</a></button>
+             <form action="{{route('basket-add', $product->id)}}" method="POST">
+                 <button type="submit" class="redir_to_contact">Заказать</button>
+                 @csrf
+             </form>
          </div>
      </div>
     <div class="product_card_image">

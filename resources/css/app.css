@@ -1107,7 +1107,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin: 0 auto;
 }
 .basket_container .basket_container_wrapper .basket_container_search {
-  align-content: center;
+  background-color: green;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1138,5 +1138,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 .basket_container .basket_container_personal_reccomendations {
   background-color: grey;
 }
+
+
 
 /*# sourceMappingURL=app.css.map */

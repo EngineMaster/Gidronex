@@ -8,12 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
-    public function search($search = null) {
-        $search_text = $search;
+    public function search(Request $request) {
+        $search_text = $request->input('search');
         if ($search_text==NULL) {
             $data= Product::all();
+            return view('search', compact('data'));
         } else {
-            $data=Product::where('name','LIKE', '%'.$search_text.'%')->get();
+            $data= Product::where('name','LIKE', '%'.$search_text.'%')->get();
         }
         return view('results', compact('data'));
     }

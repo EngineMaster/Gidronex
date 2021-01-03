@@ -49,4 +49,11 @@
         </p>
     </form>
 
+    @if(session()->has('message'))
+        <ul>
+            <li>{{ session()->get('message') }}</li>
+        </ul>
+
+    @endif
+
 </div>
