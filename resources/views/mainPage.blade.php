@@ -50,7 +50,7 @@
         <p>Мы успешно работаем на рынке с 2005 года. Наша компания предоставляет огромный выбор различных запчастей для отечественной техники.
 
             В нашем магазине вы легко сможете найти нужный вам товар, в наличии множество деталей и комплектующих.</p>
-        <button class="btn_about_us"><a href="/">Подробнее</a></button>
+        <button class="btn_about_us"><a href="{{route('categories')}}">Подробнее</a></button>
     </div>
     <div class="image_container"><img src="https://stroytehnika.su/upload/iblock/1e6/1e659e1efe8cc188b65b36d58c6929d4.jpg" alt="" class="image_about_us"></div>
     </div>
@@ -61,7 +61,7 @@
             <img src="https://static.baza.drom.ru/drom/1482814825168_bulletin" alt="" class="image_of_assortment"/>
     <div class="text-containing-element">
         <h2 class="hydrotechnic">Гидробуры и гидромолоты</h2>
-        <p>Наша компания предоставляет большой выбор гидробуров и гидромолотов для работ разной сложности и масштабов.</p>
+        <p class="paragraph">Наша компания предоставляет большой выбор гидробуров и гидромолотов для работ разной сложности и масштабов.</p>
         <button class="btn-assortment"><a href="/">Ассортимент</a></button>
     </div>
     </div>
@@ -138,31 +138,14 @@
 </section>
 
 <section class="news">
-    <div class="content-wrappy">
-        <div class="content-wrapper-wrappy">
-            <h2 class="advert">Новости и акции</h2>
-            <ul>
-                <li>
-                    <div class="card"><img src="https://sun9-70.userapi.com/impf/SLlG_aMvtE9LZdxTeQx8CE8jakzChufNFUb4gA/icHNzIkvE-s.jpg?size=370x205&quality=96&proxy=1&sign=fa89fa82bccf70e5030f4cda5774ed1a" alt="" class="news_image">
-                        <button class="btn_read_news"><span class="read"><a href="{{route('posts')}}">Читать</a></span></button>
-                        <div class="new_info">Новость такая то такая то, описание</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://sun9-32.userapi.com/impf/BEo9w6kfkFwB3n1lcXrewU4UwxpuXT9Wr_1Aaw/m5Nen-vBr8g.jpg?size=370x205&quality=96&proxy=1&sign=455921136ef55b296b39a7a6e5666654" alt="" class="news_image">
-                        <button class="btn_read_news"><span class="read"><a href="{{route('posts')}}">Читать</a>ь</span></button>
-                        <div class="new_info">Новость такая то такая то, описание</div>
-                        <p>29 октября 2020г.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://sun9-67.userapi.com/impf/FyZ_aYexbGWy6XzLB4l1TflEpW3WucZ8qYYrmA/hy-yiYl64tE.jpg?size=370x205&quality=96&proxy=1&sign=de757bab9beb8f25c0d40ca782c42127" alt="" class="news_image">
-                        <button class="btn_read_news"><span class="read"><a href="{{route('posts')}}">Читать</a></span></button>
-                        <div class="new_info">Новость такая то такая то, описание</div>
-                        <p>29 октября 2020г.</p>
-                    </div>
-                </li>
-            </ul>
+    <div class="first_row">
+        <div class="first_row_card">
+            <img src="https://sun9-28.userapi.com/impf/5JapmwiFKg2RY5Mem6kJxYvk_NxE42PQfojogw/N2M3MZwubko.jpg?size=1000x799&quality=96&proxy=1&sign=fb9f8c68f41b4f188a4eb7371d443437&type=album" alt="excavator" class="image_news">
+            <p><a href="{{route('posts')}}">Новости</a></p>
+        </div>
+        <div class="first_row_card">
+            <img src="https://media.istockphoto.com/photos/vibratory-plate-picture-id872652728?k=6&m=872652728&s=612x612&w=0&h=dcEwlo7Ce0_wATKLZxb51x7RMr6Lc7A8Nex87ALvyz0=" alt="" class="image_news">
+            <p><a href="{{route('posts')}}">Статьи</a></p>
         </div>
     </div>
 </section>

@@ -23,6 +23,7 @@ Route::get('/basket/place', [\App\Http\Controllers\BasketController::class,'bask
 Route::post('/basket/place/confirm', [\App\Http\Controllers\BasketController::class,'basketConmfirm'])->name('basket-confirm');
 Route::post('/basket/add/{id}', [\App\Http\Controllers\BasketController::class,'basketAdd'])->name('basket-add');
 Route::post('/basket/delete/{id}', [\App\Http\Controllers\BasketController::class,'basketDelete'])->name('basket-delete');
+Route::post('/basket/remove/{id}', [\App\Http\Controllers\BasketController::class,'basketRemove'])->name('basket-remove');
 Route::get('/search',[\App\Http\Controllers\SearchController::class,'search'])->name('search');
 Route::get('/admin/insert',[\App\Http\Controllers\AdminController::class,'insert'])->name('admin-insert');
 Route::get('/search/{id}',[\App\Http\Controllers\SearchController::class,'search'])->name('searching');
