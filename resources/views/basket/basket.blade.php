@@ -1,13 +1,4 @@
 @include('includes.head')
-<style>
-    .element{
-        display: block;
-    }
-
-    .hide{
-        display: none;
-    }
-</style>
 @include('includes.header')
 
 
@@ -35,62 +26,92 @@
             </div>
         </div>
 
-        <div class="elements_holder">
-            @foreach($products as $product)
-                <div class="element">{{$product->name}}
-                    <form action="{{route('basket-add', $product->id)}}" method="post">
-                        <input type="submit" value="add">
-                        @csrf
-                    </form>
-                </div>
-            @endforeach
-        </div>
-
 
 
         <div class="basket_container_products">
             <div class="basket_container_products_table">
                 <ul>
-                    @foreach($items as $item)
-                        <li>
-                            {{$item->price}}
-
+                    @if(!Cart::isEmpty())
+                        <li class="table_basket">
+                            Товар
                         </li>
+                        <li class="table_basket">
+                            Количество
+                        </li>
+                        <li class="table_basket">
+                            Цена
+                        </li>
+                        <li class="table_basket">
+                            Сумма
+                        </li>
+                        <li class="table_basket" ></li>
+                        <li class="table_basket"></li>
+                    @foreach($items as $item)
                         <li>
                             {{$item->name}}
                         </li>
                         <li>
                             {{$item->quantity}}
                         </li>
+                        <li>
+                            {{$item->price}}
 
-                        <li><form action="{{route('basket-add', $item->id)}}" method="POST">
-                                <button type="submit" class="btn_product_select">+</button>
+                        </li>
+                        <li>
+                            {{$all = $item->quantity * $item->price}}
+                        </li>
+                    <li class="add">
+                       <form action="{{route('basket-add', $item->id)}}" method="POST">
+                                <button type="submit" class="item_add">+</button>
                                 @csrf
-                            </form></li>
-                        <li><form action="{{route('basket-delete', $item->id)}}" method="POST">
-                                <button type="submit" class="btn_product_select">-</button>
+                            </form>
+                        <form action="{{route('basket-delete', $item->id)}}" method="POST">
+                                <button type="submit" class="item_remove">-</button>
                                 @csrf
-                            </form></li>
-                        <li><form action="{{route('basket-remove', $item->id)}}" method="POST">
-                                <button type="submit" class="btn_product_select">Удалить элемент</button>
+                            </form>
+                        </li>
+                        <li class="item_delete"><form action="{{route('basket-remove', $item->id)}}" method="POST">
+                                <button type="submit" class="item_delete_button">Удалить</button>
                                 @csrf
                             </form></li>
                     @endforeach
+                    @else
+                    <div>Корзина Пуста</div>
+                        @endif
                 </ul>
 
-            </div>
-            @if(session()->has('success_message'))
+                @if(session()->has('success_message'))
                 <div class="alert alert-success">
                     {{ session()->get('success_message') }}
                 </div>
             @endif
         </div>
+        </div>
+
+            <div class="elements_holder">
+                @foreach($products as $product)
+                    <div class="element">
+                        <p>{{$product->name}}</p>
+
+                        <form action="{{route('basket-add', $product->id)}}" method="post">
+                            <input type="submit" value="Добавить" class="add_product">
+                            @csrf
+                        </form>
+                    </div>
+                @endforeach
+            </div>
+
         <div class="basket_container_personal_reccomendations">
             <button><a href="{{route('basket-place')}}">Подтвердить заказ</a></button>
+            <p>
+                Нажимая 'подтвердить заказз' вы подтвержаете что согласны с правилами сайта.
+            </p>
         </div>
 
     </div>
 </div>
+
+
 
 <script>
     document.querySelector('#searchful').oninput = function () {

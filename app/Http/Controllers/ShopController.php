@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\CategoryProduct;
 use App\Models\Posts;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -72,9 +73,10 @@ class ShopController extends Controller
         $products = Product::where('category_id',$category->id)->orderBy('price');
         return view('category.category', compact('category', 'products'));
     }
+    
 
     public function product($category, $product = null){
-        $product = Product::where('id',$product)->first();
+        $product = Product::where('name',$product)->first();
         return view('products.product',['product'=>$product]);
     }
 

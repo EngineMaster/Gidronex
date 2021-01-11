@@ -15,7 +15,10 @@
      </div>
     <div class="product_card_image">
         <img src="https://www.dksh.com/media/660/562/js305-1000.jpg" alt="product_image" class="product_image_product">
-        <div class="d11"></div>
+        <div class="d11">
+
+
+        </div>
     </div>
 
 </div>

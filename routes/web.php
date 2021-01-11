@@ -29,6 +29,7 @@ Route::get('/admin/insert',[\App\Http\Controllers\AdminController::class,'insert
 Route::get('/search/{id}',[\App\Http\Controllers\SearchController::class,'search'])->name('searching');
 Route::get('/posts', [\App\Http\Controllers\ShopController::class,'posts'])->name('posts');
 Route::get('/posts/{id?}', [\App\Http\Controllers\ShopController::class,'article'])->name('article');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

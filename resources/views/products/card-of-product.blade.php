@@ -11,12 +11,9 @@
             </p>
         </div>
         <div class="lower_menu">
-            <form action="{{route('basket-add', $prod->id)}}" method="POST">
-                <button type="submit" class="btn_product_select">Заказать</button>
-                @csrf
-            </form>
+            <div class="category_name">{{$prod->index}}</div>
             <div class="category_name">{{$prod->category->name}}</div>
-            <button class="btn_product_select"><a href="{{route('product',[$prod->category->id, $prod->id])}}">Подробнее</a></button>
+            <button class="btn_product_select"><a href="{{route('product',[$prod->category->id, $prod->name])}}">Подробнее</a></button>
         </div>
     </div>
 </div>

@@ -759,7 +759,7 @@ footer
 
 .cards_container
     width: 1140px
-    height: 300px
+    height: 280px
     margin: 0 auto
     .card_of_product
         display: grid
@@ -773,12 +773,13 @@ footer
         .product_layer
             display: grid
             list-style-type: none
-            grid-template-rows: 1fr 0.12fr
+            grid-template-rows: 1fr 0.2fr
             .upper_menu
                 h2
                     font-family: $font-stack
                     font-size: 60px
                 p
+                    font-size: 30px
                     color: darkgrey
                     font-family: $font-stack
             .lower_menu
@@ -791,6 +792,14 @@ footer
                 font-family: $font-stack
                 font-weight: 500
                 margin-bottom: 0
+                .add_product_cat
+                    width: 100%
+                    background-color: $main-color
+                    padding: 0
+                    transition: 0.4s all
+                    &:hover
+                        background-color: #fcba03
+                        color: white
                 .price_of_product
                     padding: 1em 2em
                 .category_name
@@ -814,6 +823,55 @@ footer
                         &:hover
                             color: black
 
+.confirm_container
+    width: 700px
+    margin: 0 auto
+    background-color: white
+    margin-bottom: 20px
+    height: 96vh
+    .form-confirm
+        display: grid
+        grid-template-columns: repeat(1,1fr)
+        background-color: #F2F2F2
+        padding: 20px
+        font-size: 20px
+        font-family: $font-stack
+        input[type=text]
+            width: 100%
+            height: 50px
+            background-color: white
+            outline-color: #fcba03
+            text-align: left
+            border-radius: 2px
+            font-family: $font-stack
+            font-weight: 800
+            font-size: 20px
+        label
+            padding: 5px
+        input[type=checkbox]
+            margin: 0 auto
+            text-align: center
+            height: 20px
+            width: 20px
+        .checkboxy
+            text-align: center
+            padding: 20px
+        button
+            padding: 15px
+            background-color: $main-color
+            border: none
+            margin: 0 auto
+            outline-color: #f7fafc
+            width: 240px
+            height: 60px
+            font-weight: 700
+            cursor: pointer
+            color: black
+            font-size: 32px
+            font-family: $font-stack
+            transition: 0.4s all
+            &:hover
+                background-color: #fcba03
 
 .categories_wrapper
     width: 1140px
@@ -888,19 +946,15 @@ footer
                 border: none
                 width: 240px
                 height: 50px
+                color: white
                 transition: 0.5s all
+                cursor: pointer
+                font:
+                    size: 30px
+                    family: $font-stack
+                    weight: 600
                 &:hover
                     background-color: black
-                a
-                    text-decoration: none
-                    color: white
-                    transition: 0.8s all
-                    font:
-                        size: 30px
-                        family: $font-stack
-                        weight: 600
-                    &:hover
-                        transform: scale(1.1)
     .product_card_image
         position: relative
         .product_image_product
@@ -1003,14 +1057,13 @@ footer
 
 .basket_container
     width: 100%
-    height: 100vh
+    min-height: 100vh
     background-color: #F2F2F2
     padding:  50px
     .basket_container_wrapper
         width: 1140px
         margin: 0 auto
         .basket_container_search
-            background-color: black
             padding: 10px
             .search_form
                 display: grid
@@ -1023,7 +1076,7 @@ footer
                     vertical-align: bottom
                     input[type=text]
                         background-color: white
-                        border: solid 0.2px grey
+                        border: 0
                         outline-color: $main-color
                         font-size: 30px
                         font-family: $font-stack
@@ -1032,15 +1085,19 @@ footer
                         height: 100px
                         text-align: left
                         padding: 5px
-                        width: 550px
+                        width: 450px
                     button
                         float: left
                         height: 100px
                         width: 100px
                         border: none
-                        background-color: #fcba03
+                        background-color: $main-color
                         color: white
                         font-size: 40px
+                        transition: 0.4s all
+                        &:hover
+                            opacity: 0.95
+                            color: black
         .basket_container_sum
             color: white
             font:
@@ -1063,17 +1120,140 @@ footer
                 p
                     font-size: 30px
     .basket_container_products
-        background-color: black
-        padding: 20px
         margin-top: 40px
-        color: white
+        color: black
         .basket_container_products_table
+            .table_basket
+                font:
+                    weight: 500
+                    size: 40px
+                    family: $font-stack
+                padding: 10px
+                background-color: $main-color
             ul
                 list-style-type: none
                 display: grid
-                grid-template-columns: repeat(3,1fr)
+                grid-template-columns: 1.2fr 0.8fr 1fr 1fr 1fr 1fr
+                padding: 10px
+                li
+                    background-color: white
+                    font:
+                        weight: 500
+                        size: 25px
+                        family: $font-stack
+                    padding: 20px
+                    border: 1px solid $main-color
+                .item_delete
+                    display: grid
+                    padding: 0
+                    grid-template-columns: 1fr
+                    .item_delete_button
+                        width: 100%
+                        height: 100%
+                        background-color: white
+                        color: black
+                        font:
+                            weight: 500
+                            size: 25px
+                            family: $font-stack
+                        border: none
+                    &:hover
+                        background-color: $main-color
+            .add
+                display: grid
+                grid-template-columns: repeat(2,1fr)
+                padding: 0
+                .item_add
+                    width: 100%
+                    height: 100%
+                    border: none
+                    background-color: $main-color
+                    color: black
+                    transition: 0.4s all
+                    cursor: pointer
+                    font:
+                        size: 50px
+                        weight: 500
+                        family: $font-stack
+                    &:hover
+                        background-color: white
+                .item_remove
+                    width: 100%
+                    height: 100%
+                    border: none
+                    background-color: black
+                    color: white
+                    transition: 0.4s all
+                    cursor: pointer
+                    font:
+                        size: 50px
+                        weight: 500
+                        family: $font-stack
+                    &:hover
+                        background-color: white
+                        color: black
     .basket_container_personal_reccomendations
-        background-color: grey
+        margin-top: 40px
+        text-align: center
+        button
+                padding: 10px
+                background-color: $main-color
+                border: none
+                outline-color: #f7fafc
+                width: 240px
+                height: 75px
+                font-weight: 700
+                cursor: pointer
+                color: black
+                font-family: $font-stack
+                transition: 0.4s all
+                &:hover
+                    background-color: #fcba03
+                a
+                    text-decoration: none
+                    font-size: 26px
+                    color: black
+        p
+            color: grey
+            margin: 50px
+            font:
+                size: 12px
+                weight: 100
+                family: $font-stack
 
 .elements_holder
-    background-color: green
+    color: black
+    width: 1140px
+    margin-top: 20px
+    padding: 10px
+
+.element
+    display: grid
+    grid-gap: 50px
+    grid-template-columns: 2fr 1fr
+    background-color: #f7fafc
+    border: none
+    text-align: center
+    font-size: 18px
+    font-family: $font-stack
+    .add_product
+        width: 100%
+        height: 100%
+        background-color: #fcba03
+        color: white
+        border: none
+        cursor: pointer
+        transition: 0.45s all
+        font:
+            size: 25px
+            weight: 600
+            family: $font-stack
+        &:hover
+            background-color: white
+            color: black
+
+
+
+
+.hide
+    display: none

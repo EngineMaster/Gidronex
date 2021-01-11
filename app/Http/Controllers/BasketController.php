@@ -37,6 +37,9 @@ class BasketController extends Controller
     public function basketPlace(){
         $orderId = $this->sessionBegin();
         $items = \Cart::getContent();
+        if (isEmpty($items)){
+            return redirect()->route('basket')->with('success_message','Ваша Корзина Пуста! Добавьте товары, чтобы продолжить ');
+        }
         $total = Cart::session($orderId)->getTotal();
         return view('basket.basket-confirm',compact('items','total'));
 
