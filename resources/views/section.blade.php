@@ -44,7 +44,7 @@
         }
         else{
             elastiEms.forEach(function (elem) {
-                elem.classList.add('hide');
+                elem.classList.remove('hide');
             })
         }
     }
