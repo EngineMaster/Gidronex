@@ -116,6 +116,9 @@
       <path value="$PROJECT_DIR$/vendor/wildbit/swiftmailer-postmark" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-cookie-consent" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/mews/captcha" />
     </include_path>
   </component>
   <component name="PhpUnit">

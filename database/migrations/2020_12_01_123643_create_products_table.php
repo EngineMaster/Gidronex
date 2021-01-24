@@ -16,13 +16,15 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->integer('category_id');
+            $table->integer('section_id');
             $table->string('name');
             $table->string('index');
             $table->string('qty')->default(1);
-            $table->double('price')->default(0);
-            $table->text('description')->nullable();
-            $table->text('option')->nullable();
-            $table->text('option2')->nullable();
+            $table->double('price')->nullable();
+             $table->text('description')->nullable();
+            $table->text('link')->nullable();
+            $table->text('link2')->nullable();
+            $table->text('link3')->nullable();
             $table->text('image')->nullable();
             $table->text('image_product')->default('https://lh3.googleusercontent.com/proxy/2prlRxRg3FheXlVuK73uHGuD8XcBpHRDlg0G9TXW0Y9oFFGh0b7UXK2v9vHXs04GbtS5EppcQMf2bEhs31u3sVw28k9sr2PBwj3kPQ');
             $table->timestamps();

@@ -29,8 +29,8 @@ thumb_up_alt
     </div>
 </div>
 <div class="cards_container">
-        @isset($products)
-        @foreach($category->products as $prod)
+        @isset($sections)
+        @foreach($category->sections as $prod)
             @include('products.card-of-product',compact('prod'))
         @endforeach
             @endisset

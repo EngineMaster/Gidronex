@@ -4,7 +4,7 @@
     <div class="jumbotron">
         <h3>Добавить Категорию</h3>
         <form action="{{route('admin-insert-category')}}" method="post">
-            <input type="number" name="name" placeholder="Категория">
+            <input type="text" name="name" placeholder="Категория">
             <input type="text" name="index" placeholder="Имя товара" class="display-4">
             <input type="number" name="description" placeholder="Цена">
             <input type="text" name="image" placeholder="Индекс/Артикул">
@@ -17,6 +17,7 @@
         <h3>Добавить Товар</h3>
         <form action="{{route('admin-insert')}}" method="post">
             <input type="number" name="category_id" placeholder="Категория">
+            <input type="number" name="section_id" placeholder="Категория">
             <input type="text" name="name" placeholder="Имя товара" class="display-4">
             <input type="number" name="price" placeholder="Цена">
             <input type="text" name="index" placeholder="Индекс/Артикул">

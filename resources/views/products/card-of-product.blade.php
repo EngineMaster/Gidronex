@@ -6,14 +6,13 @@
             <h2>{{$prod->name}}</h2>
             <br>
             <p>
-                {{$prod->description}}
                 {{$prod->price}}
             </p>
         </div>
         <div class="lower_menu">
             <div class="category_name">{{$prod->index}}</div>
             <div class="category_name">{{$prod->category->name}}</div>
-            <button class="btn_product_select"><a href="{{route('product',[$prod->category->id, $prod->name])}}">Подробнее</a></button>
+            <button class="btn_product_select"><a href="{{route('section',[$prod->category->id, $prod->name])}}">Подробнее</a></button>
         </div>
     </div>
 </div>

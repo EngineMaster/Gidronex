@@ -4,6 +4,13 @@
     <h1>Связаться с нами</h1>
     <form action="{{route('contact-confirm')}}" method="POST">
     <div class="form_container_wrapper">
+        @if ($errors->any())
+            <div class="alert-danger">
+                @foreach ($errors->all() as $error)
+                    {{ $error }}<br>
+                @endforeach
+            </div>
+        @endif
         <hr>
             <div class="form_container_wrapper_inputs">
                 <div class="input">
@@ -31,13 +38,6 @@
                 <div class="input_checkbox">
                     <input type="checkbox" id="check2" name="checkbox">Согласен на обработку персональных данных
                 </div>
-                @if ($errors->any())
-                    <div class="alert-danger">
-                            @foreach ($errors->all() as $error)
-                                {{ $error }}<br>
-                            @endforeach
-                    </div>
-                @endif
 
     </div>
     </div>

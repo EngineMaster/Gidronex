@@ -1,16 +1,22 @@
-
-<table style="width:100%">
-    <tr>
-        <th>Name</th>
-        <th>Logo</th>
-    </tr>
+@extends('includes.head')
+@include('includes.header')
+<body>
+<div class="basket_container">
+    <div class="basket_container_wrapper">
+<div class="elements_holder">
     @if (isset($data) && count($data) > 0)
         @foreach( $data as $business )
-            <tr>
-                <td>{{ $business->name }}</td>
-                <td>{{ $business->price }}</td>
-            </tr>
+        <div class="element">
+            <p>{{ $business->name }}</p>
+            <form action="{{route('basket-add', $business->id)}}" method="post">
+                <input type="submit" value="Добавить" class="add_product">
+                @csrf
+            </form>
+        </div>
         @endforeach
     @endif
-</table>
-
+</div>
+    </div>
+</div>
+</body>
+@include('includes.footer')

@@ -5,18 +5,9 @@
 </nav>
 
 <div class="navbar">
-    <div class="navbar_wrapper">
         <div class="logo"><a href="/"> <img src="https://i.ibb.co/6P6GsQZ/Component-1.png" alt="company_logo" class="icon_header"></a></div>
-        <div class="contacts">
-            <span class="material-icons" style="font-size: 50px; margin: auto auto; color: white">
-                location_off
-                </span>
-            <p>
-                Челябинск, ул. Павелецкая 2-я, 36, нежилое помещение 8, оф. 1
-            </p>
-        </div>
         <div class="header-wrapper">
-            <ul>
+            <ul class="nav_links">
                 <li><a href="/" class="contact_menu">Главная</a></li>
                 <li><a href="/categories" class="contact_menu">Ассортимент</a></li>
                 <li><a href="{{route('contact')}}" class="contact_menu">Связаться с нами</a></li>
@@ -24,6 +15,32 @@
                 <li><a href="{{route('basket')}}" class="contact_menu"><span class="material-icons search" style="color: white">shopping_basket</span><span>{{\Cart::session($_COOKIE['sessionIds'])->getTotalQuantity()}}</span></a></li>
             </ul>
         </div>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
     </div>
 </div>
+<div class="nav-active"></div>
+<script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>
+<script>
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav_links');
+        const navLinks = document.querySelectorAll('.nav_links li a');
+
+        burger.addEventListener('click',() => {
+            nav.classList.toggle('nav-active');
+        })
+
+        navLinks.forEach((link , index)=>{
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 2}s`;
+        })
+        burger.classList.toggle('toggle');
+    }
+    navSlide();
+
+</script>
+
 

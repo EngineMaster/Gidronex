@@ -23,6 +23,7 @@ class AdminController extends Controller
     {
         $insertProduct = array([
             'category_id' => $request->input('category_id'),
+            'section_id' => $request->input('category_id'),
             'index' => $request->input('index'),
             'name' => $request->input('name'),
             'qty' => $request->input('qty'),

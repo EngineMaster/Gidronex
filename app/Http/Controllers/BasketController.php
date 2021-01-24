@@ -14,7 +14,7 @@ class BasketController extends Controller
 {
 
     public function sessionBegin(){
-        if (!isset($_COOKIE['sessionIds'])){
+        if (!isset($_COOKIE)){
             setcookie('sessionIds',uniqid());
         }
         $orderId = $_COOKIE['sessionIds'];
@@ -27,19 +27,12 @@ class BasketController extends Controller
         $products  = Product::all();
         $items = \Cart::getContent();
         $total = Cart::session($orderId)->getTotal();
-        if (isEmpty($items)){
-
-            return view('basket.basket', compact('items', 'total','products'));
-        }
         return view('basket.basket', compact('items', 'total','products'));
     }
 
     public function basketPlace(){
         $orderId = $this->sessionBegin();
         $items = \Cart::getContent();
-        if (isEmpty($items)){
-            return redirect()->route('basket')->with('success_message','Ваша Корзина Пуста! Добавьте товары, чтобы продолжить ');
-        }
         $total = Cart::session($orderId)->getTotal();
         return view('basket.basket-confirm',compact('items','total'));
 
@@ -49,6 +42,11 @@ class BasketController extends Controller
         $orderId = $this->sessionBegin();
         $items = \Cart::getContent();
         $total = Cart::session($orderId)->getTotal();
+        $items = \Cart::getContent();
+
+        foreach($items as $row) {
+            $string = ','.$row.',';;
+        }
         $validate = $request->validate(
             [
                 'name'=>'required|min:2|max:255',
@@ -56,16 +54,11 @@ class BasketController extends Controller
                 'email'=>'required|max:40',
             ]
         );
-        $items = \Cart::getContent();
-
-        foreach($items as $row) {
-            $string = ','.$row.',';;
-        }
         $insert = array([
             'name'=>$request->input('name'),
             'phone'=>$request->input('phone'),
             'email'=>$request->input('email'),
-            'all'=>$string,
+            'all'=> $string,
 
         ]);
         $insertion = DB::table('orders_of_customers')->insert($insert);

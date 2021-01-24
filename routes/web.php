@@ -47,7 +47,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/category/insert',[\App\Http\Controllers\AdminController::class,'categoryInsert'])->name('admin-insert-category');
     Route::get('/admin/clientrequests',[\App\Http\Controllers\AdminController::class,'clientsFeedback'])->name('clients');
 });
+
 Route::get('/{category}', [\App\Http\Controllers\ShopController::class,'category'])->name('category');
-Route::get('/{category}/{product?}', [\App\Http\Controllers\ShopController::class,'product'])->name('product');
-
-
+Route::get('/{category}/{section?}/', [\App\Http\Controllers\ShopController::class,'section'])->name('section');
+Route::get('/{category}/{section}/{product?}', [\App\Http\Controllers\ShopController::class,'product'])->name('product');

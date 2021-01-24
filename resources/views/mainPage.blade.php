@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-    <title>Document</title>
+    <title>ГидроНЭКС</title>
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=2780a154-acda-403e-9bd0-8c6b99873d7c&lang=ru_RU"
             type="text/javascript">
@@ -23,8 +23,7 @@
    @include('includes.header')
     <div class="black_banner">
         <div class="wrappy">
-            <p>Мы откапываем легенды</p>
-            <p class="little_text">Копайте глубже<span class="material-icons">arrow_right_alt</span></p>
+            <p>Для тех,<br> кто ценит качество</p>
         </div>
     </div>
 </div>
@@ -37,8 +36,8 @@
         <p>
             Мы предоставляем огромный выбор запчастей и оборудования для отечественных экскаваторов и драглайнов
         </p>
-        <button class="btn_shopping_details2"><a href="/">Запчасти</a></button>
-        <button class="btn_shopping_details2"><a href="/">Оборудование</a></button>
+        <button class="btn_shopping_details2"><a href="/categories">Запчасти</a></button>
+        <button class="btn_shopping_details2"><a href="/categories">Оборудование</a></button>
     </div>
 </section>
 
@@ -62,7 +61,7 @@
     <div class="text-containing-element">
         <h2 class="hydrotechnic">Гидробуры и гидромолоты</h2>
         <p class="paragraph">Наша компания предоставляет большой выбор гидробуров и гидромолотов для работ разной сложности и масштабов.</p>
-        <button class="btn-assortment"><a href="/">Ассортимент</a></button>
+        <button class="btn-assortment"><a href="{{route('categories')}}">Ассортимент</a></button>
     </div>
     </div>
 </section>
@@ -72,6 +71,14 @@
         <div class="goods_wrapper">
             <hr>
             <ul>
+                @foreach($categories as $category)
+                <li>
+                    <div class="card"><img src="{{$category->image}}" alt="" class="card-image">
+                        <div class="description">{{$category->name}}</div>
+                        <button class="btn_buy_product"><a href="{{route('category',[$category->id])}}">Смотреть</a></button>
+                    </div>
+                </li>
+                @endforeach
                 <li>
                     <div class="card"><img src="https://tri-kita.su/upload/iblock/14f/14fa6a4406556fd07d78ae2f40bf5352.jpg" alt="" class="card-image">
                         <div class="description">Запчасти на экскаваторы ЭО и ЕК</div>
@@ -154,6 +161,30 @@
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4bd09699954667873980eaa52811195248fb2431624d9348322a3b5084e2b5c6&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
 </section>
 
+<section class="cookies">
+@include('cookieConsent::index')
+</section>
 @include('includes.footer')
+<script>
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.querySelector('.navbar');
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    }
+</script>
+<script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>
+
+
 </body>
 </html>

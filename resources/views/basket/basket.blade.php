@@ -17,7 +17,8 @@
                 <form action="{{route('search')}}" class="search_form">
                     <div class="search_form_input">
                     <input type="text"name="search" id="searchful">
-                            <button><span class="material-icons">
+                            <button>
+                                <span class="material-icons">
                             search
                         </span>
                         </button>
@@ -76,7 +77,7 @@
                             </form></li>
                     @endforeach
                     @else
-                    <div>Корзина Пуста</div>
+                    <div class="basket_empty"><span class="material-icons search" style="color: black;font-weight: 800;font-size: 50px">shopping_basket</span>Пуста </div>
                         @endif
                 </ul>
 
@@ -97,10 +98,10 @@
                             <input type="submit" value="Добавить" class="add_product">
                             @csrf
                         </form>
+                        <a href="{{route('product',[$product->category->id,$product->category->id,$product->name])}}"><button class="add_product_check">Смотреть</button></a>
                     </div>
                 @endforeach
             </div>
-
         <div class="basket_container_personal_reccomendations">
             <button><a href="{{route('basket-place')}}">Подтвердить заказ</a></button>
             <p>

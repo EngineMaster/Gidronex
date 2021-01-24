@@ -3,21 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\CategoryProduct;
 use App\Models\Posts;
 use App\Models\Product;
+use App\Models\section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\HttpFoundation\Cookie;
+use function PHPUnit\Framework\isEmpty;
 
 class ShopController extends Controller
 {
     public function main(){
         if (!isset($_COOKIE['sessionIds'])){setcookie('sessionIds',uniqid());}
         $orderId = $_COOKIE['sessionIds'];
-        if (is_null($orderId)){
-            return view('contact');
+        if (isEmpty($orderId)){
+            $orderId = $_COOKIE['sessionIds'];
+            $categories = Category::all();
+            return view('mainPage',compact('orderId','categories'));
         }
         return view('mainPage');
     }
@@ -43,16 +46,8 @@ class ShopController extends Controller
             'commentary'=>$request->input('commentary'),
             'social_networking'=>$request->input('social_networking'),
         ]);
-        $insertion = DB::table('clients_feedback')->insert($insert);
+        DB::table('clients_feedback')->insert($insert);
          return redirect()->back()->with('message','success');
-        dd($insertion);
-
-        Mail::send('mail', array('key' => 'value'), function($message)
-        {
-            $message->to('gidronexservice@gmail.com', 'Джон Смит')->subject('Привет!');
-        });
-
-        redirect()->back()->with('message','success');
 }
 
 
@@ -65,19 +60,30 @@ class ShopController extends Controller
         if (!isset($_COOKIE['sessionIds'])) {setcookie('sessionIds',uniqid());}
         $orderId = $_COOKIE['sessionIds'];
         $categories = Category::get();
-        return view('categories', compact('categories'));
+        $sections = section::all();
+        return view('categories', compact('categories','sections'));
     }
 
     public function category($id){
         $category = Category::where('id',$id)->first();
-        $products = Product::where('category_id',$category->id)->orderBy('price');
-        return view('category.category', compact('category', 'products'));
+        $sections = section::where('category_id',$category->id);
+        return view('category.category', compact('category', 'sections'));
     }
-    
 
-    public function product($category, $product = null){
+    public function section($id,$section_name){
+        $category = Category::where('id',$id)->first();
+        $sections = section::where('name',$section_name)->first();
+        return view('section', compact('category', 'sections'));
+    }
+
+
+    public function product($category,$section, $product = null){
         $product = Product::where('name',$product)->first();
         return view('products.product',['product'=>$product]);
+    }
+
+    public function productList(){
+        return Product::all();
     }
 
     public function admin(){
@@ -85,9 +91,10 @@ class ShopController extends Controller
     }
 
     public function posts(){
-        $posts = DB::table('posts')->paginate(1);
+        $posts = DB::table('posts')->paginate(6);
         return view('posts',compact('posts'));
     }
+
     public function article($id){
             $post = Posts::where('id',$id)->first();
             return view('article', compact('post'));
