@@ -27,7 +27,11 @@
             </div>
         </div>
 
-
+        @if(session()->has('success_message'))
+            <div class="alert alert-success">
+                {{ session()->get('success_message') }}
+            </div>
+        @endif
 
         <div class="basket_container_products">
             <div class="basket_container_products_table">
@@ -81,16 +85,11 @@
                         @endif
                 </ul>
 
-                @if(session()->has('success_message'))
-                <div class="alert alert-success">
-                    {{ session()->get('success_message') }}
-                </div>
-            @endif
         </div>
         </div>
 
             <div class="elements_holder">
-                @foreach($products as $product)
+                @foreach($prods as $product)
                     <div class="element">
                         <p>{{$product->name}}</p>
 
@@ -111,7 +110,9 @@
 
     </div>
 </div>
-
+<div class="pages">
+    {!! $prods->links() !!}
+</div>
 
 
 <script>
@@ -130,11 +131,9 @@
         }
         else{
             elastiEms.forEach(function (elem) {
-                elem.classList.add('hide');
+                elem.classList.remove('hide');
             })
         }
     }
-
-
 </script>
 

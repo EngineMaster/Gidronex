@@ -1,18 +1,22 @@
 @extends('includes.head')
 @include('includes.header')
-<section class="posts">
+<section class="posts_container">
     <h1>Новости и Акции</h1>
     <hr>
-    <div class="categories_wrapper_card">
     @foreach($posts as $post)
-            <div class="categories_wrapper_card_second_part">
-                <div class="categories_wrapper_card_name"><h5>{{$post->subtitle}}</h5> <p>{{$post->article}}</p></div>
-                <div class="categories_wrapper_card_name">{{$post->created_at}}</div>
-                <button class="btn_check_category"><a href="{{route('article',$post->id )}}">Смотреть</a></button>
+        <div class="post_card">
+            <img src="https://i.ytimg.com/vi/gsCXBiPWmno/maxresdefault.jpg" alt="" style="height: 100%">
+            <div class="post_card_title">
+                <p>
+                    {{$post->title}}
+                </p>
+                <a href="{{route('article',[$post->title])}}">
+                    Читать
+                </a>
             </div>
-
         </div>
     @endforeach
+</section>
     <div class="pages">
         {!! $posts->links() !!}
     </div>

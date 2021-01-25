@@ -33,7 +33,7 @@ class ShopController extends Controller
         $validate = $request->validate(
             [
                 'name'=>'required|min:2|max:255',
-                'phone'=>'required|max:255',
+                'phone'=>'required|min:8|max:255',
                 'email'=>'required|max:40',
             ]
         );
@@ -91,12 +91,12 @@ class ShopController extends Controller
     }
 
     public function posts(){
-        $posts = DB::table('posts')->paginate(6);
+        $posts = Posts::paginate(5);
         return view('posts',compact('posts'));
     }
 
-    public function article($id){
-            $post = Posts::where('id',$id)->first();
+    public function article($title){
+            $post = Posts::where('title',$title)->first();
             return view('article', compact('post'));
     }
 

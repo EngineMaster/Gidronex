@@ -25,9 +25,10 @@ class BasketController extends Controller
         $orderId = $this->sessionBegin();
         \Cart::session($orderId);
         $products  = Product::all();
+        $prods  = Product::paginate(25);
         $items = \Cart::getContent();
         $total = Cart::session($orderId)->getTotal();
-        return view('basket.basket', compact('items', 'total','products'));
+        return view('basket.basket', compact('items', 'total','products','prods'));
     }
 
     public function basketPlace(){
@@ -41,12 +42,15 @@ class BasketController extends Controller
     public function basketConmfirm(Request $request){
         $orderId = $this->sessionBegin();
         $items = \Cart::getContent();
+        $item1 = Cart::session($orderId)->isEmpty();
+        if ($item1 ==  true){
+            return redirect()->route('basket')->with('success_message','Добавьте товары в корзину чтобы завершить заказ');
+        }
         $total = Cart::session($orderId)->getTotal();
-        $items = \Cart::getContent();
 
         foreach($items as $row) {
             $string = ','.$row.',';;
-        }
+
         $validate = $request->validate(
             [
                 'name'=>'required|min:2|max:255',
@@ -61,8 +65,9 @@ class BasketController extends Controller
             'all'=> $string,
 
         ]);
-        $insertion = DB::table('orders_of_customers')->insert($insert);
-        $end = \Cart::session($_COOKIE['sessionIds'])->clear();
+        DB::table('orders_of_customers')->insert($insert);
+        }
+        \Cart::session($_COOKIE['sessionIds'])->clear();
         return redirect()->route('main');
     }
 
@@ -103,7 +108,7 @@ class BasketController extends Controller
         \Cart::session($orderId);
         \Cart::remove($product_id);
         (\Cart::getContent());
-        return redirect()->route('basket');
+        return redirect()->route('basket')->with('success_message','Продукт удалён из корзины');
     }
 
 }
