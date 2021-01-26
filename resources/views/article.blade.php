@@ -1,6 +1,15 @@
 @include('includes.head')
 @include('includes.header')
-<ul><li>{{$post->id}}</li>
-    <li>{{$post->title}}</li></ul>
 
-<button type="submit"><a href="{{route('posts')}}">Posts</a></button>
+<section class="section_category">
+        <h1>{{$post->title}}</h1>
+    <div class="article_container">
+        <img src="https://i.ytimg.com/vi/gsCXBiPWmno/maxresdefault.jpg" alt="" style="width: 500px">
+        <div class="article_container_text">
+            <p class="subtitle">{{$post->subtitle}}</p>
+            <p class="article1">{{$post->article}}</p>
+            <p class="article2">{{$post->article2}}</p>
+        </div>
+    </div>
+</section>
+

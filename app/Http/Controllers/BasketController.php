@@ -35,6 +35,10 @@ class BasketController extends Controller
         $orderId = $this->sessionBegin();
         $items = \Cart::getContent();
         $total = Cart::session($orderId)->getTotal();
+        $item1 = Cart::session($orderId)->isEmpty();
+        if ($item1 ==  true){
+            return redirect()->route('basket')->with('success_message','Добавьте товары в корзину чтобы совершить заказ');
+        }
         return view('basket.basket-confirm',compact('items','total'));
 
     }
@@ -42,10 +46,6 @@ class BasketController extends Controller
     public function basketConmfirm(Request $request){
         $orderId = $this->sessionBegin();
         $items = \Cart::getContent();
-        $item1 = Cart::session($orderId)->isEmpty();
-        if ($item1 ==  true){
-            return redirect()->route('basket')->with('success_message','Добавьте товары в корзину чтобы завершить заказ');
-        }
         $total = Cart::session($orderId)->getTotal();
 
         foreach($items as $row) {

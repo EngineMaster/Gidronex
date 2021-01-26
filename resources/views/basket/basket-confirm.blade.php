@@ -34,7 +34,7 @@
         </ul>
         <div class="form_confirm_wrap">
     <form action="{{route('basket-confirm')}}" method="post" class="form-confirm"  >
-        <h3 style="margin: 0 auto; padding: 20px">Заполните поля</h3>
+        <h3 style="margin: 0 auto; padding: 0">Заполните поля</h3>
         <label for="name">Имя</label><input type="text" name="name" required><br>
         <label for="email">E-mail</label><input type="text" name="email" required><br>
         <label for="phone">Номер Телефона</label><input type="text" name="phone" required><br>
