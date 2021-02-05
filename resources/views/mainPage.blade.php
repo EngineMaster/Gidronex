@@ -17,17 +17,23 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=2780a154-acda-403e-9bd0-8c6b99873d7c&lang=ru_RU"
             type="text/javascript">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 <body>
-
-<div class="container_mainpage">
+<section class="container_mainpage">
    @include('includes.header')
-    <div class="black_banner">
-        <div class="wrappy">
-            <p>Для тех,<br> кто ценит качество</p>
+    <div class="splide" >
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide"><a href="{{route('categories')}}"><img src="https://images7.alphacoders.com/932/thumb-1920-932803.jpg" alt="" style=" width: 100%;object-fit: cover ;background-repeat: no-repeat;height: 35rem;background-position: center center"></a>  </li>
+                <li class="splide__slide"><img src="https://sun9-43.userapi.com/impf/pZmQzeRNUx9EdGq37bPJ-BrhQo-itNDHkNRfpg/bMV8b_LYSBQ.jpg?size=1280x628&quality=96&sign=768d54c145a52325dd2681994ee9cc14" alt=""  style="object-fit: cover ;height: 35rem;background-repeat: no-repeat;background-position: center center"></li>
+            </ul>
         </div>
     </div>
-</div>
+    <div class="black_banner">
+    </div>
+</section>
 
 <section class="products_and_goods">
     <div class="container_with_choice">
@@ -169,7 +175,8 @@
 <script>
     window.onscroll = function() {myFunction()};
 
-    // Get the header
+    //
+    //  the header
     var header = document.querySelector('.navbar');
 
     // Get the offset position of the navbar
@@ -183,6 +190,23 @@
             header.classList.remove('sticky');
         }
     }
+</script>
+<script>
+    new Splide( '.splide', {
+        type     : 'loop',
+        focus    : 'center',
+        direction: 'ttb',
+        height   : '35rem',
+        width : '100%',
+        heightRatio: 0.3,
+        position : 'absolute',
+        top : '0',
+        autoWidth: true,
+        rewind   : true,
+        speed: 650,
+        autoplay: true,
+        interval: 2000,
+    } ).mount();
 </script>
 <script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>
 

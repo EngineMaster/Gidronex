@@ -6,34 +6,63 @@ use App\Models\Category;
 use App\Models\Posts;
 use App\Models\Product;
 use App\Models\section;
+use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\HttpFoundation\Cookie;
 use function PHPUnit\Framework\isEmpty;
+use function PHPUnit\Framework\isNull;
+use Illuminate\Http\Client\Response;
+
 
 class ShopController extends Controller
 {
+
     public function main(){
-        if (!isset($_COOKIE['sessionIds'])){setcookie('sessionIds',uniqid());}
-        $orderId = $_COOKIE['sessionIds'];
-        if (isEmpty($orderId)){
-            $orderId = $_COOKIE['sessionIds'];
-            $categories = Category::all();
-            return view('mainPage',compact('orderId','categories'));
+        if(!isset($_COOKIE["sessionIds"])) {
+            $cart_data = array();
+            $item_data = json_encode($cart_data);
+            setcookie("sessionIds", $item_data  , time() + (86400 * 30));
+            $_COOKIE["sessionIds"] = $item_data;
         }
-        return view('mainPage');
+            $categories = Category::all();
+            return view('mainPage',compact('categories'));
     }
 
     public function contact(Request $request){
         return view('contact');
     }
 
+    public function test(Request $request){
+        //{
+            //$minutes = 20;
+        //$response = new Response('Hello World');
+        //$response->withCookie(cookie('sessionIds', 'virat', $minutes));
+        //dd($response);
+        //}
+        $lg = (isset($_COOKIE['sessionIds'])) ? $_COOKIE['sessionIds'] : 'ro'; ;
+        if(!isset($_COOKIE['sessionIds'])) {
+            setcookie('sessionIds', 'ro');
+            $value = stripslashes($_COOKIE['sessionIds']);
+            return redirect()->with($value);
+        }
+        else{
+
+
+    }
+    }
+
+    public function testPost(Request $request){
+        $request->session()->regenerate();
+        return redirect()->route('test');
+    }
+
     public function contactConfirm(Request $request){
         $validate = $request->validate(
             [
                 'name'=>'required|min:2|max:255',
-                'phone'=>'required|min:8|max:255',
+                'phone'=>'required|min:8|max:255|unique:orders_of_customers,phone',
                 'email'=>'required|max:40',
             ]
         );
@@ -61,7 +90,7 @@ class ShopController extends Controller
         $orderId = $_COOKIE['sessionIds'];
         $categories = Category::get();
         $sections = section::all();
-        return view('categories', compact('categories','sections'));
+        return view('categories', compact('categories','sections','orderId'));
     }
 
     public function category($id){
@@ -73,7 +102,8 @@ class ShopController extends Controller
     public function section($id,$section_name){
         $category = Category::where('id',$id)->first();
         $sections = section::where('name',$section_name)->first();
-        return view('section', compact('category', 'sections'));
+        $items = \Cart::getContent();
+        return view('section', compact('category', 'sections','items'));
     }
 
 

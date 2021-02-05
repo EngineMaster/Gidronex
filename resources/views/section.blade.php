@@ -26,8 +26,28 @@
                         </div>
             @endforeach
     </div>
+    @if(session()->has('success_message'))
+        <div class="success">
+            <p class="cross_to_close">
+            </p>
+            <p>{{ session()->get('success_message') }}</p>
+            <ul>
+                @foreach($items as $item)
+                    <li>{{$item->name}}</li>
+                @endforeach
+            </ul>
+            <a href="{{route('basket')}}" ><button class="add_product_check">Перейти в корзину</button></a>
+        </div>
+
+    @endif
 </section>
 </body>
+<script>
+  document.querySelector('.cross_to_close').onclick = function () {
+      let successMessage = document.querySelector('.success');
+      successMessage.classList.add('hide');
+  };
+</script>
 <script>
     document.querySelector('#searchful').oninput = function () {
         let val = this.value.trim();

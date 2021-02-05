@@ -32,9 +32,7 @@ nav
 
 .container_mainpage
     position: relative
-    height: 932px
     border-bottom: 25px solid $main-color
-    background: url("https://sun9-43.userapi.com/impf/pZmQzeRNUx9EdGq37bPJ-BrhQo-itNDHkNRfpg/bMV8b_LYSBQ.jpg?size=1280x628&quality=96&sign=768d54c145a52325dd2681994ee9cc14") center center / cover no-repeat
     .black_banner
         max-width: 70rem
         height: 320px
@@ -52,6 +50,12 @@ nav
                 font-weight: 600
                 font-size: 45px
                 color: #ffffff
+
+.splide__slide
+    background-image: url("https://images7.alphacoders.com/932/thumb-1920-932803.jpg")
+    height: 100%
+    width: 100%
+
 
 .call
     display: inline-block
@@ -918,42 +922,22 @@ footer
 
 
 .product_card
-    width: 1140px
+    width: 80%
     margin: 40px auto
     display: grid
-    grid-template-columns: repeat(2, 1fr)
     .product_card_description
         display: grid
-        grid-template-rows: 110px 280px 250px
+        grid-template-rows: 110px 280px
+        grid-template-columns: repeat(2, 1fr)
         h1
             color: black
             font-family: $font-stack
             font-size: 40px
             font-weight: 600
         .first_p
-            font-size: 25px
+            font-size: 20px
             font-weight: 400
             font-family: $font-stack
-        .option_and_buy
-            color: grey
-            font:
-                size: 15px
-                family: $font-stack
-                weight: 300
-            .redir_to_contact
-                background-color: $main-color
-                border: none
-                width: 240px
-                height: 50px
-                color: white
-                transition: 0.5s all
-                cursor: pointer
-                font:
-                    size: 30px
-                    family: $font-stack
-                    weight: 600
-                &:hover
-                    background-color: black
     .product_card_image
         position: relative
         .product_image_product
@@ -964,16 +948,44 @@ footer
         .d11
             height: 0
             position: absolute
-            left: 50px
+            left: 0px
             top: 100px
             transform: rotate(0deg)
             z-index: -1
             width: 100px
-            border-bottom: 600px solid $main-color
-            border-left:  400px solid transparent
-            border-right: 900px solid transparent
+            border-bottom: 450px solid $main-color
+            border-left:  300px solid transparent
+            border-right: 600px solid transparent
 
 
+.option_and_buy
+    color: darkgrey
+    width: 80%
+    margin: 0 auto
+    padding: 10px
+    background-color: #F2F2F2
+    margin-top: 200px
+    text-align: center
+    font:
+        size: 16px
+        family: $font-stack
+        weight: 300
+
+
+.submit_button
+    background-color: $main-color
+    border: none
+    width: 240px
+    height: 50px
+    color: white
+    transition: 0.5s all
+    cursor: pointer
+    font:
+        size: 30px
+        family: $font-stack
+        weight: 600
+    &:hover
+        background-color: black
 
 .form_container
     width: 100%
@@ -1475,6 +1487,40 @@ footer
     padding: 10px
     border-radius: 10px
 
+.success
+    position: fixed
+    color: black
+    top: 50%
+    left: 50%
+    transform: translateX(-50%)
+    transition: 0.3s all
+    background-color: #F2F2F2
+    width: 600px
+    padding: 20px
+    font-family: $font-stack
+    font-size: 25px
+    font-weight: 500
+    .cross_to_close
+        position: absolute
+        right: 15px
+        top: 0
+        transition: 0.2s all
+        opacity: 0.3
+        cursor: pointer
+        padding: 25px
+        &:hover
+            opacity: 1
+        &:before , &:after
+            height: 33px
+            position: absolute
+            content: ' '
+            width: 2px
+            background-color: #333
+        &:before
+            transform: rotate(45deg)
+        &:after
+            transform: rotate(-45deg)
+
 .alert-success
     background-color: black
     color: white
@@ -1486,8 +1532,9 @@ footer
     font-family: $font-stack
 
 .posts_container
+    max-width: 100%
     min-height: 100vh
-    padding: 50px
+    padding: 60px
     background-color: #F2F2F2
     h1
         text-align: center
@@ -1532,3 +1579,4 @@ footer
             &:hover
                 background-color: white
                 color: black
+                transform: scale3d(10 2 0 )

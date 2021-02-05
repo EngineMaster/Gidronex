@@ -32,9 +32,7 @@ nav a {
 
 .container_mainpage {
   position: relative;
-  height: 932px;
   border-bottom: 25px solid #FCB026;
-  background: url("https://sun9-43.userapi.com/impf/pZmQzeRNUx9EdGq37bPJ-BrhQo-itNDHkNRfpg/bMV8b_LYSBQ.jpg?size=1280x628&quality=96&sign=768d54c145a52325dd2681994ee9cc14") center center/cover no-repeat;
 }
 
 .container_mainpage .black_banner {
@@ -58,6 +56,12 @@ nav a {
   font-weight: 600;
   font-size: 45px;
   color: #ffffff;
+}
+
+.splide__slide {
+  background-image: url("https://images7.alphacoders.com/932/thumb-1920-932803.jpg");
+  height: 100%;
+  width: 100%;
 }
 
 .call {
@@ -1168,15 +1172,15 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .product_card {
-  width: 1140px;
+  width: 80%;
   margin: 40px auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .product_card .product_card_description {
   display: grid;
-  grid-template-rows: 110px 280px 250px;
+  grid-template-rows: 110px 280px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .product_card .product_card_description h1 {
@@ -1187,33 +1191,9 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .product_card .product_card_description .first_p {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
-}
-
-.product_card .product_card_description .option_and_buy {
-  color: grey;
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.product_card .product_card_description .option_and_buy .redir_to_contact {
-  background-color: #FCB026;
-  border: none;
-  width: 240px;
-  height: 50px;
-  color: white;
-  transition: 0.5s all;
-  cursor: pointer;
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-
-.product_card .product_card_description .option_and_buy .redir_to_contact:hover {
-  background-color: black;
 }
 
 .product_card .product_card_image {
@@ -1231,14 +1211,44 @@ footer .footer-wrap .column_of_footer_down2 p {
 .product_card .product_card_image .d11 {
   height: 0;
   position: absolute;
-  left: 50px;
+  left: 0px;
   top: 100px;
   transform: rotate(0deg);
   z-index: -1;
   width: 100px;
-  border-bottom: 600px solid #FCB026;
-  border-left: 400px solid transparent;
-  border-right: 900px solid transparent;
+  border-bottom: 450px solid #FCB026;
+  border-left: 300px solid transparent;
+  border-right: 600px solid transparent;
+}
+
+.option_and_buy {
+  color: darkgrey;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #F2F2F2;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.submit_button {
+  background-color: #FCB026;
+  border: none;
+  width: 240px;
+  height: 50px;
+  color: white;
+  transition: 0.5s all;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.submit_button:hover {
+  background-color: black;
 }
 
 .form_container {
@@ -1877,6 +1887,52 @@ footer .footer-wrap .column_of_footer_down2 p {
   border-radius: 10px;
 }
 
+.success {
+  position: fixed;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s all;
+  background-color: #F2F2F2;
+  width: 600px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.success .cross_to_close {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  transition: 0.2s all;
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 25px;
+}
+
+.success .cross_to_close:hover {
+  opacity: 1;
+}
+
+.success .cross_to_close:before,
+.success .cross_to_close:after {
+  height: 33px;
+  position: absolute;
+  content: ' ';
+  width: 2px;
+  background-color: #333;
+}
+
+.success .cross_to_close:before {
+  transform: rotate(45deg);
+}
+
+.success .cross_to_close:after {
+  transform: rotate(-45deg);
+}
+
 .alert-success {
   background-color: black;
   color: white;
@@ -1889,8 +1945,9 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .posts_container {
+  max-width: 100%;
   min-height: 100vh;
-  padding: 50px;
+  padding: 60px;
   background-color: #F2F2F2;
 }
 
@@ -1949,5 +2006,6 @@ footer .footer-wrap .column_of_footer_down2 p {
 .posts_container .post_card_title a:hover {
   background-color: white;
   color: black;
+  transform: scale3d(10 2 0);
 }
 

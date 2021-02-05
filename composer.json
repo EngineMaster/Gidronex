@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "ext-json": "*",
+        "ext-mysql_xdevapi": "*",
         "darryldecode/cart": "^4.2",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -21,7 +22,8 @@
         "mews/captcha": "^3.2",
         "spatie/laravel-cookie-consent": "^2.12",
         "spatie/laravel-permission": "^3.18",
-        "wildbit/swiftmailer-postmark": "^3.3"
+        "wildbit/swiftmailer-postmark": "^3.3",
+        "ext-http": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

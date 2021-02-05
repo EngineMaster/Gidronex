@@ -9,25 +9,30 @@ use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Cookie;
 use Cart;
 use function PHPUnit\Framework\isEmpty;
+use function PHPUnit\Framework\isNull;
+use http\Env\Response;
 
 class BasketController extends Controller
 {
 
     public function sessionBegin(){
-        if (!isset($_COOKIE)){
-            setcookie('sessionIds',uniqid());
+        if(!isset($_COOKIE["sessionIds"])) {
+            $cart_data = array();
+            $item_data = json_encode($cart_data);
+            setcookie("sessionIds", $item_data  , time() + (86400 * 30));
+            $_COOKIE["sessionIds"] = $item_data;
+            return  $_COOKIE["sessionIds"];
         }
-        $orderId = $_COOKIE['sessionIds'];
-        return $orderId;
+        return  $_COOKIE["sessionIds"];
     }
 
-    public function basket(){
+    public function basket(Request $request){
         $orderId = $this->sessionBegin();
         \Cart::session($orderId);
         $products  = Product::all();
         $prods  = Product::paginate(25);
         $items = \Cart::getContent();
-        $total = Cart::session($orderId)->getTotal();
+        $total = \Cart::session($orderId)->getTotal();
         return view('basket.basket', compact('items', 'total','products','prods'));
     }
 
@@ -71,7 +76,7 @@ class BasketController extends Controller
         return redirect()->route('main');
     }
 
-    public function basketAdd($product_id){
+    public function basketAdd($product_id,Request $request = null){
         $orderId = $this->sessionBegin();
         $product = Product::find($product_id);
         \Cart::session($orderId);
@@ -84,8 +89,7 @@ class BasketController extends Controller
         ));
         Cart::session($orderId)->getTotal();
         (\Cart::getContent());
-        //return redirect()->route('categories')->with('success_message','this product was added');
-        return redirect()->route('basket')->with('success_message','Продукт добавлен в корзину');
+        return redirect()->back()->with('success_message','Продукт добавлен в корзину');
     }
 
 

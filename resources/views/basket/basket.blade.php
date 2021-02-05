@@ -87,7 +87,6 @@
 
         </div>
         </div>
-
             <div class="elements_holder">
                 @foreach($prods as $product)
                     <div class="element">

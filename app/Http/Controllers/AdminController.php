@@ -32,10 +32,10 @@ class AdminController extends Controller
         ]);
         if (!empty($insertProduct)) {
             $insertion = DB::table('products')->insert($insertProduct);
-            return redirect()->route('admin')->with('message_success', 'success');
+            return redirect()->route('admin')->with('message_success', 'Товар добавлен');
         }
         if (empty($insertProduct==null)) {
-            return redirect()->route('admin')->with('message_error', 'InputIsEmpty');
+            return redirect()->route('admin')->with('message_error', 'Ввод пуст');
         }
     }
 
@@ -79,7 +79,7 @@ class AdminController extends Controller
         );
         if (!empty($insertProduct)) {
             $insertion = DB::table('posts')->insert($insertProduct);
-            return redirect()->route('admin-posts')->with('message_success', 'success');
+            return redirect()->route('admin-posts')->with('message_success', 'Пост Добавлен');
         }
         return view('admin.posts.postInsert', compact('posts'));
     }
@@ -97,7 +97,7 @@ class AdminController extends Controller
             );
             if (!empty($insertProduct)) {
                 $insertion = DB::table('categories')->insert($insertProduct);
-                return redirect()->route('admin')->with('message_success', 'success');
+                return redirect()->route('admin')->with('message_success', 'Удачно');
             }
 
 

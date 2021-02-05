@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/sessionBegin', [\App\Http\Controllers\BasketController::class,'sessionBegin'])->name('sessionStart');
+Route::get('/testing', [\App\Http\Controllers\ShopController::class,'test'])->name('test');
+Route::get('/tests', [\App\Http\Controllers\ShopController::class,'testPost'])->name('testPost');
 Route::get('/', [\App\Http\Controllers\ShopController::class,'main'])->name('main');
 Route::get('/categories', [\App\Http\Controllers\ShopController::class,'categories'])->name('categories');
 Route::get('/contact', [\App\Http\Controllers\ShopController::class,'contact'])->name('contact');
