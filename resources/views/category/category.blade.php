@@ -37,8 +37,4 @@ thumb_up_alt
             @endisset
 </div>
 
-    @foreach($category->products as $producted)
-        <li>{{$producted->name}}</li>
-    @endforeach
-
 

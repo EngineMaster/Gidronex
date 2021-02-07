@@ -1968,6 +1968,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   grid-template-columns: 0.5fr 1fr;
   background-color: #FCB026;
   margin-top: 20px;
+  transform: translate(-50%, -50%);
 }
 
 .posts_container .post_card_title {
