@@ -138,18 +138,17 @@
         </div>
 </section>
 
-<section class="advertise">
-    <div class="content">
+    <section class="content">
         <div class="text">
-            <h2 class="advert">Виброплиты и вибротромовки</h2>
-            <p class="second_paragraph">На нашей витрине представлены вибротромбовки и виброплиты разных ценовых категорий и вы всегда сможете подобрать именно нужный вам инструмент.</p>
+            <h2 class="vibrating_plates">Виброплиты и вибротромовки</h2>
+            <p class="vibrating_plates_sub">На нашей витрине представлены вибротромбовки и виброплиты разных ценовых категорий и вы всегда сможете подобрать именно нужный вам инструмент.</p>
             <button class="btn-assortment"><a href=""> Ассортимент</a></button>
         </div>
         <div class="image_container_advertisment">
             <img src="https://mdvgroup.pro/uploads/product/1300/1331/thumbs/70_vibroplita-impulse-vp60l-5.jpg" alt="" class="imagecont">
         </div>
-        </div>
-</section>
+    </section>
+
 
 <section class="news">
     <div class="first_row">
@@ -197,7 +196,7 @@
         focus    : 'center',
         direction: 'ttb',
         height   : '35rem',
-        width : '100%',
+        width : '100vw',
         heightRatio: 0.3,
         position : 'absolute',
         top : '0',
@@ -206,6 +205,7 @@
         speed: 650,
         autoplay: true,
         interval: 2000,
+        cover: true,
     } ).mount();
 </script>
 <script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>

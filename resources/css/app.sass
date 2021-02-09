@@ -1,6 +1,7 @@
 body
     margin: 0
     padding: 0
+    overflow-x: hidden
 
 $font-stack: 'Roboto', sans-serif
 $main-color: #FCB026
@@ -164,7 +165,7 @@ nav
     nav
         display: none
 
-@media screen and (max-width: 840px)
+@media screen and (max-width: 1000px)
     body
         overflow-x: hidden
     .nav_links
@@ -339,17 +340,28 @@ nav
         text-decoration: none
 
 .about_company
-    min-height: 650px
-    margin-top: 80px
+    min-height: 300px
+    margin-top: 30px
     .wrapping
         display: flex
         margin: 15px auto
-        justify-content: space-evenly
+        justify-content: space-around
         width: 1140px
+        align-items: stretch
+        @media screen and (max-width: 1000px)
+            flex-direction: column
+            width: 100%
+            background-color: #F2F2F2
+            align-items: center
+            text-align: center
+            justify-content: center
         .text_container
             width: 50%
             text-align: left
-            margin-right: 38px
+            @media screen and (max-width: 1000px)
+                text-align: center
+                width: 100%
+                margin: 0
             .about_us
                 font-family: $font-stack
                 font-style: normal
@@ -357,6 +369,8 @@ nav
                 font-size: 64px
                 line-height: 75px
                 color: #000000
+                @media screen and (max-width: 1000px)
+                    font-size: 40px
             .bolder
                 font-family: $font-stack
                 font-style: normal
@@ -364,7 +378,8 @@ nav
                 font-size: 24px
                 line-height: 28px
                 color: #000000
-
+                @media screen and (max-width: 1000px)
+                    font-size: 18px
             p
                 font-family: $font-stack
                 font-style: normal
@@ -372,20 +387,23 @@ nav
                 font-size: 24px
                 line-height: 28px
                 color: #000000
+                @media screen and (max-width: 1000px)
+                    font-size: 15px
     .image_container
-        margin-top: 80px
         width: 50%
+        @media screen and (max-width: 1000px)
+            width: 100%
+            margin: 20px auto
+            display: flex
+            justify-content: center
         .image_about_us
             height: 440px
+            @media screen and (max-width: 1000px)
+                height: 300px
+                display: flex
+                align-self: center
 
-@media screen and (max-width: 1024px)
-    .wrapping
-        flex-direction: column
-        padding: 15%
-        display: none
-    .content-wrapper
-        flex-direction: column
-        margin: 0 auto
+
 
 
 .assortment
@@ -395,36 +413,43 @@ nav
         max-width: 1140px
         display: flex
         justify-content: center
-        vertical-align: baseline
+        vertical-align: top
+        @media screen and (max-width: 1000px)
+            flex-direction: column-reverse
+            width: 80%
         .image_of_assortment
             width: 780px
             height: 320px
             object-fit: none
             margin: auto 0
             margin-top: 29px
+            @media screen and (max-width: 1000px)
+                width: 100%
         .text-containing-element
-            margin-left: 40px
+            margin-left: 90px
             width: 900px
+            @media screen and (max-width: 1000px)
+                text-align: center
+                width: 100%
+                margin-left: 2px
             .hydrotechnic
                 font-family: $font-stack
                 font-style: normal
                 font-weight: bold
                 font-size: 52px
                 color: #000000
+                @media screen and (max-width: 1000px)
+                    font-size: 28px
             .paragraph
                 font-family: $font-stack
                 font-style: normal
                 font-weight: bold
                 font-size: 20px
                 color: #000000
+                @media screen and (max-width: 1000px)
+                    font-size: 14px
 
 
-@mixin paragraph
-    font-family: $font-stack
-    font-style: normal
-    font-weight: bold
-    font-size: 20px
-    color: #000000
 
 hr
     width: 1140px
@@ -435,6 +460,8 @@ hr
 .goods_container
     min-height: 1080px
     text-align: center
+    @media screen and (max-width: 850px)
+        display: none
     .full_assortment
         font-family: $font-stack
         font-style: normal
@@ -494,34 +521,51 @@ hr
             text-align: center
             color: #000000
 
-.advertise
+.content
     min-height: 480px
-    .content
-        display: flex
-        width: 1140px
-        margin: 0 auto
-        justify-content: center
-        align-items: center
-        height: 480px
-        .text
-            width: 50%
-            float: left
-        .image_container_advertisment
-            .imagecont
-                width: 560px
-                height: 320px
-                object-fit: none
-                margin-top: 35px
+    display: flex
+    width: 1140px
+    margin: 0 auto
+    justify-content: center
+    align-items: center
+    @media screen and (max-width: 1000px)
+        flex-direction: column
+        margin-top: 50px
+        width: 90%
+    .text
+        width: 50%
+        @media screen and (max-width: 1000px)
+            width: 90%
+            font-size: 25px
+            margin: 0 auto
+            text-align: center
+    .image_container_advertisment
+        .imagecont
+            width: 560px
+            height: 320px
+            object-fit: none
+            margin-top: 35px
+            @media screen and (max-width: 1000px)
+                margin:  0 auto
+                width: 90%
+                margin-top: 5px
 
 .news
     width: 1140px
     margin: 0 auto
     padding-bottom: 50px
+    @media screen and (max-width: 1000px)
+        width: 100%
+    @media screen and (max-width: 500px)
+        display: none
     .first_row
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-gap: 15px
         text-align: center
+        @media screen and (max-width: 1000px)
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-rows: repeat(2, 1fr)
         .first_row_card
             position: relative
             text-align: center
@@ -533,6 +577,10 @@ hr
                 border: 5px solid #fcba03
                 &:hover
                     transform: scale(0.8) translate(-20%, 10%)
+                @media screen and (max-width: 1000px)
+                    width: 70%
+                    object-fit: none
+                    margin: 0 auto
             p
                 position: absolute
                 top: 50%
@@ -549,13 +597,16 @@ hr
                     transform: scale(0.8) translate(-20%, 10%)
                     opacity: 0.92
                     background-color: white
+                @media screen and (max-width: 1000px)
+                    font-size: 22px
+                    left: 30%
+                    padding: 10px
                 a
                     text-decoration: none
                     transition: 0.2s all
                     color: white
                     &:hover
                         color: black
-
     .second_row
         display: grid
         grid-template-columns: repeat(3,1fr)
@@ -582,7 +633,6 @@ hr
     display: flex
     align-items: center
     justify-content: center
-
     .read
         display: inline-block
         font-family: $font-stack
@@ -601,19 +651,22 @@ hr
     color: #000000
     padding: 10px
 
-.advert
+.vibrating_plates
     font-family: $font-stack
     font-style: normal
     font-weight: bold
     font-size: 52px
     color: #000000
-
-.second_paragraph
-    font-family: $font-stack
-    font-style: normal
-    font-weight: bold
-    font-size: 20px
-    color: #000000
+    @media screen and (max-width: 1000px)
+        font-size: 25px
+    &_sub
+        font-family: $font-stack
+        font-style: normal
+        font-weight: bold
+        font-size: 20px
+        color: #000000
+        @media screen and (max-width: 1000px)
+            font-size: 15px
 
 .map-container
     height: 500px
@@ -659,6 +712,10 @@ footer
         grid-template-columns: repeat(4, 1fr)
         grid-gap: 10px
         padding-bottom: 25px
+        @media screen and (max-width:  1000px)
+            grid-template-columns: 100%
+            width: 100%
+            grid-template-rows: repeat(4,1fr)
         .column_of_footer
             ul
                 line-height: 40px
@@ -714,7 +771,6 @@ footer
 
 
 .category_description
-    width: 100%
     background-color: $black-color
     .feedback
         display: flex
@@ -724,6 +780,8 @@ footer
         width: 1140px
         margin: 0 auto
         text-align: left
+        @media screen and (max-width: 1000px)
+            width: 100%
         a
             text-decoration: none
             font-size: 45px
@@ -733,6 +791,8 @@ footer
             width: 50%
             text-align: center
             transition: 0.3s all
+            @media screen and (max-width: 1000px)
+                font-size: 22px
             &:hover
                 background-color: #505050
     .category_description_wrapper
@@ -742,17 +802,26 @@ footer
         display: grid
         grid-template-columns: 1.5fr 2fr
         vertical-align: top
+        @media screen and (max-width: 1000px)
+            width: 100%
         .name_category
             padding: 20px
+            h1
+                font-family: $font-stack, bold
+                color: #EB8A3E
+                @media screen and (max-width: 1000px)
+                    font-size: 15px
         .category_desctiption_p
             padding: 10px
-        h1
-            font-family: $font-stack, bold
-            color: #EB8A3E
-        p
-            font-family: $font-stack
-            font-weight: 600
-            color: white
+            h1
+                font-family: $font-stack, bold
+                color: #EB8A3E
+            p
+                font-family: $font-stack
+                font-weight: 600
+                color: white
+                @media screen and (max-width: 1000px)
+                    font-size: 15px
 
 
 .image_product
@@ -764,12 +833,17 @@ footer
     width: 1140px
     height: 280px
     margin: 0 auto
+    @media screen and (max-width: 1000px)
+        width: 90%
     .card_of_product
         display: grid
         grid-template-columns: 1fr 2fr
         box-shadow: 0 0 10px rgba(5,5,5,0.5)
         margin: 25px
         transition: 0.3s all
+        @media screen and (max-width: 1000px)
+            width: 80%
+            grid-template-columns: 1fr
         &:hover
             transform: scale(1.05)
             box-shadow: 0 0 10px rgba(10,5,10,0.5)
@@ -884,12 +958,19 @@ footer
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 20px
+    @media screen and (max-width: 1000px)
+        grid-template-columns: 1fr
+        width: 100%
     .categories_wrapper_card
         width: 500px
         display: grid
         grid-template-columns: repeat(2,1fr)
         box-shadow: 0 0 10px rgba(5,5,5,0.5)
         transition: 0.5s all
+        @media screen and (max-width: 1000px)
+            width: 70%
+            margin: 0 auto
+            grid-template-columns: 1fr
         &:hover
             opacity: 0.8
             box-shadow: 0 0 10px rgba(10,5,10,0.5)
@@ -929,15 +1010,22 @@ footer
         display: grid
         grid-template-rows: 110px 280px
         grid-template-columns: repeat(2, 1fr)
+        @media screen and (max-width: 1000px)
+            grid-template-columns: 100%
+            grid-template-rows: 1fr
         h1
             color: black
             font-family: $font-stack
             font-size: 40px
             font-weight: 600
+            @media screen and (max-width: 1000px)
+                font-size: 25px
         .first_p
             font-size: 20px
             font-weight: 400
             font-family: $font-stack
+            @media screen and (max-width: 1000px)
+                font-size: 15px
     .product_card_image
         position: relative
         .product_image_product
@@ -945,6 +1033,10 @@ footer
             width: 550px
             object-fit: none
             border: solid 20px $main-color
+            @media screen and (max-width: 550px)
+                height: 200px
+                width: 300px
+                margin: 0 auto
         .d11
             height: 0
             position: absolute
@@ -956,6 +1048,8 @@ footer
             border-bottom: 450px solid $main-color
             border-left:  300px solid transparent
             border-right: 600px solid transparent
+            @media screen and (max-width: 800px)
+                display: none
 
 
 .option_and_buy
@@ -1006,10 +1100,11 @@ footer
     form
         .form_container_wrapper
             padding: 20px
-            margin: 0 auto
-            .form_container_wrapper_inputs
+            &_inputs
                 display: grid
                 grid-template-columns: repeat(2,1fr)
+                @media screen and (max-width: 850px)
+                    grid-template-columns: 1fr
                 .input
                     color: #333333
                     font-family: $font-stack
@@ -1066,11 +1161,13 @@ footer
                 weight: 100
                 family: $font-stack
 
+
 .basket_container
     width: 100%
     min-height: 100vh
     background-color: #F2F2F2
     padding:  50px
+    display: block
     .basket_container_wrapper
         width: 1140px
         margin: 0 auto
@@ -1244,10 +1341,10 @@ footer
     padding: 10px
     font-family: $font-stack
     text-align: center
+    @media (max-width: 1200px)
+        width: 80%
 
-@media (max-width: 1200px)
-    .elements_holder
-        width: 100%
+
 
 
 .element
@@ -1258,6 +1355,10 @@ footer
     text-align: center
     font-size: 18px
     font-family: $font-stack
+    @media screen and (max-width: 1000px)
+        grid-template-columns: 150px 400px 150px
+    @media screen and (max-width: 1000px)
+        grid-template-columns: 100px 130px 120px
     .add_product
         width: 100%
         height: 60px
@@ -1339,10 +1440,14 @@ footer
     margin: 0 auto
     min-height: 100vh
     text-align: center
+    @media screen and (max-width: 1000px)
+        width: 100%
     h1
         font-family: $font-stack
         font-size: 40px
         font-weight: 600
+        @media screen and (max-width: 1000px)
+            font-size: 28px
     .search_form2
         display: grid
         grid-template-rows: 1fr 1fr

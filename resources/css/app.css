@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -184,7 +185,7 @@ nav a {
     display: none;
   }
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1000px) {
   body {
     overflow-x: hidden;
   }
@@ -382,19 +383,36 @@ nav a {
 }
 
 .about_company {
-  min-height: 650px;
-  margin-top: 80px;
+  min-height: 300px;
+  margin-top: 30px;
 }
 .about_company .wrapping {
   display: flex;
   margin: 15px auto;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 1140px;
+  align-items: stretch;
+}
+@media screen and (max-width: 1000px) {
+  .about_company .wrapping {
+    flex-direction: column;
+    width: 100%;
+    background-color: #F2F2F2;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 }
 .about_company .wrapping .text_container {
   width: 50%;
   text-align: left;
-  margin-right: 38px;
+}
+@media screen and (max-width: 1000px) {
+  .about_company .wrapping .text_container {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
 }
 .about_company .wrapping .text_container .about_us {
   font-family: "Roboto", sans-serif;
@@ -404,6 +422,11 @@ nav a {
   line-height: 75px;
   color: #000000;
 }
+@media screen and (max-width: 1000px) {
+  .about_company .wrapping .text_container .about_us {
+    font-size: 40px;
+  }
+}
 .about_company .wrapping .text_container .bolder {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -411,6 +434,11 @@ nav a {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+}
+@media screen and (max-width: 1000px) {
+  .about_company .wrapping .text_container .bolder {
+    font-size: 18px;
+  }
 }
 .about_company .wrapping .text_container p {
   font-family: "Roboto", sans-serif;
@@ -420,26 +448,33 @@ nav a {
   line-height: 28px;
   color: #000000;
 }
+@media screen and (max-width: 1000px) {
+  .about_company .wrapping .text_container p {
+    font-size: 15px;
+  }
+}
 .about_company .image_container {
-  margin-top: 80px;
   width: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .about_company .image_container {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 .about_company .image_container .image_about_us {
   height: 440px;
 }
-
-@media screen and (max-width: 1024px) {
-  .wrapping {
-    flex-direction: column;
-    padding: 15%;
-    display: none;
-  }
-
-  .content-wrapper {
-    flex-direction: column;
-    margin: 0 auto;
+@media screen and (max-width: 1000px) {
+  .about_company .image_container .image_about_us {
+    height: 300px;
+    display: flex;
+    align-self: center;
   }
 }
+
 .assortment {
   min-height: 480px;
 }
@@ -448,7 +483,13 @@ nav a {
   max-width: 1140px;
   display: flex;
   justify-content: center;
-  vertical-align: baseline;
+  vertical-align: top;
+}
+@media screen and (max-width: 1000px) {
+  .assortment .content-wrapper {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
 }
 .assortment .content-wrapper .image_of_assortment {
   width: 780px;
@@ -457,9 +498,21 @@ nav a {
   margin: auto 0;
   margin-top: 29px;
 }
+@media screen and (max-width: 1000px) {
+  .assortment .content-wrapper .image_of_assortment {
+    width: 100%;
+  }
+}
 .assortment .content-wrapper .text-containing-element {
-  margin-left: 40px;
+  margin-left: 90px;
   width: 900px;
+}
+@media screen and (max-width: 1000px) {
+  .assortment .content-wrapper .text-containing-element {
+    text-align: center;
+    width: 100%;
+    margin-left: 2px;
+  }
 }
 .assortment .content-wrapper .text-containing-element .hydrotechnic {
   font-family: "Roboto", sans-serif;
@@ -468,12 +521,22 @@ nav a {
   font-size: 52px;
   color: #000000;
 }
+@media screen and (max-width: 1000px) {
+  .assortment .content-wrapper .text-containing-element .hydrotechnic {
+    font-size: 28px;
+  }
+}
 .assortment .content-wrapper .text-containing-element .paragraph {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   color: #000000;
+}
+@media screen and (max-width: 1000px) {
+  .assortment .content-wrapper .text-containing-element .paragraph {
+    font-size: 14px;
+  }
 }
 
 hr {
@@ -486,6 +549,11 @@ hr {
 .goods_container {
   min-height: 1080px;
   text-align: center;
+}
+@media screen and (max-width: 850px) {
+  .goods_container {
+    display: none;
+  }
 }
 .goods_container .full_assortment {
   font-family: "Roboto", sans-serif;
@@ -556,26 +624,44 @@ hr {
   color: #000000;
 }
 
-.advertise {
+.content {
   min-height: 480px;
-}
-.advertise .content {
   display: flex;
   width: 1140px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 480px;
 }
-.advertise .content .text {
+@media screen and (max-width: 1000px) {
+  .content {
+    flex-direction: column;
+    margin-top: 50px;
+    width: 90%;
+  }
+}
+.content .text {
   width: 50%;
-  float: left;
 }
-.advertise .content .image_container_advertisment .imagecont {
+@media screen and (max-width: 1000px) {
+  .content .text {
+    width: 90%;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.content .image_container_advertisment .imagecont {
   width: 560px;
   height: 320px;
   object-fit: none;
   margin-top: 35px;
+}
+@media screen and (max-width: 1000px) {
+  .content .image_container_advertisment .imagecont {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 5px;
+  }
 }
 
 .news {
@@ -583,11 +669,27 @@ hr {
   margin: 0 auto;
   padding-bottom: 50px;
 }
+@media screen and (max-width: 1000px) {
+  .news {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .news {
+    display: none;
+  }
+}
 .news .first_row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .news .first_row {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 .news .first_row .first_row_card {
   position: relative;
@@ -602,6 +704,13 @@ hr {
 }
 .news .first_row .first_row_card .image_news:hover {
   transform: scale(0.8) translate(-20%, 10%);
+}
+@media screen and (max-width: 1000px) {
+  .news .first_row .first_row_card .image_news {
+    width: 70%;
+    object-fit: none;
+    margin: 0 auto;
+  }
 }
 .news .first_row .first_row_card p {
   position: absolute;
@@ -620,6 +729,13 @@ hr {
   transform: scale(0.8) translate(-20%, 10%);
   opacity: 0.92;
   background-color: white;
+}
+@media screen and (max-width: 1000px) {
+  .news .first_row .first_row_card p {
+    font-size: 22px;
+    left: 30%;
+    padding: 10px;
+  }
 }
 .news .first_row .first_row_card p a {
   text-decoration: none;
@@ -676,20 +792,29 @@ hr {
   padding: 10px;
 }
 
-.advert {
+.vibrating_plates {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 52px;
   color: #000000;
 }
-
-.second_paragraph {
+@media screen and (max-width: 1000px) {
+  .vibrating_plates {
+    font-size: 25px;
+  }
+}
+.vibrating_plates_sub {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   color: #000000;
+}
+@media screen and (max-width: 1000px) {
+  .vibrating_plates_sub {
+    font-size: 15px;
+  }
 }
 
 .map-container {
@@ -740,6 +865,13 @@ footer .footer-wrap {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   padding-bottom: 25px;
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-wrap {
+    grid-template-columns: 100%;
+    width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 footer .footer-wrap .column_of_footer ul {
   line-height: 40px;
@@ -798,7 +930,6 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .category_description {
-  width: 100%;
   background-color: #1a1a1a;
 }
 .category_description .feedback {
@@ -810,6 +941,11 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin: 0 auto;
   text-align: left;
 }
+@media screen and (max-width: 1000px) {
+  .category_description .feedback {
+    width: 100%;
+  }
+}
 .category_description .feedback a {
   text-decoration: none;
   font-size: 45px;
@@ -819,6 +955,11 @@ footer .footer-wrap .column_of_footer_down2 p {
   width: 50%;
   text-align: center;
   transition: 0.3s all;
+}
+@media screen and (max-width: 1000px) {
+  .category_description .feedback a {
+    font-size: 22px;
+  }
 }
 .category_description .feedback a:hover {
   background-color: #505050;
@@ -831,20 +972,39 @@ footer .footer-wrap .column_of_footer_down2 p {
   grid-template-columns: 1.5fr 2fr;
   vertical-align: top;
 }
+@media screen and (max-width: 1000px) {
+  .category_description .category_description_wrapper {
+    width: 100%;
+  }
+}
 .category_description .category_description_wrapper .name_category {
   padding: 20px;
+}
+.category_description .category_description_wrapper .name_category h1 {
+  font-family: "Roboto", sans-serif, bold;
+  color: #EB8A3E;
+}
+@media screen and (max-width: 1000px) {
+  .category_description .category_description_wrapper .name_category h1 {
+    font-size: 15px;
+  }
 }
 .category_description .category_description_wrapper .category_desctiption_p {
   padding: 10px;
 }
-.category_description .category_description_wrapper h1 {
+.category_description .category_description_wrapper .category_desctiption_p h1 {
   font-family: "Roboto", sans-serif, bold;
   color: #EB8A3E;
 }
-.category_description .category_description_wrapper p {
+.category_description .category_description_wrapper .category_desctiption_p p {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   color: white;
+}
+@media screen and (max-width: 1000px) {
+  .category_description .category_description_wrapper .category_desctiption_p p {
+    font-size: 15px;
+  }
 }
 
 .image_product {
@@ -858,12 +1018,23 @@ footer .footer-wrap .column_of_footer_down2 p {
   height: 280px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1000px) {
+  .cards_container {
+    width: 90%;
+  }
+}
 .cards_container .card_of_product {
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
   margin: 25px;
   transition: 0.3s all;
+}
+@media screen and (max-width: 1000px) {
+  .cards_container .card_of_product {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
 }
 .cards_container .card_of_product:hover {
   transform: scale(1.05);
@@ -1001,12 +1172,25 @@ footer .footer-wrap .column_of_footer_down2 p {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
+@media screen and (max-width: 1000px) {
+  .categories_wrapper {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
 .categories_wrapper .categories_wrapper_card {
   width: 500px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
   transition: 0.5s all;
+}
+@media screen and (max-width: 1000px) {
+  .categories_wrapper .categories_wrapper_card {
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
 }
 .categories_wrapper .categories_wrapper_card:hover {
   opacity: 0.8;
@@ -1056,16 +1240,32 @@ footer .footer-wrap .column_of_footer_down2 p {
   grid-template-rows: 110px 280px;
   grid-template-columns: repeat(2, 1fr);
 }
+@media screen and (max-width: 1000px) {
+  .product_card .product_card_description {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+  }
+}
 .product_card .product_card_description h1 {
   color: black;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-weight: 600;
 }
+@media screen and (max-width: 1000px) {
+  .product_card .product_card_description h1 {
+    font-size: 25px;
+  }
+}
 .product_card .product_card_description .first_p {
   font-size: 20px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  .product_card .product_card_description .first_p {
+    font-size: 15px;
+  }
 }
 .product_card .product_card_image {
   position: relative;
@@ -1075,6 +1275,13 @@ footer .footer-wrap .column_of_footer_down2 p {
   width: 550px;
   object-fit: none;
   border: solid 20px #FCB026;
+}
+@media screen and (max-width: 550px) {
+  .product_card .product_card_image .product_image_product {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 .product_card .product_card_image .d11 {
   height: 0;
@@ -1087,6 +1294,11 @@ footer .footer-wrap .column_of_footer_down2 p {
   border-bottom: 450px solid #FCB026;
   border-left: 300px solid transparent;
   border-right: 600px solid transparent;
+}
+@media screen and (max-width: 800px) {
+  .product_card .product_card_image .d11 {
+    display: none;
+  }
 }
 
 .option_and_buy {
@@ -1140,19 +1352,23 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 .form_container form .form_container_wrapper {
   padding: 20px;
-  margin: 0 auto;
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs {
+.form_container form .form_container_wrapper_inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs .input {
+@media screen and (max-width: 850px) {
+  .form_container form .form_container_wrapper_inputs {
+    grid-template-columns: 1fr;
+  }
+}
+.form_container form .form_container_wrapper_inputs .input {
   color: #333333;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   margin: 0 auto;
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs .input input[type=text] {
+.form_container form .form_container_wrapper_inputs .input input[type=text] {
   background-color: #f7fafc;
   border: solid 0.2px grey;
   outline-color: #FCB026;
@@ -1161,15 +1377,15 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs .input input, .form_container form .form_container_wrapper .form_container_wrapper_inputs .input label {
+.form_container form .form_container_wrapper_inputs .input input, .form_container form .form_container_wrapper_inputs .input label {
   display: block;
   text-align: left;
   padding: 5px;
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs .input input sup, .form_container form .form_container_wrapper .form_container_wrapper_inputs .input label sup {
+.form_container form .form_container_wrapper_inputs .input input sup, .form_container form .form_container_wrapper_inputs .input label sup {
   color: #FCB026;
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs .input textarea {
+.form_container form .form_container_wrapper_inputs .input textarea {
   background-color: #f7fafc;
   border: solid 0.2px grey;
   outline-color: #FCB026;
@@ -1178,7 +1394,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
-.form_container form .form_container_wrapper .form_container_wrapper_inputs .input_checkbox {
+.form_container form .form_container_wrapper_inputs .input_checkbox {
   margin: 40px auto;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
@@ -1215,6 +1431,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   min-height: 100vh;
   background-color: #F2F2F2;
   padding: 50px;
+  display: block;
 }
 .basket_container .basket_container_wrapper {
   width: 1140px;
@@ -1412,12 +1629,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
-
 @media (max-width: 1200px) {
   .elements_holder {
-    width: 100%;
+    width: 80%;
   }
 }
+
 .element {
   display: grid;
   grid-template-columns: 550px 1fr 250px;
@@ -1426,6 +1643,16 @@ footer .footer-wrap .column_of_footer_down2 p {
   text-align: center;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  .element {
+    grid-template-columns: 150px 400px 150px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .element {
+    grid-template-columns: 100px 130px 120px;
+  }
 }
 .element .add_product {
   width: 100%;
@@ -1512,10 +1739,20 @@ footer .footer-wrap .column_of_footer_down2 p {
   min-height: 100vh;
   text-align: center;
 }
+@media screen and (max-width: 1000px) {
+  .section_category {
+    width: 100%;
+  }
+}
 .section_category h1 {
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-weight: 600;
+}
+@media screen and (max-width: 1000px) {
+  .section_category h1 {
+    font-size: 28px;
+  }
 }
 .section_category .search_form2 {
   display: grid;
