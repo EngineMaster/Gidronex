@@ -4,7 +4,7 @@
 <section class="section_category">
         <h1>{{$post->title}}</h1>
     <div class="article_container">
-        <img src="https://i.ytimg.com/vi/gsCXBiPWmno/maxresdefault.jpg" alt="" style="width: 500px">
+        <img src="https://i.ytimg.com/vi/gsCXBiPWmno/maxresdefault.jpg" alt="" style="margin: 0 auto; display: flex;align-self: center;width: 400px" >
         <div class="article_container_text">
             <p class="subtitle">{{$post->subtitle}}</p>
             <p class="article1">{{$post->article}}</p>

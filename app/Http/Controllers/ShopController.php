@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Posts;
 use App\Models\Product;
+use App\Models\ProductImages;
 use App\Models\section;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;

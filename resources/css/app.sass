@@ -1,7 +1,6 @@
 body
     margin: 0
     padding: 0
-    overflow-x: hidden
 
 $font-stack: 'Roboto', sans-serif
 $main-color: #FCB026
@@ -93,6 +92,8 @@ nav
             margin-left: 135px
             margin-top: 10px
             margin-bottom: 10px
+            @media screen and (max-width: 1000px)
+                margin-left: 0
 
     .contacts
         display: flex
@@ -179,11 +180,14 @@ nav
         width: 100%
         transform: translateX(100%)
         transition: transform 0.5s ease-in-out
+        a
+            padding: 40px
+            font-size: 50px
     .burger
         display: block
 
 .nav-active
-    transform: translateX(0%)
+    transform: translateX(50%)
 
 .basket_empty
     font-size: 25px
@@ -196,6 +200,8 @@ nav
     justify-content: space-around
     padding: 40px
     vertical-align: baseline
+    @media screen and (max-width: 1000px)
+        width: 90%
 
 .products_and_goods
     min-height: 250px
@@ -460,7 +466,7 @@ hr
 .goods_container
     min-height: 1080px
     text-align: center
-    @media screen and (max-width: 850px)
+    @media screen and (max-width: 1000px)
         display: none
     .full_assortment
         font-family: $font-stack
@@ -528,6 +534,7 @@ hr
     margin: 0 auto
     justify-content: center
     align-items: center
+    flex-basis: auto
     @media screen and (max-width: 1000px)
         flex-direction: column
         margin-top: 50px
@@ -540,6 +547,10 @@ hr
             margin: 0 auto
             text-align: center
     .image_container_advertisment
+        @media screen and (max-width: 1000px)
+            display: flex
+            align-self: center
+            margin-top: 30px
         .imagecont
             width: 560px
             height: 320px
@@ -552,20 +563,16 @@ hr
 
 .news
     width: 1140px
-    margin: 0 auto
+    margin: 50px auto
     padding-bottom: 50px
     @media screen and (max-width: 1000px)
-        width: 100%
-    @media screen and (max-width: 500px)
-        display: none
+        width: 90%
+        background-color: #F2F2F2
     .first_row
-        display: grid
-        grid-template-columns: repeat(2, 1fr)
-        grid-gap: 15px
+        display: flex
+        justify-content: space-around
+        align-items: stretch
         text-align: center
-        @media screen and (max-width: 1000px)
-            grid-template-columns: repeat(1, 1fr)
-            grid-template-rows: repeat(2, 1fr)
         .first_row_card
             position: relative
             text-align: center
@@ -578,7 +585,7 @@ hr
                 &:hover
                     transform: scale(0.8) translate(-20%, 10%)
                 @media screen and (max-width: 1000px)
-                    width: 70%
+                    width: 100%
                     object-fit: none
                     margin: 0 auto
             p
@@ -666,7 +673,7 @@ hr
         font-size: 20px
         color: #000000
         @media screen and (max-width: 1000px)
-            font-size: 15px
+            font-size: 14px
 
 .map-container
     height: 500px
@@ -698,6 +705,8 @@ input[type=text], input[type=textarea]
     background: rgba(235, 138, 62, 0.46)
     border: 0
     margin-top: 57px
+    @media screen and (max-width: 1000px)
+        width: 80%
 
 
 footer
@@ -705,6 +714,8 @@ footer
     background-color: $black-color
     padding: 80px
     z-index: 101
+    @media screen and (max-width: 1000px)
+        display: none
     .footer-wrap
         width: 1200px
         margin: 0 auto
@@ -828,13 +839,16 @@ footer
     height: 250px
     padding: 2em
     margin: 0 auto
+    @media screen and (max-width: 1000px)
+        height: 50%
+        width: 100%
 
 .cards_container
     width: 1140px
     height: 280px
     margin: 0 auto
     @media screen and (max-width: 1000px)
-        width: 90%
+        width: 80%
     .card_of_product
         display: grid
         grid-template-columns: 1fr 2fr
@@ -855,10 +869,16 @@ footer
                 h2
                     font-family: $font-stack
                     font-size: 60px
+                    @media screen and ( max-width: 1000px)
+                        font-size: 25px
+                        text-align: center
+                        padding: 10px
                 p
                     font-size: 30px
                     color: darkgrey
                     font-family: $font-stack
+                    @media screen and ( max-width: 1000px)
+                        font-size: 13px
             .lower_menu
                 text-align: center
                 background-color: $black-color
@@ -869,6 +889,10 @@ footer
                 font-family: $font-stack
                 font-weight: 500
                 margin-bottom: 0
+                @media screen and (max-width: 1000px)
+                    display: flex
+                    flex-direction: column
+
                 .add_product_cat
                     width: 100%
                     background-color: $main-color
@@ -881,6 +905,8 @@ footer
                     padding: 1em 2em
                 .category_name
                     padding: 1em 2em
+                    @media screen and (max-width: 1000px)
+                        display: none
                 .btn_product_select
                     min-height: 100%
                     background-color: $main-color
@@ -890,6 +916,8 @@ footer
                     transition: 0.3s all
                     &:hover
                         background-color: #e67e00
+                    @media screen and (max-width: 1000px)
+                        width: 100%
                     a
                         color: white
                         text-decoration: none
@@ -986,6 +1014,8 @@ footer
                 padding: 1em
                 font-size: 30px
                 font-family: $font-stack
+                @media screen and (max-width: 1000px)
+                    text-align: center
             .btn_check_category
                 font-size: 35px
                 font-family: $font-stack
@@ -1033,9 +1063,9 @@ footer
             width: 550px
             object-fit: none
             border: solid 20px $main-color
-            @media screen and (max-width: 550px)
-                height: 200px
-                width: 300px
+            @media screen and (max-width: 1000px)
+                height: 100%
+                width: 100%
                 margin: 0 auto
         .d11
             height: 0
@@ -1064,6 +1094,8 @@ footer
         size: 16px
         family: $font-stack
         weight: 300
+    @media screen and (max-width: 700px)
+        margin-top: 40px
 
 
 .submit_button
@@ -1092,9 +1124,13 @@ footer
         font-weight: 700
         font-family: $font-stack
         font-size: 60px
+        @media screen and (max-width: 1000px)
+            font-size: 28px
     .form_container_wrapper
         max-width: 920px
         margin: 0 auto
+        @media screen and (max-width: 920px)
+            max-width: 90%
     hr
         width: 100%
     form
@@ -1114,10 +1150,12 @@ footer
                         background-color: #f7fafc
                         border: solid 0.2px grey
                         outline-color: $main-color
-                        margin-top: 0
                         font-size: 20px
                         font-family: $font-stack
                         font-weight: 500
+                        margin: 0 auto
+                        @media screen and (max-width: 500px)
+                            font-size: 14px
                     input, label
                         display: block
                         text-align: left
@@ -1138,6 +1176,8 @@ footer
                     font-family: $font-stack
                     font-weight: 500
                     width: 85%
+                    @media screen and (max-width: 600px)
+                        font-size: 13px
         input[type=submit]
             padding: 15px
             background-color: $main-color
@@ -1153,6 +1193,12 @@ footer
             transition: 0.4s all
             &:hover
                 background-color: #fcba03
+            @media screen and (max-width: 850px)
+                width: 80%
+                font-size: 15px
+                text-align: center
+            @media screen and (max-width: 300px)
+                font-size: 8px
         p
             color: grey
             margin: 50px
@@ -1160,6 +1206,8 @@ footer
                 size: 12px
                 weight: 100
                 family: $font-stack
+            @media screen and (max-width: 550px)
+                margin: 5px
 
 
 .basket_container
@@ -1168,9 +1216,11 @@ footer
     background-color: #F2F2F2
     padding:  50px
     display: block
-    .basket_container_wrapper
+    &_wrapper
         width: 1140px
         margin: 0 auto
+        @media screen and (max-width: 1000px)
+            width: 90%
         .basket_container_search
             padding: 10px
             .search_form
@@ -1194,6 +1244,8 @@ footer
                         text-align: left
                         padding: 5px
                         width: 450px
+                        @media screen and (max-width: 1000px)
+                            width: 90%
                     button
                         float: left
                         height: 100px
@@ -1215,6 +1267,10 @@ footer
             display: grid
             grid-template-columns: repeat(2,550px)
             grid-column-gap: 20px
+            @media screen and (max-width: 1000px)
+                grid-template-columns: repeat(1,450px)
+            @media screen and (max-width: 500px)
+                grid-template-columns: repeat(1,250px)
             .basket_count
                 background-color: orange
                 height: 100px
@@ -1225,6 +1281,8 @@ footer
                 background-color: orange
                 height: 100px
                 padding: 10px
+                @media screen and (max-width: 1000px)
+                    margin-top: 40px
                 p
                     font-size: 30px
     .basket_container_products
@@ -1342,7 +1400,7 @@ footer
     font-family: $font-stack
     text-align: center
     @media (max-width: 1200px)
-        width: 80%
+        width: 100%
 
 
 
@@ -1356,9 +1414,7 @@ footer
     font-size: 18px
     font-family: $font-stack
     @media screen and (max-width: 1000px)
-        grid-template-columns: 150px 400px 150px
-    @media screen and (max-width: 1000px)
-        grid-template-columns: 100px 130px 120px
+        grid-template-columns: 40% 30% 30%
     .add_product
         width: 100%
         height: 60px
@@ -1389,6 +1445,8 @@ footer
         &:hover
             background-color: white
             color: black
+        @media screen and (max-width: 768px)
+            font-size: 10px
     .add_product_check
         width: 100%
         height: 100%
@@ -1404,6 +1462,8 @@ footer
         &:hover
             background-color: black
             color: white
+        @media screen and (max-width: 768px)
+            font-size: 10px
 
 
 
@@ -1447,7 +1507,7 @@ footer
         font-size: 40px
         font-weight: 600
         @media screen and (max-width: 1000px)
-            font-size: 28px
+            font-size: 22px
     .search_form2
         display: grid
         grid-template-rows: 1fr 1fr
@@ -1471,16 +1531,19 @@ footer
                 color: white
     .article_container
         display: grid
-        grid-template-columns: repeat(2,1fr)
-        padding: 40px
+        grid-template-columns: repeat(2, 40%)
+        padding: 20px
         background-color: #F2F2F2
-        .article_container_text
+        @media screen and (max-width: 1140px)
+            grid-template-columns: 1fr
+            width: 80%
+            margin: 0 auto
+        &_text
             display: grid
             grid-template-rows: repeat(3,1fr)
             .subtitle
                 font-size: 30px
                 font-family: $font-stack
-                overflow: hidden
             .article1
                 line-height: normal
                 font-size: 12px
@@ -1605,6 +1668,8 @@ footer
     font-family: $font-stack
     font-size: 25px
     font-weight: 500
+    @media screen and (max-width: 1000px)
+        width: 50%
     .cross_to_close
         position: absolute
         right: 15px
@@ -1648,6 +1713,8 @@ footer
         font-size: 40px
         padding: 0
         margin: 0
+        @media screen and (max-width: 1000px)
+            font-size: 24px
     .post_card
         box-shadow: 0 0 10px rgba(5,5,5,0.5)
         width: 800px
@@ -1656,33 +1723,42 @@ footer
         grid-template-columns: 0.5fr 1fr
         background-color: $main-color
         margin-top: 20px
-        transform: translate(-50%, -50%)
-    .post_card_title
-        display: grid
-        grid-template-rows: repeat(3,1fr)
-        text-align: center
-        p
-            color: white
-            font-size: 20px
-            font-family: $font-stack
-            font-weight: 500
-        .post_card_subtitle
-            color: grey
-            font-size:  15px
-            font-family: $font-stack
-            font-weight: 500
-        a
-            background-color: black
-            text-decoration: none
-            color: white
-            width: 100%
-            padding: 20px
-            font-size: 25px
-            font-family: $font-stack
-            font-weight: 700
-            margin-top: 20px
-            transition: 0.5s all
-            &:hover
-                background-color: white
-                color: black
-                transform: scale3d(10 2 0 )
+        position: relative
+        @media screen and (max-width: 1000px)
+            width: 60%
+        &_title
+            display: grid
+            grid-template-rows: repeat(3,1fr)
+            text-align: center
+            p
+                color: white
+                font-size: 20px
+                font-family: $font-stack
+                font-weight: 500
+                @media screen and (max-width: 768px)
+                    font-size: 15px
+            .post_card_subtitle
+                color: grey
+                font-size:  15px
+                font-family: $font-stack
+                font-weight: 500
+                @media screen and (max-width: 768px)
+                    font-size: 11px
+            a
+                background-color: black
+                text-decoration: none
+                color: white
+                width: 100%
+                padding: 20px
+                font-size: 25px
+                font-family: $font-stack
+                font-weight: 700
+                margin-top: 20px
+                transition: 0.5s all
+                &:hover
+                    background-color: white
+                    color: black
+        &_image
+            object-fit: fill
+            width: 80%
+            transform: translate(10%, 60%)

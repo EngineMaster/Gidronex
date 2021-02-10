@@ -13,5 +13,9 @@ class Product extends Model
         return $this->belongsTo(section::class);
     }
 
+    public function images(){
+        return $this->hasMany(ProductImages::class);
+    }
+
 
 }

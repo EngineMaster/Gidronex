@@ -5,7 +5,7 @@
     <hr>
     @foreach($posts as $post)
         <div class="post_card">
-            <img src="https://i.ytimg.com/vi/gsCXBiPWmno/maxresdefault.jpg" alt="" style="height: 100%">
+            <img src="https://i.ibb.co/6P6GsQZ/Component-1.png" alt="" class="post_card_image">
             <div class="post_card_title">
                 <p>
                     {{$post->title}}

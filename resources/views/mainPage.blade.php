@@ -86,56 +86,6 @@
                     </div>
                 </li>
                 @endforeach
-                <li>
-                    <div class="card"><img src="https://tri-kita.su/upload/iblock/14f/14fa6a4406556fd07d78ae2f40bf5352.jpg" alt="" class="card-image">
-                        <div class="description">Запчасти на экскаваторы ЭО и ЕК</div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://cdn1.leksakscity.se/2368/siku-liebherr-kabelkran-med-larvband-3536-1-50.jpg" alt="" class="card-image">
-                        <div class="description">Запчасти на драглайны ЭО</div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://images.esellerpro.com/2489/I/142/lrgscalePS-7010.jpg" alt="" class="card-image">
-                        <div class="description">Фильтры</div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://gear24.ru/wp-content/uploads/2020/04/SH11CR.jpg" alt="" class="card-image">
-                        <div class="description">Гидромоторы, гидронасосы, гидроцилиндры</div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://img.cataloxy.ru/upload/board/900/9276/gidromolot-delta-fx-30s_92754570.jpg" alt="" class="card-image">
-                        <div class="description">Гидромолоты и гидробуры</div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://s.alicdn.com/@sc01/kf/HTB1mLyoXKL2gK0jSZPhq6yhvXXa8/Fine-Quality-Floating-Oil-Seal-Used-for.jpg" alt="" class=" card-image">
-                        <div class="description">Уплотнения для гидроцилиндров </div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://gmgc.ru/wp-content/uploads/2018/02/DSC_0890_1-600x600.jpg" alt="" class="card-image">
-                        <div class="description">Гидроаппаратура </div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="card"><img src="https://spec-centr.ru/upload/iblock/3b2/3b2d54cab72a7579d6aef376949325c9.png" alt="" class="card-image">
-                        <div class="description">Виброплиты и вибротромбовки</div>
-                        <button class="btn_buy_product"><a href="/">Смотреть</a></button>
-                    </div>
-                </li>
-            </ul>
-        </div>
 </section>
 
     <section class="content">
@@ -156,10 +106,10 @@
             <img src="https://sun9-28.userapi.com/impf/5JapmwiFKg2RY5Mem6kJxYvk_NxE42PQfojogw/N2M3MZwubko.jpg?size=1000x799&quality=96&proxy=1&sign=fb9f8c68f41b4f188a4eb7371d443437&type=album" alt="excavator" class="image_news">
             <p><a href="{{route('posts')}}">Новости</a></p>
         </div>
-        <div class="first_row_card">
+        <!--<div class="first_row_card">
             <img src="https://media.istockphoto.com/photos/vibratory-plate-picture-id872652728?k=6&m=872652728&s=612x612&w=0&h=dcEwlo7Ce0_wATKLZxb51x7RMr6Lc7A8Nex87ALvyz0=" alt="" class="image_news">
-            <p><a href="{{route('posts')}}">Статьи</a></p>
-        </div>
+            <p><a href="//route('posts')}}">Статьи</a></p>
+        </div>-->
     </div>
 </section>
 
