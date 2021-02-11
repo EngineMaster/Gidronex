@@ -2102,7 +2102,13 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-size: 20px;
   margin: 20px auto;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 2px;
+}
+@media screen and (max-width: 768px) {
+  .alert-danger {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .success {
