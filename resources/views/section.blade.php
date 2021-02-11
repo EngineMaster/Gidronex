@@ -1,7 +1,6 @@
-
 @extends('includes.head')
-
     @include('includes.header')
+
 <body>
 <section class="section_category">
                 <h1>{{$sections->name}}</h1>

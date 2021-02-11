@@ -4,7 +4,7 @@
 
 <div class="basket_container">
     <div class="basket_container_wrapper">
-        <div class="basket_container_search">
+        <div class="basket_container_wrapper_search">
             <div class="basket_container_sum">
                 <div class="basket_count">
                     <p>Сумма заказа</p>
@@ -49,8 +49,6 @@
                         <li class="table_basket">
                             Сумма
                         </li>
-                        <li class="table_basket" ></li>
-                        <li class="table_basket"></li>
                     @foreach($items as $item)
                         <li>
                             {{$item->name}}
