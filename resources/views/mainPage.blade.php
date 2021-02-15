@@ -22,7 +22,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
-<body>
+<body onload=" myFunction()">
+
+<div id="loader-42">
+
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
 <section class="container_mainpage">
    @include('includes.header')
 
@@ -133,6 +139,7 @@
 @include('cookieConsent::index')
 </section>
 @include('includes.footer')
+</div>
 <script>
     window.onscroll = function() {myFunction()};
 
@@ -169,6 +176,20 @@
         interval: 2000,
         cover: true,
     } ).mount();
+</script>
+
+<script>
+    var myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 1200);
+    }
+
+    function showPage() {
+        document.getElementById("myDiv").style.display = "block";
+        document.getElementById("loader-42").style.display = "none";
+
+    }
 </script>
 <script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>
 

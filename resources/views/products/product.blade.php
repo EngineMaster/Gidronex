@@ -8,7 +8,7 @@
             <p class="first_p">{{$product->description}}</p>
          </div>
          <div class="product_card_image">
-             <img src="{{$product->image}}" alt="product_image" class="product_image_product">
+             <img src="{{$product->image_product}}" alt="product_image" class="product_image_product">
              <div class="d11">
                  <!-- https://www.dksh.com/media/660/562/js305-1000.jpg -->
 

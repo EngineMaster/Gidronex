@@ -50,10 +50,34 @@
     </form>
 
     @if(session()->has('message'))
-        <ul>
+        <div class="overlay">
+            <p class="cross_to_close" style="z-index: 3">
+            </p>
+
+        </div>
+        <ul class="success_message_contact">
             <li>{{ session()->get('message') }}</li>
         </ul>
 
     @endif
 
 </div>
+
+<script>
+        // your code
+    let overlay = document.querySelector('overlay');
+
+    overlay.onclick = function () {
+        overlay.classList.add('.hide');
+    }
+
+
+</script>
+<script>
+    document.querySelector('.overlay').onclick = function () {
+        let successMessage = document.querySelector('.success_message_contact');
+        let overlay = document.querySelector('.overlay');
+        successMessage.classList.add('hide');
+        overlay.classList.add('hide');
+    };
+</script>

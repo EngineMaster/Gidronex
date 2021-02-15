@@ -1,5 +1,10 @@
 @extends('includes.head')
 @include('includes.header')
+<body onload=" myFunction()">
+<div id="loader-42">
+
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
     <section class="categories_wrapper">
             @foreach($categories as $category)
                 <div class="categories_wrapper_card">
@@ -35,5 +40,20 @@
         } else {
             header.classList.remove('sticky');
         }
+    }
+</script>
+</div>
+
+<script>
+    var myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 1200);
+    }
+
+    function showPage() {
+        document.getElementById("myDiv").style.display = "block";
+        document.getElementById("loader-42").style.display = "none";
+
     }
 </script>

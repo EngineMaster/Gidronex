@@ -35,24 +35,6 @@ class ShopController extends Controller
         return view('contact');
     }
 
-    public function test(Request $request){
-        //{
-            //$minutes = 20;
-        //$response = new Response('Hello World');
-        //$response->withCookie(cookie('sessionIds', 'virat', $minutes));
-        //dd($response);
-        //}
-        $lg = (isset($_COOKIE['sessionIds'])) ? $_COOKIE['sessionIds'] : 'ro'; ;
-        if(!isset($_COOKIE['sessionIds'])) {
-            setcookie('sessionIds', 'ro');
-            $value = stripslashes($_COOKIE['sessionIds']);
-            return redirect()->with($value);
-        }
-        else{
-
-
-    }
-    }
 
     public function testPost(Request $request){
         $request->session()->regenerate();
@@ -77,7 +59,7 @@ class ShopController extends Controller
             'social_networking'=>$request->input('social_networking'),
         ]);
         DB::table('clients_feedback')->insert($insert);
-         return redirect()->back()->with('message','success');
+         return redirect()->back()->with('message','Ваше сообщение отправлено. В ближайшее время с вамя свяжется наш сотрудник. Спасибо что выбрали нас!');
 }
 
 
