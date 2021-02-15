@@ -18,11 +18,15 @@
             type="text/javascript">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 <body>
 <section class="container_mainpage">
    @include('includes.header')
+
+    <!--
     <div class="splide" >
         <div class="splide__track">
             <ul class="splide__list">
@@ -30,9 +34,17 @@
                 <li class="splide__slide"><img src="https://sun9-43.userapi.com/impf/pZmQzeRNUx9EdGq37bPJ-BrhQo-itNDHkNRfpg/bMV8b_LYSBQ.jpg?size=1280x628&quality=96&sign=768d54c145a52325dd2681994ee9cc14" alt=""  style="object-fit: cover ;height: 35rem;background-repeat: no-repeat;background-position: center center"></li>
             </ul>
         </div>
-    </div>
+    </div> -->
+
     <div class="black_banner">
+        <div class="wrappy">
+            <h3>Надежность в каждой детали </h3>
+            <p>
+                <span class="wrappy_orange"> Gidronex </span> - Ваш лучший выбор
+            </p>
+        </div>
     </div>
+
 </section>
 
 <section class="products_and_goods">

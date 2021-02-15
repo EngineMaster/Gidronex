@@ -49,6 +49,8 @@
                         <li class="table_basket">
                             Сумма
                         </li>
+                        <li class="table_basket"></li>
+                        <li class="table_basket"></li>
                     @foreach($items as $item)
                         <li>
                             {{$item->name}}

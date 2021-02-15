@@ -37,23 +37,46 @@ nav
 .container_mainpage
     position: relative
     border-bottom: 25px solid $main-color
+    background-image: url("https://sun9-43.userapi.com/impf/pZmQzeRNUx9EdGq37bPJ-BrhQo-itNDHkNRfpg/bMV8b_LYSBQ.jpg?size=1280x628&quality=96&sign=768d54c145a52325dd2681994ee9cc14")
+    background-position: center
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: cover
+    height: 932px
     .black_banner
-        max-width: 70rem
+        max-width: 100rem
         height: 320px
         top: 50%
-        left: 0
+        left: 50%
+        transform: translate(-50% , -50%)
         position: absolute
         background: rgba(51, 51, 51, 0.85)
         .wrappy
+            width: 90%
+            margin: 0 auto
             display: grid
+            padding: 40px
             grid-template-rows: 150px 150px
+            text-align: center
+            h3
+                font-family: 'Russo One', sans-serif
+                font-size: 40px
+                color: #ffffff
+                font-weight: 400
+                text-transform: uppercase
             p
                 font-family: $font-stack
-                padding: 3rem 7rem
                 font-style: normal
-                font-weight: 600
-                font-size: 45px
+                font-weight: 400
+                font-size: 32px
                 color: #ffffff
+                .wrappy_orange
+                    font-family: $font-stack
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 32px
+                    color: $main-color
+
 
 .splide__slide
     background-image: url("https://images7.alphacoders.com/932/thumb-1920-932803.jpg")
@@ -108,7 +131,7 @@ nav
                 position: fixed
                 right: 0
                 height: 92vh
-                top: 10vh
+                top: 8.3vh
                 background-color: $main-color
                 flex-direction: column
                 align-items: center
@@ -212,6 +235,8 @@ nav
             font-size: 48px
             line-height: 56px
             color: #000000
+            @media screen and ( max-width: 768px)
+                font-size: 32px
         p
             font-family: $font-stack
             font-style: normal
@@ -220,6 +245,8 @@ nav
             line-height: 28px
             text-align: center
             color: #000000
+            @media screen and (max-width: 768px)
+                font-size: 19px
         .btn_shopping_details2
             width: 350px
             height: 45px
@@ -346,9 +373,9 @@ nav
     .wrapping
         display: flex
         margin: 15px auto
-        justify-content: space-around
+        justify-content: center
         width: 1140px
-        align-items: stretch
+        align-items: flex-end
         @media screen and (max-width: 1000px)
             flex-direction: column
             width: 100%
@@ -369,6 +396,7 @@ nav
                 font-weight: bold
                 font-size: 64px
                 line-height: 75px
+                padding: 0
                 color: #000000
                 @media screen and (max-width: 1000px)
                     font-size: 40px
@@ -931,6 +959,8 @@ footer
     .form_confirm_wrap
         width: 800px
         margin: 0 auto
+        @media screen and (max-width: 1024px)
+            width: 80%
         .form-confirm
             display: grid
             grid-template-columns: repeat(1,1fr)
@@ -1073,7 +1103,7 @@ footer
             border-bottom: 450px solid $main-color
             border-left:  300px solid transparent
             border-right: 600px solid transparent
-            @media screen and (max-width: 800px)
+            @media screen and (max-width: 960px)
                 display: none
 
 
@@ -1141,7 +1171,7 @@ footer
                     font-family: $font-stack
                     font-weight: 600
                     margin: 0 auto
-                    input[type=text]
+                    input[type=text], input[type=tel], input[type=tel], input[type=email]
                         background-color: #f7fafc
                         border: solid 0.2px grey
                         outline-color: $main-color
@@ -1305,9 +1335,6 @@ footer
                 grid-template-columns: 1.2fr 0.8fr 1fr 1fr 1fr 1fr
                 padding: 10px
                 @media screen and (max-width: 1024px)
-                    min-height: 200px
-                    grid-template-columns: 30% 20% 50%
-                @media screen and (max-width: 1024px)
                     grid-template-columns: 1fr
                 li
                     background-color: white
@@ -1318,7 +1345,8 @@ footer
                     padding: 20px
                     border: 1px solid $main-color
                     &:nth-child(4)
-                        display: none
+                        @media screen and (max-width: 768px)
+                            display: none
                 .item_delete
                     display: grid
                     padding: 0
@@ -1707,6 +1735,23 @@ footer
             transform: rotate(45deg)
         &:after
             transform: rotate(-45deg)
+    .add_product_check
+        width: 100%
+        height: 100%
+        background-color: white
+        color: black
+        border: none
+        cursor: pointer
+        transition: 0.45s all
+        font:
+            size: 25px
+            weight: 600
+            family: $font-stack
+        &:hover
+            background-color: black
+            color: white
+        @media screen and (max-width: 768px)
+            font-size: 10px
 
 .alert-success
     background-color: black

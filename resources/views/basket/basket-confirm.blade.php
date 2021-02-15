@@ -35,10 +35,13 @@
         <div class="form_confirm_wrap">
     <form action="{{route('basket-confirm')}}" method="post" class="form-confirm"  >
         <h3 style="margin: 0 auto; padding: 0">Заполните поля</h3>
-        <label for="name">Имя</label><input type="text" name="name" required><br>
-        <label for="email">E-mail</label><input type="text" name="email" required><br>
-        <label for="phone">Номер Телефона</label><input type="text" name="phone" required><br>
-        <input type="checkbox" name="checkbox"><label for="checkbox" class="checkboxy" required>Даю согласие на обработку персональных данных</label>
+            <label for="name">Имя</label>
+        <input type="text" name="name" required><br>
+            <label for="email">E-mail</label>
+        <input type="text" name="email" required><br>
+            <label for="phone">Номер Телефона</label><input type="text" name="phone" required><br>
+        <input type="checkbox" name="checkbox" required>
+            <label for="checkbox" class="checkboxy">Даю согласие на обработку персональных данных</label>
         <button type="submit" class="">Подтвердить</button>
         @csrf
     </form>
