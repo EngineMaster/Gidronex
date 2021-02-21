@@ -58,6 +58,13 @@ nav a {
   position: absolute;
   background: rgba(51, 51, 51, 0.85);
 }
+@media screen and (max-width: 768px) {
+  .container_mainpage .black_banner {
+    max-width: 80%;
+    margin: 0 auto;
+    z-index: -2;
+  }
+}
 .container_mainpage .black_banner .wrappy {
   width: 90%;
   margin: 0 auto;
@@ -72,6 +79,11 @@ nav a {
   color: #ffffff;
   font-weight: 400;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .container_mainpage .black_banner .wrappy h3 {
+    font-size: 22px;
+  }
 }
 .container_mainpage .black_banner .wrappy p {
   font-family: "Roboto", sans-serif;
@@ -142,6 +154,7 @@ nav a {
 .navbar_wrapper_nav_links {
   list-style-type: none;
   display: flex;
+  justify-content: flex-start;
 }
 @media screen and (max-width: 1024px) {
   .navbar_wrapper_nav_links {
@@ -168,6 +181,10 @@ nav a {
     opacity: 0;
     padding: 20px;
     font-size: 26px;
+    text-align: center;
+  }
+  .navbar_wrapper_nav_links li:nth-child(4) {
+    display: none;
   }
 }
 .navbar_wrapper_nav_links li a {
@@ -253,11 +270,13 @@ nav a {
 @media screen and (max-width: 1024px) {
   .basket_empty {
     width: 450px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 768px) {
   .basket_empty {
     width: 250px;
+    margin: 0 auto;
   }
 }
 
@@ -395,6 +414,10 @@ nav a {
   line-height: 41px;
   color: #FFFFFF;
   text-decoration: none;
+  transition: 0.3s all;
+}
+.btn_about_us a:hover {
+  color: black;
 }
 
 .btn_shopping_details a {
@@ -415,6 +438,14 @@ nav a {
   line-height: 41px;
   color: #FFFFFF;
   text-decoration: none;
+}
+.btn-assortment a:hover {
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .btn-assortment a:hover {
+    font-size: 22px;
+  }
 }
 
 .btn_buy_product {
@@ -737,14 +768,15 @@ hr {
 }
 @media screen and (max-width: 1000px) {
   .news {
-    width: 90%;
+    width: 80%;
+    margin: 0 auto;
     background-color: #F2F2F2;
   }
 }
 .news .first_row {
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   text-align: center;
 }
 .news .first_row .first_row_card {
@@ -1280,7 +1312,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 1000px) {
   .categories_wrapper {
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 90%;
   }
 }
 .categories_wrapper .categories_wrapper_card {
@@ -1304,6 +1336,11 @@ footer .footer-wrap .column_of_footer_down2 p {
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_image {
   width: 245px;
   height: 283px;
+}
+@media screen and (max-width: 768px) {
+  .categories_wrapper .categories_wrapper_card .categories_wrapper_card_image {
+    width: 100%;
+  }
 }
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part {
   display: grid;
@@ -1609,14 +1646,17 @@ footer .footer-wrap .column_of_footer_down2 p {
   justify-items: baseline;
 }
 .basket_container_wrapper_search .search_form .search_form_input {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: first baseline;
-  vertical-align: bottom;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1024px) {
   .basket_container_wrapper_search .search_form .search_form_input {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
 .basket_container_wrapper_search .search_form .search_form_input input[type=text] {
@@ -1672,12 +1712,12 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 @media screen and (max-width: 1024px) {
   .basket_container_wrapper .basket_container_sum {
-    grid-template-columns: repeat(1, 450px);
+    grid-template-columns: repeat(1, 100%);
   }
 }
 @media screen and (max-width: 768px) {
   .basket_container_wrapper .basket_container_sum {
-    grid-template-columns: repeat(1, 250px);
+    grid-template-columns: repeat(1, 100%);
   }
 }
 .basket_container_wrapper .basket_container_sum .basket_count {
@@ -2341,15 +2381,29 @@ footer .footer-wrap .column_of_footer_down2 p {
   left: 0;
 }
 
+.box {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 1px solid currentcolor;
+  border-radius: 3px;
+  font-size: 30px;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 0.25em;
+  color: #fcba03;
+  vertical-align: top;
+  transition: 0.3s color, 0.3s border, 0.3s transform, 0.3s opacity;
+}
+
 #loader-42 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fcba03;
+  transform: translate(-80%, -50%);
   width: 100px;
-  height: 30px;
-  border: 0.05em #FCB026 solid;
+  height: 20px;
+  border: 0.05em black solid;
   border-radius: 0.1em;
   background: #FCB026;
   background-size: 1em 2em;
@@ -2359,12 +2413,14 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 @keyframes loader-42 {
   0% {
+    opacity: 0.5;
     background-position: 0 0;
-    opacity: 0;
+    transform-style: preserve-3d;
   }
   100% {
-    background-position: -2em 0;
+    transform-style: preserve-3d;
     opacity: 1;
+    background-position: -2em 0;
   }
 }
 

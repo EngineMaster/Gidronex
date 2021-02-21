@@ -1,9 +1,7 @@
 @extends('includes.head')
 @include('includes.header')
 <body onload=" myFunction()">
-<div id="loader-42">
-
-</div>
+<div id="loader-42"></div>
 <div style="display:none;" id="myDiv" class="animate-bottom">
     <section class="categories_wrapper">
             @foreach($categories as $category)
@@ -24,7 +22,7 @@
 
 
 <script>
-    window.onscroll = function() {myFunction()};
+    window.onscroll = function() {myFunction2()};
 
     //
     //  the header
@@ -34,7 +32,7 @@
     var sticky = header.offsetTop;
 
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
+    function myFunction2() {
         if (window.pageYOffset > sticky) {
             header.classList.add('sticky');
         } else {

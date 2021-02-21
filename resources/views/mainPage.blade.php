@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/app.css') }} " />
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -140,25 +139,8 @@
 </section>
 @include('includes.footer')
 </div>
-<script>
-    window.onscroll = function() {myFunction()};
-
-    //
-    //  the header
-    var header = document.querySelector('.navbar');
-
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-    }
-</script>
+</body>
+</html>
 <script>
     new Splide( '.splide', {
         type     : 'loop',
@@ -177,7 +159,25 @@
         cover: true,
     } ).mount();
 </script>
+<script>
+    window.onscroll = function() {myFunction2()};
 
+    //
+    //  the header
+    var header = document.querySelector('.navbar');
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction2() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    }
+</script>
 <script>
     var myVar;
 
@@ -186,13 +186,11 @@
     }
 
     function showPage() {
-        document.getElementById("myDiv").style.display = "block";
         document.getElementById("loader-42").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+
 
     }
 </script>
 <script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>
 
-
-</body>
-</html>

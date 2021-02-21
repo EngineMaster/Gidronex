@@ -1,10 +1,8 @@
 
 @extends('includes.head')
-
 <div class="container_category">
     @include('includes.header')
 </div>
-
 @isset($category)
 <div class="category_description">
     <div class="feedback">
@@ -36,7 +34,6 @@ thumb_up_alt
             @endisset
             @endisset
 </div>
-
 
 <script>
     window.onscroll = function() {myFunction()};
