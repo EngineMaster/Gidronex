@@ -17,6 +17,7 @@ class CreateSectionsTable extends Migration
             $table->id();
             $table->integer('category_id');
             $table->text('name');
+            $table->text('img');
             $table->timestamps();
         });
     }

@@ -1,6 +1,6 @@
 @include('includes.head')
 <div class="card_of_product">
-    <img src="{{$prod->image}}" alt="product_image" class="image_product">
+    <img src="{{$prod->img}}" alt="product_image" class="image_product">
     <div class="product_layer">
         <div class="upper_menu">
             <h2>{{$prod->name}}</h2>
