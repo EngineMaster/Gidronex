@@ -10,9 +10,7 @@ class Category extends Model
     use HasFactory;
 
     public function products(){
-        return $this->hasManyThrough(Product::class, section::class);
+        return $this->hasMany(Product::class);
     }
-    public function sections(){
-        return $this->hasMany(section::class);
-    }
+
 }

@@ -13,7 +13,7 @@
                     </button>
             </form>
     <div class="elements_holder">
-            @foreach($sections->products as $product)
+            @foreach($produs as $product)
                         <div class="element">
                             <p>{{$product->name}}</p>
 
@@ -21,7 +21,7 @@
                                 <input type="submit" value="Добавить" class="add_product2">
                                 @csrf
                             </form>
-                            <a href="{{route('product',[$product->category->id,$product->category->id,$product->name])}}"><button class="add_product_check">Смотреть</button></a>
+                            <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">Смотреть</button></a>
                         </div>
             @endforeach
     </div>

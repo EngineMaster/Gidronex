@@ -71,26 +71,26 @@ class ShopController extends Controller
     public function categories(){
         if (!isset($_COOKIE['sessionIds'])) {setcookie('sessionIds',uniqid());}
         $orderId = $_COOKIE['sessionIds'];
-        $categories = Category::get();
-        $sections = section::all();
-        return view('categories', compact('categories','sections','orderId'));
+        $categories = Category::where('parent_id', 0)->get();
+        return view('categories', compact('categories','orderId'));
     }
 
     public function category($id){
         $category = Category::where('id',$id)->first();
-        $sections = section::where('category_id',$category->id);
+        $sections = Category::where('parent_id',$id)->get();
         return view('category.category', compact('category', 'sections'));
     }
 
     public function section($id,$section_name){
         $category = Category::where('id',$id)->first();
-        $sections = section::where('name',$section_name)->first();
+        $sections = Category::where('parent_id',$section_name)->first();
+        $produs = Product::where('category_id',$section_name)->get();
         $items = \Cart::getContent();
-        return view('section', compact('category', 'sections','items'));
+        return view('section', compact('category', 'sections','items','produs'));
     }
 
 
-    public function product($category,$section, $product = null){
+    public function product($category,$sections, $product = null){
         $product = Product::where('name',$product)->first();
         return view('products.product',['product'=>$product]);
     }
