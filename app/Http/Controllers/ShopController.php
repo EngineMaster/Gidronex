@@ -27,7 +27,7 @@ class ShopController extends Controller
             setcookie("sessionIds", $item_data  , time() + (86400 * 30));
             $_COOKIE["sessionIds"] = $item_data;
         }
-            $categories = Category::all();
+            $categories = Category::where('parent_id', 0)->get();
             return view('mainPage',compact('categories'));
     }
 
@@ -54,9 +54,7 @@ class ShopController extends Controller
             'name'=>$request->input('name'),
             'phone'=>$request->input('phone'),
             'email'=>$request->input('email'),
-            'city'=>$request->input('city'),
             'commentary'=>$request->input('commentary'),
-            'social_networking'=>$request->input('social_networking'),
         ]);
         DB::table('clients_feedback')->insert($insert);
          return redirect()->back()->with('message','Ваше сообщение отправлено. В ближайшее время с вамя свяжется наш сотрудник. Спасибо что выбрали нас!');
@@ -83,8 +81,8 @@ class ShopController extends Controller
 
     public function section($id,$section_name){
         $category = Category::where('id',$id)->first();
-        $sections = Category::where('parent_id',$section_name)->first();
-        $produs = Product::where('category_id',$section_name)->get();
+        $sections = Category::where('name',$section_name)->first();
+        $produs = Product::where('category_id',$sections->id)->get();
         $items = \Cart::getContent();
         return view('section', compact('category', 'sections','items','produs'));
     }
@@ -92,7 +90,8 @@ class ShopController extends Controller
 
     public function product($category,$sections, $product = null){
         $product = Product::where('name',$product)->first();
-        return view('products.product',['product'=>$product]);
+        $productsOther = Product::inRandomOrder()->limit(5)->get();
+        return view('products.product',['product'=>$product,'productsOther'=>$productsOther]);
     }
 
     public function productList(){

@@ -18,9 +18,9 @@ class CreateClientsFeedbackTable extends Migration
             $table->text('name');
             $table->text('phone');
             $table->text('email');
-            $table->text('city');
+            $table->text('city')->nullable();
             $table->text('commentary');
-            $table->text('social_networking');
+            $table->text('social_networking')->nullable();
             $table->timestamps();
         });
     }

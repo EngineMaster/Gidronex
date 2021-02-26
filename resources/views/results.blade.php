@@ -22,7 +22,7 @@
                     <input type="submit" value="Добавить" class="add_product">
                     @csrf
                 </form>
-                <a href="{{route('product',[$business->category->id,$business->category->id,$business->name])}}"><button class="add_product_check">Смотреть</button></a>
+                <a href="{{route('product',[$business->id,$business->id,$business->name])}}"><button class="add_product_check">Смотреть</button></a>
             </div>
         @endforeach
         @endif

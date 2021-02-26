@@ -5,7 +5,7 @@
      <div class="product_card_description">
          <div>
         <h1>{{$product->name}}</h1>
-            <p class="first_p">{{$product->description}}</p>
+            <p class="first_p">{{$product->description}} <br><br><br> @if($product->price == 0) Цена по Запросу  @else {{$product->price}} &#8381     @endif</p>
          </div>
          <div class="product_card_image">
              <img src="{{$product->image_product}}" alt="product_image" class="product_image_product">
@@ -18,12 +18,11 @@
 
          <div class="option_and_buy">
                  @isset($product->link)
-                <ul>
-                    <li>{{$product->link}}</li>
+                <ul style="list-style-type:none;">
+                    <li><h4> Комплект поставки {{$product->name}} включает в себя</h4><br>{{$product->link}}</li>
                     <br>
-                    <li>{{$product->link2}}</li>
+                    <li><h4>Характеристики</h4><br>{{$product->link2}}</li>
                     <br>
-                    <li>{{$product->link3}}</li>
                 </ul>
                  @endisset
              <form action="{{route('basket-add', $product->id)}}" method="POST">
@@ -31,6 +30,7 @@
                  @csrf
              </form>
          </div>
+         
     @if(session()->has('success_message'))
         <div class="success">
             <p class="cross_to_close">

@@ -26,14 +26,7 @@
                     <input type="text" id="check1" name="email" required>
                 </div>
                 <div class="input">
-                    <label for="check1">Населённый Пункт<sup>*</sup></label>
-                    <input type="text" id="check1" name="city" required>
-                </div>
-                <div class="input">
                     <label for="check1">Комментарий</label><input type="text" id="check1" name="commentary" required>
-                </div>
-                <div class="input">
-                    <label for="check1">Социальные сети</label><input type="text" id="check1" name="social_networking" required>
                 </div>
                 <div class="input_checkbox">
                     <input type="checkbox" id="check2" name="checkbox" required>Согласен на обработку персональных данных
