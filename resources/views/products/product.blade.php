@@ -31,13 +31,13 @@
              </form>
          </div>
 
-<div class="similiar">
+<div class="similar">
     <h5>ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ</h5>
-    <ul class="similiar_products">
+    <ul class="similar_products">
     @foreach($productsOther as $similiar)
         <li>
-            <div class="similiar_products_card">
-                <img src="{{$similiar->image_product}}" alt="similiar_products_card_image">
+            <div class="similar_products_card">
+                <img src="{{$similiar->image_product}}" alt="similar_products_card_image" style="width: 228px;height: 500px">
                 <a href="{{$similiar->name}}">{{$similiar->name}}</a>
             </div>
         </li>
