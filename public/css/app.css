@@ -1690,6 +1690,17 @@ footer .footer-wrap .column_of_footer_down2 p {
   }
 }
 
+.option_and_buy ul {
+  list-style-type: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.option_and_buy ul li {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .submit_button {
   background-color: #FCB026;
   border: none;
