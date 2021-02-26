@@ -2819,7 +2819,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   width: 1140px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   list-style-type: none;
   flex-direction: row;
