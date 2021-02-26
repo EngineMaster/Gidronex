@@ -2468,7 +2468,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
-  width: 20%;
+  width: 100%;
 }
 .similiar_products_card a {
   text-decoration: none;
