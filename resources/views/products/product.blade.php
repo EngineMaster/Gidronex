@@ -30,7 +30,21 @@
                  @csrf
              </form>
          </div>
-         
+
+<div class="similiar">
+    <h5>ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ</h5>
+    <ul class="similiar_products">
+    @foreach($productsOther as $similiar)
+        <li>
+            <div class="similiar_products_card">
+                <img src="{{$similiar->image}}" alt="similiar_products_card_image">
+                <a href="{{$similiar->name}}">{{$similiar->name}}</a>
+            </div>
+        </li>
+    @endforeach
+    </ul>
+</div>
+
     @if(session()->has('success_message'))
         <div class="success">
             <p class="cross_to_close">

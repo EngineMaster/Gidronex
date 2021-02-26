@@ -2791,3 +2791,60 @@ footer .footer-wrap .column_of_footer_down2 p {
   }
 }
 
+.similiar {
+  width: 100%;
+  margin-top: 50px;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .similiar {
+    font-size: 18px;
+  }
+}
+
+.similiar h5 {
+  width: 1140px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.similiar_products {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.similiar_products_card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+}
+
+.similiar_products_card a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  background-color: #F2F2F2;
+  transition: 0.4s all;
+}
+
+.similiar_products_card a:hover {
+  background-color: black;
+  color: white;
+}
+
