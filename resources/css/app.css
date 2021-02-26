@@ -1382,6 +1382,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin: 40px auto;
   display: grid;
 }
+@media screen and (min-width: 1280px) {
+  .product_card {
+    width: 1140px;
+    margin: 30px auto;
+  }
+}
 .product_card .product_card_description {
   display: grid;
   grid-template-rows: 110px 280px;
