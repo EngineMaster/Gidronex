@@ -1461,9 +1461,14 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .option_and_buy {
     margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .option_and_buy {
+    width: 1140px;
   }
 }
 
