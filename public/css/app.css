@@ -2824,6 +2824,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   padding: 40px;
 }
 
+@media screen and (max-width: 1024px) {
+  .similiar_products {
+    flex-direction: column;
+  }
+}
+
 .similiar_products_card {
   display: flex;
   flex-direction: column;
