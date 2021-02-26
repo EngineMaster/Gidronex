@@ -2469,6 +2469,10 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   width: 100%;
+  margin-left: 10px;
+}
+.similiar_products_card_image {
+  width: 228px;
 }
 .similiar_products_card a {
   text-decoration: none;
