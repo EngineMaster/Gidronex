@@ -139,7 +139,7 @@ nav a {
 .navbar_logo_icon_header {
   width: 138px;
   padding: 5px;
-  margin-left: 135px;
+  margin-left: 155px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -162,7 +162,7 @@ nav a {
     position: fixed;
     right: 0;
     height: 92vh;
-    top: 8.3vh;
+    top: 8.5vh;
     background-color: #FCB026;
     flex-direction: column;
     align-items: center;
@@ -1626,6 +1626,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 768px) {
   .basket_container {
     padding: 10px;
+    margin: 0 auto;
   }
 }
 .basket_container_wrapper {
@@ -2269,6 +2270,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 768px) {
   .alert-success {
     width: 250px;
+    margin: 0 auto;
   }
 }
 
@@ -2400,7 +2402,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-80%, -50%);
+  transform: translate(-50%, -50%);
   width: 100px;
   height: 20px;
   border: 0.05em black solid;
