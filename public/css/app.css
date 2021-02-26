@@ -2798,6 +2798,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
@@ -2841,6 +2843,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-size: 22px;
   width: 100%;
   margin-left: 10px;
+  height: 600px;
 }
 
 .similar_products_card_image {
