@@ -37,7 +37,7 @@
     @foreach($productsOther as $similiar)
         <li>
             <div class="similar_products_card">
-                <img src="{{$similiar->image_product}}" alt="similar_products_card_image" style="width: 228px;height: 500px">
+                <img src="{{$similiar->image_product}}" alt="similar_products_card_image" style="width: 228px;height: 250px">
                 <a href="{{$similiar->name}}">{{$similiar->name}}</a>
             </div>
         </li>
