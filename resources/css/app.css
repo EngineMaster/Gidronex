@@ -1356,6 +1356,8 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 1000px) {
   .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .categories_wrapper_card_name {
     text-align: center;
+    font-size: 12px;
+    padding: 10px;
   }
 }
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .btn_check_category {
