@@ -53,7 +53,7 @@
                         <li class="table_basket"></li>
                     @foreach($items as $item)
                         <li>
-                            {{$item->name}}
+                            <a href="{{route('product',[$item->quantity,$item->quantity,$item->name])}}">{{$item->name}}</a>
                         </li>
                         <li>
                             {{$item->quantity}}

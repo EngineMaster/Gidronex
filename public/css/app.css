@@ -2088,6 +2088,18 @@ footer .footer-wrap .column_of_footer_down2 p {
   }
 }
 
+.basket_container .basket_container_products .basket_container_products_table ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  color: black;
+}
+
+.basket_container .basket_container_products .basket_container_products_table ul li a:hover {
+  color: #fcba03;
+  font-weight: 800;
+}
+
 .basket_container .basket_container_products .basket_container_products_table ul .item_delete {
   display: grid;
   padding: 0;
