@@ -2480,6 +2480,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 1024px) {
   .similar_products {
     flex-direction: column;
+    width: 80%;
   }
 }
 .similar_products_card {
@@ -2495,9 +2496,19 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin-left: 10px;
   height: 600px;
 }
+@media screen and (max-width: 768px) {
+  .similar_products_card {
+    font-size: 12px;
+  }
+}
 .similar_products_card_image {
   width: 228px;
   height: 500px;
+}
+@media screen and (max-width: 768px) {
+  .similar_products_card_image {
+    width: 15%;
+  }
 }
 .similar_products_card a {
   text-decoration: none;
@@ -2509,6 +2520,47 @@ footer .footer-wrap .column_of_footer_down2 p {
 .similar_products_card a:hover {
   background-color: black;
   color: white;
+}
+
+.call_me {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  .call_me {
+    font-size: 8px;
+  }
+}
+.call_me_contact {
+  display: flex;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcba03;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.call_me_contact:hover {
+  background-color: #FCB026;
+}
+@media screen and (max-width: 1024px) {
+  .call_me_contact {
+    font-size: 10px;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

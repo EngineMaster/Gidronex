@@ -31,6 +31,18 @@
              </form>
          </div>
 
+<div class="call_me">
+    <div class="call_me_contact">
+    <span class="material-icons" style="font-size: 50px;padding: 20px">
+call_end
+</span>
+
+       <p> +7 (922) 698-40-41 </p>
+    </div>
+        <p>Получить лучшую цену</p>
+
+</div>
+
 <div class="similar">
     <h5>ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ</h5>
     <ul class="similar_products">

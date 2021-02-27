@@ -1966,6 +1966,7 @@ footer
         padding: 40px
         @media screen and (max-width: 1024px)
             flex-direction: column
+            width: 80%
         &_card
             display: flex
             flex-direction: column
@@ -1978,9 +1979,13 @@ footer
             width: 100%
             margin-left: 10px
             height: 600px
+            @media screen and (max-width: 768px)
+                font-size: 12px
             &_image
                 width: 228px
                 height: 500px
+                @media screen and (max-width: 768px)
+                    width: 15%
             a
                 text-decoration: none
                 color: black
@@ -1991,3 +1996,35 @@ footer
                     background-color: black
                     color: white
 
+
+.call_me
+    width: 25%
+    margin: 0 auto
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px
+    flex-direction: column
+    font-family: $font-stack
+    font-size: 18px
+    font-weight: 400
+    @media screen and (max-width: 1024px)
+        font-size: 8px
+    &_contact
+        display: flex
+        padding: 20px
+        font-family: $font-stack
+        font-size: 22px
+        align-items: center
+        justify-content: center
+        background-color: #fcba03
+        color: black
+        font-weight: 700
+        cursor: pointer
+        transition: 0.2s all
+        &:hover
+            background-color: $main-color
+        @media screen and (max-width: 1024px)
+            font-size: 10px
+            flex-direction: column
