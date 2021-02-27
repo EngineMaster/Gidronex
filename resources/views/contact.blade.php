@@ -33,6 +33,7 @@
                 </div>
                 <div class="input">
                     <select id="check1">
+                        <option></option>
                         @foreach($products as $product)
                             <option>{{$product->name}}</option>
                         @endforeach
