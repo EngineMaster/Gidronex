@@ -32,7 +32,8 @@ class ShopController extends Controller
     }
 
     public function contact(Request $request){
-        return view('contact');
+        $products = Product::all();
+        return view('contact',compact('products'));
     }
 
 
