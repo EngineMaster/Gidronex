@@ -1504,7 +1504,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 1000px) {
   .categories_wrapper {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
   }
 }
 
