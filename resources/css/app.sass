@@ -1057,7 +1057,9 @@ footer
             width: 245px
             height: 283px
             @media screen and (max-width: 768px)
-                width: 100%
+                width: 90%
+                background-position: center
+                background-repeat: no-repeat
         .categories_wrapper_card_second_part
             display: grid
             grid-template-rows: repeat(2,1fr)
@@ -1079,6 +1081,8 @@ footer
                 transition: 0.6s all
                 &:hover
                     opacity: 1
+                @media screen and (max-width: 768px)
+                    font-size: 15px
                 a
                     text-decoration: none
                     color: white

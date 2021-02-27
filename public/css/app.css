@@ -1536,7 +1536,9 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 @media screen and (max-width: 768px) {
   .categories_wrapper .categories_wrapper_card .categories_wrapper_card_image {
-    width: 100%;
+    width: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -1571,6 +1573,12 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .btn_check_category:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .btn_check_category {
+    font-size: 15px;
+  }
 }
 
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .btn_check_category a {
