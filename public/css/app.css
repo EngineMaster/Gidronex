@@ -2080,10 +2080,22 @@ footer .footer-wrap .column_of_footer_down2 p {
 .basket_container .basket_container_products .basket_container_products_table ul li {
   background-color: white;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   padding: 20px;
   border: 1px solid #FCB026;
+}
+
+@media screen and (max-width: 1024px) {
+  .basket_container .basket_container_products .basket_container_products_table ul li {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .basket_container .basket_container_products .basket_container_products_table ul li {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width: 768px) {

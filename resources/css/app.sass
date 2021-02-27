@@ -1395,10 +1395,14 @@ footer
                     background-color: white
                     font:
                         weight: 500
-                        size: 25px
+                        size: 14px
                         family: $font-stack
                     padding: 20px
                     border: 1px solid $main-color
+                    @media screen and (max-width: 1024px)
+                        font-size: 13px
+                    @media screen and (min-width: 1600px)
+                        font-size: 22px
                     &:nth-child(4)
                         @media screen and (max-width: 768px)
                             display: none
