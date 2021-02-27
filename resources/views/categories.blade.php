@@ -18,7 +18,6 @@
             {{session()->get('success_message')}}
             @endif
     </section>
-</body>
 
 
 <script>
@@ -55,3 +54,5 @@
 
     }
 </script>
+</body>
+</html>

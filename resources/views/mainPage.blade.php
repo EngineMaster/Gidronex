@@ -73,7 +73,7 @@
         <p>Мы успешно работаем на рынке с 2005 года. Наша компания предоставляет огромный выбор различных запчастей для отечественной техники.
 
             В нашем магазине вы легко сможете найти нужный вам товар, в наличии множество деталей и комплектующих.</p>
-        <button class="btn_about_us"><a href="{{route('categories')}}">Подробнее</a></button>
+        <button class="btn_about_us"><a href="/1">Подробнее</a></button>
     </div>
     <div class="image_container"><img src="https://stroytehnika.su/upload/iblock/1e6/1e659e1efe8cc188b65b36d58c6929d4.jpg" alt="" class="image_about_us"></div>
     </div>
@@ -85,7 +85,7 @@
     <div class="text-containing-element">
         <h2 class="hydrotechnic">Гидробуры и гидромолоты</h2>
         <p class="paragraph">Наша компания предоставляет большой выбор гидробуров и гидромолотов для работ разной сложности и масштабов.</p>
-        <button class="btn-assortment"><a href="{{route('categories')}}">Ассортимент</a></button>
+        <button class="btn-assortment"><a href="/2">Ассортимент</a></button>
     </div>
     </div>
 </section>
