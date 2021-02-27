@@ -1083,7 +1083,11 @@ input[type=textarea] {
 
 footer {
   min-height: 810px;
-  background-color: #1a1a1a;
+  background-image: linear-gradient(black, #1a1a1a);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   padding: 80px;
   z-index: 101;
 }
