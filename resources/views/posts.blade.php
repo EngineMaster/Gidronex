@@ -1,7 +1,7 @@
 @extends('includes.head')
 @include('includes.header')
 <section class="posts_container">
-    <h1>Новости и Акции</h1>
+    <h1>Статьи, советы, рекомендации, а также новости и акции Gidronex</h1>
     <hr>
     @foreach($posts as $post)
         <div class="post_card">
