@@ -12,6 +12,7 @@
             <br><br>
             <p class="article2">{{$post->article2}}</p>
         </div>
+        <div class="article_container_time">{{$post->created_at}}</div>
     </div>
 </section>
 </body>

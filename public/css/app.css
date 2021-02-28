@@ -2580,6 +2580,16 @@ footer .footer-wrap .column_of_footer_down2 p {
   border: 10px solid #fcba03;
 }
 
+.article_container_time {
+  text-align: right;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
 .articles_cont {
   background-image: url("https://www.tradicia-k.ru/images/gallery/original/001/032/7308.jpg");
   background-attachment: fixed !important;

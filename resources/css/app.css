@@ -2230,6 +2230,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin: 0 auto;
   overflow: hidden;
   width: 90%;
+  background-color: white;
+  padding: 10px;
 }
 @media screen and (max-width: 768px) {
   .article_container_text .article2 {
@@ -2242,6 +2244,15 @@ footer .footer-wrap .column_of_footer_down2 p {
   align-self: center;
   width: 90%;
   border: 10px solid #fcba03;
+}
+.article_container_time {
+  text-align: right;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
 .articles_cont {
