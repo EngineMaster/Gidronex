@@ -3065,7 +3065,19 @@ footer .footer-wrap .column_of_footer_down2 p {
   display: flex;
   list-style-type: none;
   color: white;
-  font: 15px;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li {
+  background-color: #fcba03;
+  transition: 0.2s all;
+}
+
+.pagination li:hover {
+  background-color: white;
+  color: black;
 }
 
