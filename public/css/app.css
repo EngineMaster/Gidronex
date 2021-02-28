@@ -3073,14 +3073,15 @@ footer .footer-wrap .column_of_footer_down2 p {
 .pagination li {
   transition: 0.2s all;
   padding: 15px;
-  margin: 5px;
+  margin: 4px;
 }
 
 .pagination li a {
   text-decoration: none;
   font-size: 15px;
   padding: 15px;
-  margin: 5px;
+  margin: 2px;
+  transition: 0.3s all;
 }
 
 .pagination li a:hover {
