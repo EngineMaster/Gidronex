@@ -2565,6 +2565,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   border: 10px solid #fcba03;
 }
 
+@media screen and (max-width: 1024px) {
+  .article_container_image {
+    width: 850px;
+  }
+}
+
 .articles_cont {
   background-image: url("https://www.tradicia-k.ru/images/gallery/original/001/032/7308.jpg");
   background-attachment: fixed;
