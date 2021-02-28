@@ -2691,4 +2691,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   color: black;
 }
 
+.disabled {
+  background-color: #FCB026;
+}
+
 /*# sourceMappingURL=app.css.map */

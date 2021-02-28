@@ -11,14 +11,14 @@
                     <a href="{{ $paginator->previousPageUrl() }}" rel="Предыдующая страница" aria-label="@lang('pagination.previous')">Предыдущая страница</a>
                 </li>
             @endif
-
+            {{$newOne = 0}}
             {{-- Pagination Elements --}}
             @foreach ($elements as $element)
                 {{-- "Three Dots" Separator --}}
                 @if (is_string($element))
                     <li class="disabled" aria-disabled="true"><span>{{ $element }}</span></li>
                 @endif
-
+                {{$newOne += 1}}
                 {{-- Array Of Links --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
