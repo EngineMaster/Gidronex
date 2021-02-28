@@ -2559,7 +2559,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   margin-left: 10px;
-  height: 500px;
+  height: 400px;
 }
 @media screen and (max-width: 768px) {
   .similar_products_card {
@@ -2581,7 +2581,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   padding: 20px;
   background-color: #F2F2F2;
   transition: 0.4s all;
-  height: 200px;
+  height: 100px;
 }
 .similar_products_card a:hover {
   background-color: black;
