@@ -1401,8 +1401,9 @@ footer .footer-wrap .column_of_footer_down2 p {
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .categories_wrapper_card_name {
   background-color: #1a1a1a;
   color: white;
-  padding: 1em;
-  font-size: 30px;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
   font-family: "Roboto", sans-serif;
 }
 @media screen and (max-width: 1000px) {
