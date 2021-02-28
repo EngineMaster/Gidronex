@@ -2534,16 +2534,10 @@ footer .footer-wrap .column_of_footer_down2 p {
   width: 50%;
 }
 
-.article_container_text .subtitle {
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
-}
-
 .article_container_text .article1 {
   line-height: normal;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
-  width: 800px;
   min-height: 100px;
   margin: 0 auto;
   overflow: hidden;
@@ -2553,7 +2547,6 @@ footer .footer-wrap .column_of_footer_down2 p {
   line-height: normal;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
-  width: 800px;
   min-height: 100px;
   margin: 0 auto;
   overflow: hidden;
