@@ -109,7 +109,7 @@
 
     </div>
 </div>
-    {{$prods->onEachSide(5)->links("pagination::bootstrap-4")  }}
+    {{$prods->onEachSide(5)->links()  }}
 
 
 <script>
