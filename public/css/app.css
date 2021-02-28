@@ -2574,9 +2574,16 @@ footer .footer-wrap .column_of_footer_down2 p {
   transform: translate(-50%, -50%);
   border: 5px solid white;
   padding: 20px;
-  font-size: 22px;
+  font-size: 35px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .articles_cont_article {
+    font-size: 18px;
+  }
 }
 
 .cookies {
