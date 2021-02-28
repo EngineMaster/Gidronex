@@ -2670,7 +2670,6 @@ footer .footer-wrap .column_of_footer_down2 p {
   display: flex;
   list-style-type: none;
   color: white;
-  font-size: 15px;
   font-family: "Roboto", sans-serif;
   justify-content: center;
   align-items: center;
@@ -2678,10 +2677,13 @@ footer .footer-wrap .column_of_footer_down2 p {
 .pagination li {
   background-color: #fcba03;
   transition: 0.2s all;
+  font-size: 15px;
 }
 .pagination li:hover {
   background-color: white;
   color: black;
+  padding: 15px;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=app.css.map */
