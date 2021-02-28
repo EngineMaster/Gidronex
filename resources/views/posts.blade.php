@@ -7,7 +7,6 @@ dynamic_feed
     <div class="lines"></div>
     <div class="lines2"></div>
 
-    <hr>
     @foreach($posts as $post)
         <div class="post_card">
             <img src="https://i.ibb.co/6P6GsQZ/Component-1.png" alt="" class="post_card_image">
