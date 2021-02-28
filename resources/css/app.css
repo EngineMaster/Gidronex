@@ -2581,6 +2581,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   padding: 20px;
   background-color: #F2F2F2;
   transition: 0.4s all;
+  height: 200px;
 }
 .similar_products_card a:hover {
   background-color: black;
