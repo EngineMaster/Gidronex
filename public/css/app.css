@@ -9,6 +9,12 @@ body {
   }
 }
 
+@media screen and (max-width: 560px) {
+  body {
+    overflow-y: hidden;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
