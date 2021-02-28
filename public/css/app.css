@@ -2517,6 +2517,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   max-width: 1140px;
   flex-direction: column;
   padding: 40px;
+  text-align: left;
 }
 
 @media screen and (max-width: 1140px) {
@@ -2532,6 +2533,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   flex-direction: column;
   align-self: center;
   width: 50%;
+  padding: 20px;
 }
 
 .article_container_text .article1 {
