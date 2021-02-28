@@ -109,7 +109,7 @@
 
     </div>
 </div>
-    {{$prods->onEachSide(5)->links()  }}
+    {{$prods->onEachSide(5)->render()  }}
 
 
 <script>
