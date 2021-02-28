@@ -2417,6 +2417,24 @@ footer .footer-wrap .column_of_footer_down2 p {
     font-size: 24px;
   }
 }
+.posts_container .lines {
+  width: 38px;
+  height: 5px;
+  background-color: #fcba03;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  animation: 1s linear 1s infinite alternate lines;
+}
+.posts_container .lines2 {
+  width: 38px;
+  height: 3px;
+  background-color: #fcba03;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  animation: 1s linear 1s infinite alternate lines2;
+}
 .posts_container .post_card {
   box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
   width: 800px;
@@ -2481,6 +2499,22 @@ footer .footer-wrap .column_of_footer_down2 p {
   transform: translate(10%, 60%);
 }
 
+@keyframes lines {
+  0% {
+    width: 38px;
+  }
+  100% {
+    width: 108px;
+  }
+}
+@keyframes lines2 {
+  0% {
+    width: 98px;
+  }
+  100% {
+    width: 38px;
+  }
+}
 .success_message_contact {
   position: fixed;
   top: 50%;
