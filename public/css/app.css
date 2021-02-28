@@ -2491,7 +2491,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 .article {
   width: 1140px;
   margin: 0 auto;
-  background-color: #F2F2F2;
+  text-align: center;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -2509,7 +2509,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 .article_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #F2F2F2;
   min-height: 800px;
@@ -2530,6 +2530,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 .article_container_text {
   display: flex;
   flex-direction: column;
+  align-self: center;
   width: 50%;
 }
 
