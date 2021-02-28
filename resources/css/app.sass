@@ -51,6 +51,8 @@ nav
         transform: translate(-50% , -50%)
         position: absolute
         background: rgba(51, 51, 51, 0.85)
+        @media screen and (max-width: 1024px)
+            height: 200px
         @media screen and (max-width: 768px)
             max-width: 80%
             margin: 0 auto
@@ -68,6 +70,8 @@ nav
                 color: #ffffff
                 font-weight: 400
                 text-transform: uppercase
+                @media screen and (max-width: 1024px)
+                    font-size: 24px
                 @media screen and (max-width: 768px)
                     font-size: 22px
             p
@@ -76,12 +80,16 @@ nav
                 font-weight: 400
                 font-size: 32px
                 color: #ffffff
+                @media screen and (max-width: 1024px)
+                    display: none
                 .wrappy_orange
                     font-family: $font-stack
                     font-style: normal
                     font-weight: 400
                     font-size: 32px
                     color: $main-color
+                    @media screen and (max-width: 1024px)
+                        display: none
 
 
 .splide__slide
@@ -2001,7 +2009,7 @@ footer
         padding: 40px
         @media screen and (max-width: 1024px)
             flex-direction: column
-            width: 80%
+            width: 75%
         &_card
             display: flex
             flex-direction: column
@@ -2011,7 +2019,6 @@ footer
             text-transform: uppercase
             font-family: $font-stack
             font-size: 22px
-            width: 100%
             margin-left: 10px
             height: 600px
             @media screen and (max-width: 768px)
