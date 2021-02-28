@@ -2211,6 +2211,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   min-height: 100px;
   margin: 0 auto;
   overflow: hidden;
+  width: 90%;
 }
 .article_container_text .article2 {
   line-height: normal;
@@ -2219,6 +2220,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   min-height: 100px;
   margin: 0 auto;
   overflow: hidden;
+  width: 90%;
 }
 
 .cookies {
