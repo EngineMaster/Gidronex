@@ -2232,20 +2232,10 @@ footer .footer-wrap .column_of_footer_down2 p {
   width: 90%;
   border: 10px solid #fcba03;
 }
-@media screen and (max-width: 1024px) {
-  .article_container_image {
-    width: 850px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .article_container_image {
-    width: 60%;
-  }
-}
 
 .articles_cont {
   background-image: url("https://www.tradicia-k.ru/images/gallery/original/001/032/7308.jpg");
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
