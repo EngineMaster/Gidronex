@@ -109,7 +109,7 @@
 
     </div>
 </div>
-    {{$prods->onEachSide(5)->render()  }}
+    {!!$prods->onEachSide(5)->links('vendor.pagination.default') !!}
 
 
 <script>
