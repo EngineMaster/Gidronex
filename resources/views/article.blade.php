@@ -1,6 +1,8 @@
 @include('includes.head')
 @include('includes.header')
+<div class="articles_cont">
 
+</div>
 <section class="article">
         <h1>{{$post->title}}</h1>
     <div class="article_container">
