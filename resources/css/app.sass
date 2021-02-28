@@ -1695,12 +1695,19 @@ footer
     width: 1140px
     margin: 0 auto
     background-color: #F2F2F2
+    display: flex
+    flex-direction: column
+    font-family: $font-stack
+    font-size: 28px
+    align-items: center
+    justify-content: space-around
     &_container
         display: flex
         justify-content: center
         align-items: center
         background-color: #F2F2F2
         min-height: 800px
+        max-width: 1140px
         @media screen and (max-width: 1140px)
             flex-direction: column
             width: 80%
@@ -1708,6 +1715,7 @@ footer
         &_text
             display: flex
             flex-direction: column
+            width: 50%
             .subtitle
                 font-size: 30px
                 font-family: $font-stack
