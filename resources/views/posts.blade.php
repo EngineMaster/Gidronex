@@ -14,7 +14,7 @@ dynamic_feed
                 <p>
                     {{$post->title}}
                 </p>
-                <a href="{{route('article',[$post->title])}}">
+                <a href="{{route('article',$post->title)}}">
                     Читать
                 </a>
             </div>
