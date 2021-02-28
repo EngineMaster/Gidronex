@@ -1883,7 +1883,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 @media screen and (min-width: 1600px) {
   .basket_container .basket_container_products .basket_container_products_table ul li {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
