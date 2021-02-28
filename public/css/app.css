@@ -2579,6 +2579,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-weight: 700;
   color: white;
   transition: 0.4s all;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
