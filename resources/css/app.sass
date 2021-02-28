@@ -179,9 +179,33 @@ nav
                         padding-bottom: 50px
                         background-color: $main-color
                         color: white
+                /*#contact_menu_hov
+                    position: relative
+                    &:hover .dropdown
+                            display: none
+                /*.dropdown
+                    position: absolute
+                    flex-direction: column
+                    align-items: center
+                    box-shadow: 0 10px 10px gray
+                    margin: 25px 0
+                    z-index: 1
+                    background-color: lightgray
+                    width: 160px
+                    a
+                        text-decoration: none
+                        color: black
+                        padding: 20px
+                        height: 20px
+                        &:hover
+                            background-color: greenyellow
+                            color: white
 
 
 
+.contact_menu:hover
+    .dropdown
+        display: block
 
 
 
@@ -1050,15 +1074,16 @@ footer
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 20px
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: 1040px)
         grid-template-columns: 1fr
         width: 100%
     .categories_wrapper_card
-        width: 500px
+        width: 400px
         display: grid
         grid-template-columns: repeat(2,1fr)
         box-shadow: 0 0 10px rgba(5,5,5,0.5)
         transition: 0.5s all
+        margin: 0 auto
         @media screen and (max-width: 1000px)
             width: 70%
             margin: 0 auto
@@ -1067,8 +1092,8 @@ footer
             opacity: 0.8
             box-shadow: 0 0 10px rgba(10,5,10,0.5)
         .categories_wrapper_card_image
-            width: 245px
-            height: 283px
+            width: 180px
+            height: 250px
             @media screen and (max-width: 768px)
                 width: 90%
                 background-position: center
@@ -1087,7 +1112,7 @@ footer
                     font-size: 12px
                     padding: 10px
             .btn_check_category
-                font-size: 35px
+                font-size: 18px
                 font-family: $font-stack
                 background-color: $main-color
                 border: none

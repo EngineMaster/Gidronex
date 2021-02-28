@@ -11,7 +11,8 @@
         <div class="navbar_wrapper">
             <ul class="navbar_wrapper_nav_links">
                 <li><a href="/" class="contact_menu">Главная</a></li>
-                <li><a href="/categories" class="contact_menu">Ассортимент</a></li>
+                <li><a href="/categories" class="contact_menu" id="contact_menu_hov">Ассортимент</a>
+                </li>
                 <li><a href="{{route('contact')}}" class="contact_menu">Связаться с нами</a></li>
                 <li><a href="/posts" class="contact_menu">FAQ</a></li>
                 <li><a href="{{route('basket')}}" class="contact_menu"><span class="material-icons search" style=" color: white; margin-bottom: 50px">search</span></a></li>
