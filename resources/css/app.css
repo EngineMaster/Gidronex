@@ -2180,6 +2180,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   align-items: center;
   background-color: #F2F2F2;
   min-height: 800px;
+  margin: 40px;
   max-width: 1140px;
   flex-direction: column;
 }
@@ -2748,4 +2749,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   color: black;
 }
 
-.
+.disabled {
+  background-color: #FCB026;
+}
+
+/*# sourceMappingURL=app.css.map */
