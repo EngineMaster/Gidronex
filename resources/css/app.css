@@ -2246,7 +2246,17 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: white;
+  transition: 0.4s all;
 }
+@media screen and (max-width: 768px) {
+  .articles_cont_article {
+    font-size: 18px;
+  }
+}
+.articles_cont_article:hover {
+  background-color: black;
+}
+
 .cookies {
   position: fixed;
   display: flex;
