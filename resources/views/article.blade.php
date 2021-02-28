@@ -1,7 +1,7 @@
 @include('includes.head')
 @include('includes.header')
 <div class="articles_cont">
-
+    <p class="articles_cont_article"> Статьи </p>
 </div>
 <section class="article">
         <h1>{{$post->title}}</h1>
