@@ -2501,7 +2501,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin-top: 30px;
 }
 
-@media screen and (max-width: 80%) {
+@media screen and (max-width: 1280px) {
   .article {
     width: 80%;
   }
@@ -2563,18 +2563,6 @@ footer .footer-wrap .column_of_footer_down2 p {
   align-self: center;
   width: 90%;
   border: 10px solid #fcba03;
-}
-
-@media screen and (max-width: 1024px) {
-  .article_container_image {
-    width: 850px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .article_container_image {
-    width: 200px;
-  }
 }
 
 .articles_cont {

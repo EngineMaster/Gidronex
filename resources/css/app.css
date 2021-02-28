@@ -2175,7 +2175,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   justify-content: space-around;
   margin-top: 30px;
 }
-@media screen and (max-width: 80%) {
+@media screen and (max-width: 1280px) {
   .article {
     width: 80%;
   }
@@ -2237,6 +2237,12 @@ footer .footer-wrap .column_of_footer_down2 p {
     width: 850px;
   }
 }
+@media screen and (max-width: 768px) {
+  .article_container_image {
+    width: 60%;
+  }
+}
+
 .articles_cont {
   background-image: url("https://www.tradicia-k.ru/images/gallery/original/001/032/7308.jpg");
   background-attachment: fixed;
