@@ -1708,6 +1708,7 @@ footer
         background-color: #F2F2F2
         min-height: 800px
         max-width: 1140px
+        flex-direction: column
         @media screen and (max-width: 1140px)
             flex-direction: column
             width: 80%
@@ -1721,7 +1722,7 @@ footer
                 font-family: $font-stack
             .article1
                 line-height: normal
-                font-size: 12px
+                font-size: 18px
                 font-family: $font-stack
                 width: 800px
                 min-height: 100px
@@ -1729,7 +1730,7 @@ footer
                 overflow: hidden
             .article2
                 line-height: normal
-                font-size: 10px
+                font-size: 15px
                 font-family: $font-stack
                 width: 800px
                 min-height: 100px
@@ -1754,6 +1755,8 @@ footer
     font-size: 40px
     bottom: 0
     max-width: 100%
+    @media screen and (max-width: 768px)
+        font-size: 12px
     .cookie-consent__agree
         padding: 5px
         height: 100%
