@@ -683,6 +683,11 @@ hr {
   transform: rotate(-0.09deg);
   margin: 0 auto;
 }
+@media screen and (max-width: 1280px) {
+  hr {
+    width: 80%;
+  }
+}
 
 .goods_container {
   min-height: 1080px;
