@@ -109,9 +109,7 @@
 
     </div>
 </div>
-<div class="pages">
     {{$prods->onEachSide(5)->links("pagination::bootstrap-4")  }}
-</div>
 
 
 <script>
