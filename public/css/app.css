@@ -2532,8 +2532,9 @@ footer .footer-wrap .column_of_footer_down2 p {
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 50%;
+  width: 90%;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .article_container_text .article1 {
@@ -2554,6 +2555,14 @@ footer .footer-wrap .column_of_footer_down2 p {
   margin: 0 auto;
   overflow: hidden;
   width: 90%;
+}
+
+.article_container_image {
+  margin: 0 auto;
+  display: flex;
+  align-self: center;
+  width: 90%;
+  border: 10px solid #fcba03;
 }
 
 .articles_cont {

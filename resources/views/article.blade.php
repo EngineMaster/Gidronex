@@ -6,7 +6,7 @@
 <section class="article">
         <h1>{{$post->title}}</h1>
     <div class="article_container">
-        <img src="{{$post->subtitle}}" alt="article_image" style="margin: 0 auto; display: flex;align-self: center;width: 90%;border: 10px solid #fcba03;" >
+        <img src="{{$post->subtitle}}" alt="article_image" class="article_container_image" >
         <div class="article_container_text">
             <p class="article1">{{$post->article}}</p>
             <br><br>
