@@ -2503,7 +2503,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 @media screen and (max-width: 1280px) {
   .article {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -2523,7 +2523,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 1140px) {
   .article_container {
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -2532,7 +2532,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 90%;
+  width: 95%;
   padding: 20px;
   margin: 0 auto;
 }
