@@ -2673,6 +2673,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   justify-content: center;
   align-items: center;
+  width: 1140px;
+  margin: 0 auto;
 }
 .pagination li {
   transition: 0.2s all;
