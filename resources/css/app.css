@@ -2666,4 +2666,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   }
 }
 
+.pagination {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  font: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
 /*# sourceMappingURL=app.css.map */
