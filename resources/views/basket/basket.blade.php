@@ -110,7 +110,7 @@
     </div>
 </div>
 <div class="pages">
-    {!! $prods->onEachSide(5)->links() !!}
+    {{$prods->onEachSide(5)->links() }}
 </div>
 
 
