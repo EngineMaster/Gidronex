@@ -14,9 +14,6 @@ dynamic_feed
                 <p>
                     {{$post->title}}
                 </p>
-                <p class="post_card_subtitle">
-                    {{$post->subtitle}}
-                </p>
                 <a href="{{route('article',[$post->title])}}">
                     Читать
                 </a>
