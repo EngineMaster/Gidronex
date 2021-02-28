@@ -2163,14 +2163,15 @@ footer .footer-wrap .column_of_footer_down2 p {
   color: white;
 }
 .section_category .article_container {
-  display: grid;
-  grid-template-columns: repeat(2, 40%);
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #F2F2F2;
+  min-height: 800px;
 }
 @media screen and (max-width: 1140px) {
   .section_category .article_container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     width: 80%;
     margin: 0 auto;
   }
