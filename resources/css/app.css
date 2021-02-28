@@ -2559,7 +2559,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   margin-left: 10px;
-  height: 600px;
+  height: 500px;
 }
 @media screen and (max-width: 768px) {
   .similar_products_card {
