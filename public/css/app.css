@@ -3259,3 +3259,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   background-color: #FCB026;
 }
 
+.selector_label {
+  margin: 0 auto;
+  text-align: center;
+}
+
