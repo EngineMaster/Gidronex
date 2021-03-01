@@ -5,9 +5,6 @@
         <div class="upper_menu">
             <h2>{{$prod->name}}</h2>
             <br>
-            <p>
-                {{$prod->index}}
-            </p>
         </div>
         <div class="lower_menu">
             <div class="category_name">{{$prod->name}}</div>
