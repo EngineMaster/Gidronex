@@ -1,6 +1,8 @@
 @extends('includes.head')
-@include('includes.header')
-
+@section('title','product')
+@section('content')
+    <body>
+    @include('includes.header')
 <div class="product_card">
      <div class="product_card_description">
          <div>
@@ -72,5 +74,5 @@ call_end
         successMessage.classList.add('hide');
     };
 </script>
-
-
+    </body>
+@endsection
