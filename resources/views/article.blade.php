@@ -1,5 +1,8 @@
-@include('includes.head')
-@include('includes.header')
+@extends('includes.head')
+@section('title','article')
+@section('content')
+    <body>
+    @include('includes.header')
 <div class="articles_cont">
     <p class="articles_cont_article"> Статьи </p>
 </div>
@@ -35,4 +38,4 @@
         }
     }
 </script>
-</html>
+@endsection

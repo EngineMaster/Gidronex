@@ -1,7 +1,8 @@
 @extends('includes.head')
+@section('title','article')
+@section('content')
+    <body>
     @include('includes.header')
-
-<body>
 <section class="section_category">
                 <h1>{{$sections->name}}</h1>
             <form action="{{route('search')}}" class="search_form2" >
@@ -40,7 +41,6 @@
 
     @endif
 </section>
-</body>
 <script>
   document.querySelector('.cross_to_close').onclick = function () {
       let successMessage = document.querySelector('.success');
@@ -68,4 +68,5 @@
         }
     }
 </script>
-
+    </body>
+@endsection

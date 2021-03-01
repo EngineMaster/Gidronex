@@ -482,16 +482,10 @@ nav a {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 23px;
     line-height: 41px;
     color: #FFFFFF;
     transition: 0.4s all;
-  }
-
-  .btn_about_us a:hover,
-  .btn_shopping_details a:hover,
-  .btn-assortment a:hover {
-    color: black;
   }
 }
 
@@ -499,7 +493,15 @@ nav a {
   .btn_about_us a,
   .btn_shopping_details a,
   .btn-assortment a {
-    font-size: 10px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn_about_us a:hover,
+  .btn_shopping_details a:hover,
+  .btn-assortment a:hover {
+    color: black;
   }
 }
 
@@ -552,7 +554,7 @@ nav a {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 24px;
   line-height: 41px;
   color: #FFFFFF;
   text-decoration: none;
@@ -563,7 +565,7 @@ nav a {
 }
 
 @media screen and (max-width: 768px) {
-  .btn-assortment a:hover {
+  .btn-assortment a {
     font-size: 22px;
   }
 }

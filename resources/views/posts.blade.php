@@ -1,11 +1,20 @@
 @extends('includes.head')
-@include('includes.header')
-<section class="posts_container">
-    <h1> <span class="material-icons">
-dynamic_feed
-</span>  Статьи, советы, рекомендации</h1>
-    <div class="lines"></div>
-    <div class="lines2"></div>
+@section('title','article')
+@section('content')
+    <body>
+    @include('includes.header')
+
+    <section class="posts_container">
+        <h1>
+                <span class="material-icons">
+                    dynamic_feed
+                 </span>
+                Статьи, советы, рекомендации
+        </h1>
+
+        <div class="lines"></div>
+
+        <div class="lines2"></div>
 
     @foreach($posts as $post)
         <div class="post_card">
@@ -24,7 +33,6 @@ dynamic_feed
     <div class="pages">
         {!! $posts->links() !!}
     </div>
-</section>
 <script>
     window.onscroll = function() {myFunction()};
 
@@ -43,4 +51,5 @@ dynamic_feed
         }
     }
 </script>
-
+    </body>
+@endsection

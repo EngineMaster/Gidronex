@@ -1,5 +1,8 @@
-@include('includes.head')
-@include('includes.header')
+@extends('includes.head')
+@section('title','article')
+@section('content')
+    <body>
+    @include('includes.header')
     <section class="confirm_container">
         @if ($errors->any())
             <div class="alert-danger">
@@ -57,3 +60,5 @@
         return false;
     }
 </script>
+    </body>
+        @endsection

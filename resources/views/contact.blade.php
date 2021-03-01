@@ -1,5 +1,8 @@
-@include('includes.head')
-@include('includes.header')
+@extends('includes.head')
+@section('title','contact')
+@section('content')
+    <body>
+    @include('includes.header')
 <div class="form_container">
     <h1>Связаться с нами</h1>
     <form action="{{route('contact-confirm')}}" method="POST">
@@ -83,3 +86,5 @@
         overlay.classList.add('hide');
     };
 </script>
+    </body>
+@endsection

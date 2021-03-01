@@ -1,5 +1,8 @@
-@include('includes.head')
-@include('includes.header')
+@extends('includes.head')
+@section('title','article')
+@section('content')
+    <body>
+    @include('includes.header')
 
 
 <div class="basket_container">
@@ -133,4 +136,5 @@
         }
     }
 </script>
-
+    </body>
+@endsection

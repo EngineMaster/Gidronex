@@ -1,5 +1,7 @@
 @extends('includes.head')
-@include('includes.header')
+@section('title','Categories')
+@section('content')
+    @include('includes.header')
 <body onload=" myFunction()">
 <div id="loader-42"></div>
 <div style="display:none;" id="myDiv" class="animate-bottom">
@@ -55,4 +57,4 @@
     }
 </script>
 </body>
-</html>
+@endsection
