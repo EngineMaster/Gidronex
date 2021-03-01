@@ -1,4 +1,4 @@
-@include('includes.head')
+
 <div class="card_of_product">
     <img src="{{$prod->image}}" alt="product_image" class="image_product">
     <div class="product_layer">

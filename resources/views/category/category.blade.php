@@ -1,5 +1,7 @@
-
 @extends('includes.head')
+@section('title','category')
+@section('content')
+    <body>
 <div class="container_category">
     @include('includes.header')
 </div>
@@ -34,4 +36,5 @@ thumb_up_alt
             @endisset
             @endisset
 </div>
-
+    </body>
+@endsection
