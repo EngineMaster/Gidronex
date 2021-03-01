@@ -3,7 +3,7 @@
 @section('content')
     <body>
     @include('includes.header')
-<div class="product_card">
+<section class="product_card">
      <div class="product_card_description">
          <div>
         <h1>{{$product->name}}</h1>
@@ -16,9 +16,10 @@
 
              </div>
          </div>
-     </div></div>
+     </div>
+</section>
 
-         <div class="option_and_buy">
+         <section class="option_and_buy">
                  @isset($product->link)
                 <ul style="list-style-type:none;">
                     <li><h4> Комплект поставки {{$product->name}} включает в себя</h4><br>{{$product->link}}</li>
@@ -31,33 +32,31 @@
                  <button type="submit" class="submit_button">Заказать</button>
                  @csrf
              </form>
-         </div>
+         </section>
 
-<div class="call_me">
+<section class="call_me">
     <div class="call_me_contact">
-    <span class="material-icons" style="font-size: 50px;padding: 20px">
-call_end
-</span>
-
-       <p> +7 (922) 698-40-41 </p>
+            <span class="material-icons" style="font-size: 50px;padding: 20px">
+                call_end
+            </span>
+               <p> +7 (922) 698-40-41 </p>
     </div>
         <p>Получить лучшую цену</p>
+</section>
 
-</div>
-
-<div class="similar">
+<section class="similar">
     <h5>ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ</h5>
-    <ul class="similar_products">
-    @foreach($productsOther as $similiar)
-        <li>
-            <div class="similar_products_card">
-                <img src="{{$similiar->image_product}}" alt="similar_products_card_image" style="width: 228px;height: 250px">
-                <a href="{{$similiar->name}}">{{$similiar->name}}</a>
-            </div>
-        </li>
-    @endforeach
-    </ul>
-</div>
+        <ul class="similar_products">
+            @foreach($productsOther as $similiar)
+                <li>
+                    <div class="similar_products_card">
+                        <img src="{{$similiar->image_product}}" alt="similar_products_card_image" style="width: 228px;height: 250px">
+                        <a href="{{$similiar->id/$similiar->id/$similiar->name}}">{{$similiar->name}}</a>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+</section>
 
     @if(session()->has('success_message'))
         <div class="success">
