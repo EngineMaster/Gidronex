@@ -3,7 +3,7 @@
     <a href="/" class="contacts_top"><span class="material-icons mail">email</span>gidro_nex@mail.ru</a>
 </nav>
 
-<div class="navbar">
+<section class="navbar">
         <div class="navbar_logo"><a href="/"> <img src="https://i.ibb.co/6P6GsQZ/Component-1.png" alt="company_logo" class="navbar_logo_icon_header"></a></div>
         <div class="navbar_wrapper">
             <ul class="navbar_wrapper_nav_links">
@@ -22,7 +22,9 @@
         <div class="line2"></div>
         <div class="line3"></div>
     </div>
-</div>
+</section>
+
+
 <div class="nav_active">
 
 </div>
