@@ -51,7 +51,7 @@
                 <li>
                     <div class="similar_products_card">
                         <img src="{{$similiar->image_product}}" alt="similar_products_card_image" style="width: 228px;height: 250px">
-                        <a href="{{route('product',[$similiar->id/$similiar->id/$similiar->name])}}">{{$similiar->name}}</a>
+                        <a href="{{route('product',[$similiar->id,$similiar->id,$similiar->name])}}">{{$similiar->name}}</a>
                     </div>
                 </li>
             @endforeach
