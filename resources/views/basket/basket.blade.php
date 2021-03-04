@@ -100,7 +100,8 @@
                             <input type="submit" value="Добавить" class="add_product">
                             @csrf
                         </form>
-                        <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">Смотреть</button></a>
+                        <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">
+                            {{$product->price}}</button></a>
                     </div>
                 @endforeach
             </div>
