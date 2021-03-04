@@ -23,7 +23,13 @@
                                 @csrf
                             </form>
                             <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">
-                                {{$product->price}} ₽</button></a>
+                                @if($product->price == 0 )
+                                        Цена по запросу
+                                    @else
+                                        {{$product->price}}₽
+                                    @endif
+                                </button>
+                            </a>
                         </div>
             @endforeach
     </div>
