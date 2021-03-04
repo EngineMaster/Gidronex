@@ -72,7 +72,8 @@
                        <form action="{{route('basket-add', $item->id)}}" method="POST">
                                 <button type="submit" class="item_add">+</button>
                                 @csrf
-                            </form>
+                       </form>
+
                         <form action="{{route('basket-delete', $item->id)}}" method="POST">
                                 <button type="submit" class="item_remove">-</button>
                                 @csrf
@@ -93,7 +94,7 @@
             <div class="elements_holder">
                 @foreach($prods as $product)
                     <div class="element">
-                        <p>{{$product->name}}</p>
+                        <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><p>{{$product->name}}</p></a>
 
                         <form action="{{route('basket-add', $product->id)}}" method="post">
                             <input type="submit" value="Добавить" class="add_product">
