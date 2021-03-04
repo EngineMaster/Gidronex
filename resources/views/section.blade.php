@@ -16,13 +16,14 @@
     <div class="elements_holder">
             @foreach($produs as $product)
                         <div class="element">
-                            <p>{{$product->name}}</p>
+                            <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><p>{{$product->name}}</p></a>
 
                             <form action="{{route('basket-add', $product->id)}}" method="post">
                                 <input type="submit" value="Добавить" class="add_product2">
                                 @csrf
                             </form>
-                            <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">Смотреть</button></a>
+                            <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">
+                                {{$product->price}} ₽</button></a>
                         </div>
             @endforeach
     </div>
