@@ -101,7 +101,7 @@
                             @csrf
                         </form>
                         <a href="{{route('product',[$product->id,$product->id,$product->name])}}"><button class="add_product_check">
-                            {{$product->price}}</button></a>
+                            {{$product->price}}₽</button></a>
                     </div>
                 @endforeach
             </div>
