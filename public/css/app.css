@@ -1569,7 +1569,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 @media screen and (max-width: 1040px) {
   .categories_wrapper {
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -1584,7 +1584,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 @media screen and (max-width: 1000px) {
   .categories_wrapper .categories_wrapper_card {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     grid-template-columns: 1fr;
   }
@@ -1596,7 +1596,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_image {
-  width: 180px;
+  width: 220px;
   height: 250px;
 }
 
@@ -1610,7 +1610,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 0.4fr;
 }
 
 .categories_wrapper .categories_wrapper_card .categories_wrapper_card_second_part .categories_wrapper_card_name {
@@ -1687,13 +1687,13 @@ footer .footer-wrap .column_of_footer_down2 p {
 .product_card .product_card_description h1 {
   color: black;
   font-family: "Roboto", sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 @media screen and (max-width: 1000px) {
   .product_card .product_card_description h1 {
-    font-size: 25px;
+    font-size: 17px;
   }
 }
 
@@ -1705,7 +1705,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 @media screen and (max-width: 1000px) {
   .product_card .product_card_description .first_p {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 

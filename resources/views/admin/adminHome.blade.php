@@ -78,7 +78,6 @@
                 <div class="alert alert-danger" role="alert">
                     {{ session()->get('message_error') }}
                 </div>
-                @endif
-
+    @endif
 
 @endsection
