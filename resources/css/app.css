@@ -2475,6 +2475,11 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
 }
+@media screen and (max-width: 1024px) {
+  .success_wrap {
+    flex-direction: column;
+  }
+}
 .success_wrap_category {
   list-style-type: none;
   padding: 20px;
