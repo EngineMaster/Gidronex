@@ -1462,6 +1462,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 .product_card .product_card_description {
   min-height: 500px;
   display: grid;
+  background-color: #F2F2F2;
   grid-template-columns: repeat(2, 1fr);
 }
 @media screen and (max-width: 1000px) {
@@ -2422,16 +2423,17 @@ footer .footer-wrap .column_of_footer_down2 p {
   color: black;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   transition: 0.3s all;
   background-color: #F2F2F2;
-  width: 600px;
-  height: 300px;
-  padding: 20px;
+  width: 400px;
+  min-height: 200px;
+  padding: 15px;
   font-family: "Roboto", sans-serif;
-  font-size: 25px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
+  box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
 }
 @media screen and (max-width: 1000px) {
   .success {
@@ -2445,7 +2447,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   transition: 0.2s all;
   opacity: 0.3;
   cursor: pointer;
-  padding: 25px;
+  padding: 10px;
+  margin: 15px;
 }
 .success .cross_to_close:hover {
   opacity: 1;
@@ -2463,7 +2466,44 @@ footer .footer-wrap .column_of_footer_down2 p {
 .success .cross_to_close:after {
   transform: rotate(-45deg);
 }
-.success .add_product_check {
+.success_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+.success_wrap_category {
+  list-style-type: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.success_wrap_category li {
+  background-color: #FCB026;
+  transition: 0.3s all;
+  width: 100%;
+  padding: 15px;
+}
+.success_wrap_category li:hover {
+  background-color: white;
+}
+.success_wrap_category li a {
+  text-decoration: none;
+  color: black;
+}
+.success_wrap_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.success_wrap_buttons a .add_product_check {
   width: 100%;
   height: 50%;
   background-color: white;
@@ -2471,16 +2511,16 @@ footer .footer-wrap .column_of_footer_down2 p {
   border: none;
   cursor: pointer;
   transition: 0.45s all;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
 }
-.success .add_product_check:hover {
+.success_wrap_buttons a .add_product_check:hover {
   background-color: black;
   color: white;
 }
 @media screen and (max-width: 768px) {
-  .success .add_product_check {
+  .success_wrap_buttons a .add_product_check {
     font-size: 10px;
   }
 }
@@ -2765,15 +2805,13 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 .call_me {
   width: 25%;
-  margin: 0 auto;
+  margin: 25px auto;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
   font-weight: 400;
 }
 @media screen and (max-width: 1024px) {
@@ -2785,7 +2823,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   display: flex;
   padding: 20px;
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
+  font-size: 13px;
   align-items: center;
   justify-content: center;
   background-color: #fcba03;
@@ -2799,7 +2837,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 @media screen and (max-width: 1024px) {
   .call_me_contact {
-    font-size: 10px;
+    font-size: 8px;
     flex-direction: column;
   }
 }

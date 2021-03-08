@@ -91,8 +91,9 @@ class ShopController extends Controller
 
     public function product($category,$sections, $product = null){
         $product = Product::where('name',$product)->first();
+        $clientsCategory = Category::where('parent_id','0')->limit(5)->get();
         $productsOther = Product::where('category_id', $product->category_id)->inRandomOrder()->limit(5)->get();
-        return view('products.product',['product'=>$product,'productsOther'=>$productsOther]);
+        return view('products.product',['product'=>$product,'productsOther'=>$productsOther,'clientsCategory'=>$clientsCategory]);
     }
 
     public function productList(){

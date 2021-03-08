@@ -1906,16 +1906,17 @@ footer
     color: black
     top: 50%
     left: 50%
-    transform: translateX(-50%)
+    transform: translate(-50%,-50%)
     transition: 0.3s all
     background-color: #F2F2F2
-    width: 600px
-    height: 300px
-    padding: 20px
+    width: 400px
+    min-height: 200px
+    padding: 15px
     font-family: $font-stack
-    font-size: 25px
+    font-size: 14px
     font-weight: 500
     text-align: center
+    box-shadow: 0 0 10px rgba(5,5,5,0.5)
     @media screen and (max-width: 1000px)
         width: 50%
     .cross_to_close
@@ -1925,7 +1926,8 @@ footer
         transition: 0.2s all
         opacity: 0.3
         cursor: pointer
-        padding: 25px
+        padding: 10px
+        margin: 15px
         &:hover
             opacity: 1
         &:before , &:after
@@ -1938,23 +1940,56 @@ footer
             transform: rotate(45deg)
         &:after
             transform: rotate(-45deg)
-    .add_product_check
+    &_wrap
         width: 100%
-        height: 50%
-        background-color: white
-        color: black
-        border: none
-        cursor: pointer
-        transition: 0.45s all
-        font:
-            size: 25px
-            weight: 600
-            family: $font-stack
-        &:hover
-            background-color: black
-            color: white
-        @media screen and (max-width: 768px)
-            font-size: 10px
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-around
+        list-style-type: none
+        font-family: $font-stack
+        font-size: 17px
+        &_category
+            list-style-type: none
+            padding: 20px
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            li
+                background-color: $main-color
+                transition: 0.3s all
+                width: 100%
+                padding: 15px
+                &:hover
+                    background-color: white
+                a
+                    text-decoration: none
+                    color: black
+
+        &_buttons
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            height: 100%
+            a
+                .add_product_check
+                    width: 100%
+                    height: 50%
+                    background-color: white
+                    color: black
+                    border: none
+                    cursor: pointer
+                    transition: 0.45s all
+                    font:
+                        size: 15px
+                        weight: 600
+                        family: $font-stack
+                    &:hover
+                        background-color: black
+                        color: white
+                    @media screen and (max-width: 768px)
+                        font-size: 10px
 
 .alert-success
     background-color: black
@@ -2183,15 +2218,13 @@ footer
 
 .call_me
     width: 25%
-    margin: 0 auto
+    margin: 25px auto
     text-align: center
     display: flex
     justify-content: center
     align-items: center
-    padding: 20px
     flex-direction: column
     font-family: $font-stack
-    font-size: 18px
     font-weight: 400
     @media screen and (max-width: 1024px)
         font-size: 8px
@@ -2199,7 +2232,7 @@ footer
         display: flex
         padding: 20px
         font-family: $font-stack
-        font-size: 22px
+        font-size: 13px
         align-items: center
         justify-content: center
         background-color: #fcba03
@@ -2210,7 +2243,7 @@ footer
         &:hover
             background-color: $main-color
         @media screen and (max-width: 1024px)
-            font-size: 10px
+            font-size: 8px
             flex-direction: column
 
 .pagination

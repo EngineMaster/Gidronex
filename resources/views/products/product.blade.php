@@ -63,8 +63,27 @@
                 <div class="success">
                     <p class="cross_to_close">
                     </p>
-                    <p>{{ session()->get('success_message') }}</p>
-                    <a href="{{route('basket')}}" ><button class="add_product_check">Перейти в корзину</button></a>
+                    <div class="success_wrap">
+                        <ul class="success_wrap_category">
+                            <p> Вам может быть интересно</p>
+                            @foreach($clientsCategory as $clientCat)
+                                <li><a href="{{route('category',[$clientCat->id])}}">{!! $clientCat->name !!}</a></li>
+                            @endforeach
+                        </ul>
+                        <div class="success_wrap_buttons">
+
+                            <p>
+                                {{ session()->get('success_message') }}
+                            </p>
+
+                            <a href="{{route('basket')}}" >
+                                <button class="add_product_check">
+                                    Перейти в корзину
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
             @endif
 
