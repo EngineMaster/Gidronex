@@ -89,7 +89,7 @@ class BasketController extends Controller
         ));
         Cart::session($orderId)->getTotal();
         (\Cart::getContent());
-        return redirect()->back()->with('success_message','Продукт добавлен в корзину');
+        return redirect()->back()->with('success_message','Продукт ' . $product->name .' добавлен в корзину');
     }
 
 
