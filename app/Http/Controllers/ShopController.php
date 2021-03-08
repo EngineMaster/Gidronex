@@ -83,9 +83,10 @@ class ShopController extends Controller
     public function section($id,$section_name){
         $category = Category::where('id',$id)->first();
         $sections = Category::where('name',$section_name)->first();
+        $clientsCategory = Category::where('parent_id','0')->limit(5)->get();
         $produs = Product::where('category_id',$sections->id)->get();
         $items = \Cart::getContent();
-        return view('section', compact('category', 'sections','items','produs'));
+        return view('section', compact('category', 'sections','items','produs','clientsCategory'));
     }
 
 
