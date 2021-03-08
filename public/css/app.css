@@ -1711,6 +1711,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 .product_card .product_card_image {
   position: relative;
+  margin: 0 auto;
 }
 
 .product_card .product_card_image .product_image_product {
