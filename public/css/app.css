@@ -1714,19 +1714,19 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 
 .product_card .product_card_image .product_image_product {
-  height: 400px;
-  width: 550px;
+  min-height: 400px;
+  min-width: 550px;
   -o-object-fit: none;
      object-fit: none;
   border: solid 20px #FCB026;
   background-attachment: fixed;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1000px) {
   .product_card .product_card_image .product_image_product {
     height: 100%;
     width: 100%;
-    margin: 0 auto;
   }
 }
 
