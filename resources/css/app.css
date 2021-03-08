@@ -19,7 +19,7 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   max-width: 100%;
   background-color: black;
   height: 45px;
