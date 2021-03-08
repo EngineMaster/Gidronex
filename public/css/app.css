@@ -1674,7 +1674,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 .product_card .product_card_description {
   min-height: 500px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 @media screen and (max-width: 1000px) {
