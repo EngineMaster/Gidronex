@@ -2791,6 +2791,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .success {
+    width: 100%;
+  }
+}
+
 .success .cross_to_close {
   position: absolute;
   right: 15px;
