@@ -120,24 +120,7 @@
     @include('includes.footer')
 </div>
     </body>
-<script>
-    new Splide( '.splide', {
-        type     : 'loop',
-        focus    : 'center',
-        direction: 'ttb',
-        height   : '35rem',
-        width : '100vw',
-        heightRatio: 0.3,
-        position : 'absolute',
-        top : '0',
-        autoWidth: true,
-        rewind   : true,
-        speed: 650,
-        autoplay: true,
-        interval: 2000,
-        cover: true,
-    } ).mount();
-</script>
+
 <script>
     window.onscroll = function() {myFunction2()};
 
