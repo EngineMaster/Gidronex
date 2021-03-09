@@ -8,7 +8,7 @@
 </div>
 <div style="display:none;" id="myDiv" class="animate-bottom">
 
-<section class="container_mainpage animate__animated animate__zoomInLeft animate__delay-0.5s">
+<section class="container_mainpage">
    @include('includes.header')
 
     <!--
