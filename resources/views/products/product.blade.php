@@ -3,7 +3,7 @@
 @section('content')
     <body>
         @include('includes.header')
-        <div class="articles_cont">
+        <div class="articles_cont2">
             <p class="articles_cont_article"> {{$product->index}}</p>
         </div>
             <section class="product_card">
@@ -11,6 +11,9 @@
                      <div>
                     <h1>{{$product->name}}</h1>
                         <p class="first_p">{{$product->description}} <br><br><br> @if($product->price == 0) Цена по Запросу  @else {{$product->price}} &#8381     @endif</p>
+                         @if($product->price > 16000 && $product->price <85000 )
+                             <p class="second_p">Лидер продаж</p>
+                             @endif
                      </div>
                      <div class="product_card_image">
                          <img src="{{$product->image_product}}" alt="product_image" class="product_image_product">
