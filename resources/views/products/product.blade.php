@@ -4,7 +4,7 @@
     <body>
         @include('includes.header')
         <div class="articles_cont2">
-            <p class="articles_cont_article"> {{$product->index}}</p>
+            <p class="articles_cont_article"> {{$product->category->name}}</p>
         </div>
             <section class="product_card">
                  <div class="product_card_description">
