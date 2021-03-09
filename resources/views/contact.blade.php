@@ -35,9 +35,8 @@
                     <input type="checkbox" id="check2" name="checkbox" required>Согласен на обработку персональных данных
                 </div>
                 <div class="input">
-                    <label for="select" class="selector_label">Узнать цену на:</label>
                     <select>
-                        <option></option>
+                        <option>Узнать цену на:</option>
                         @foreach($products as $product)
                             <option>{{$product->name}}</option>
                         @endforeach
