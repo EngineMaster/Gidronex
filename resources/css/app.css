@@ -1496,6 +1496,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   font-family: "Roboto", sans-serif;
   padding: 10px;
   border: 5px solid black;
+  width: 30%;
+  background-color: #FCB026;
+  transition: 0.35s all;
+}
+.product_card .product_card_description .second_p:hover {
+  background-color: white;
 }
 @media screen and (max-width: 1000px) {
   .product_card .product_card_description .second_p {
