@@ -45,7 +45,7 @@
     </div>
 </section>
 
-<section class="about_company animate__animated animate__flipInX animate__delay-2s"  >
+<section class="about_company animate__animated animate__fadeInUp animate__delay-2s"  >
     <div class="wrapping">
     <div class="text_container">
         <h3 class="about_us">О компании</h3>
@@ -59,7 +59,7 @@
     </div>
 </section>
 
-<section class="assortment animate__animated animate__fadeInDownBig animate__delay-3s">
+<section class="assortment animate__animated animate__flipInX animate__delay-3s">
     <div class="content-wrapper">
             <img src="https://static.baza.drom.ru/drom/1482814825168_bulletin" alt="" class="image_of_assortment"/>
     <div class="text-containing-element">
