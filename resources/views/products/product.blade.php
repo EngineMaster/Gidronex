@@ -14,8 +14,8 @@
                          @if($product->price > 16000 && $product->price <85000 )
                              <p class="second_p">Лидер продаж
                                  <span class="material-icons" style="font-size: 20px">
-                                     wb_sunny
-                                 </span>
+                                     local_offer
+                                </span>
                              </p>
                              @endif
                      </div>
