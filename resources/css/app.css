@@ -2367,7 +2367,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 18px;
   bottom: 0;
   max-width: 100%;
 }
@@ -2382,7 +2382,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   color: black;
   border: none;
   background-color: white;
-  font-size: 30px;
+  font-size: 17px;
   font-family: "Roboto", sans-serif;
   transition: 0.2s all;
 }
