@@ -21,7 +21,7 @@
         </div>
     </div> -->
 
-    <div class="black_banner">
+    <div class="black_banner animate__animated animate__zoomIn animate__delay-0.5s">
         <div class="wrappy">
             <h3>Надежность в каждой детали </h3>
             <p>
