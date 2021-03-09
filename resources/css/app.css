@@ -18,21 +18,28 @@ body {
 }
 
 nav {
-  display: flex;
-  justify-content: space-around;
   max-width: 100%;
   background-color: black;
   height: 45px;
-  opacity: 0.99;
-  text-align: center;
+  opacity: 0.96;
 }
 @media screen and (max-width: 1024px) {
   nav {
     display: none;
   }
 }
-nav a {
-  display: inline-block;
+nav .nav_wrapper {
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1140px) {
+  nav .nav_wrapper {
+    width: 85%;
+  }
+}
+nav .nav_wrapper .contacts_top {
   color: white;
   text-decoration: none;
   margin: auto 0;
