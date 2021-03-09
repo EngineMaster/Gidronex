@@ -1491,7 +1491,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   }
 }
 .product_card .product_card_description .second_p {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   padding: 10px;
@@ -1499,6 +1499,7 @@ footer .footer-wrap .column_of_footer_down2 p {
   width: 30%;
   background-color: #FCB026;
   transition: 0.35s all;
+  cursor: pointer;
 }
 .product_card .product_card_description .second_p:hover {
   background-color: white;
