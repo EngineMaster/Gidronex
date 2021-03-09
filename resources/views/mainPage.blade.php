@@ -32,7 +32,7 @@
 
 </section>
 
-<section class="products_and_goods">
+<section class="products_and_goods animate__animated animate__fadeInRightBig animate__delay-1s" >
     <div class="container_with_choice">
         <h2>
             Большой ассортимент товара
@@ -45,7 +45,7 @@
     </div>
 </section>
 
-<section class="about_company">
+<section class="about_company animate__animated animate__fadeInUp animate__delay-2s"  >
     <div class="wrapping">
     <div class="text_container">
         <h3 class="about_us">О компании</h3>
@@ -59,7 +59,7 @@
     </div>
 </section>
 
-<section class="assortment">
+<section class="assortment animate__animated animate__fadeInDownBig animate__delay-3s">
     <div class="content-wrapper">
             <img src="https://static.baza.drom.ru/drom/1482814825168_bulletin" alt="" class="image_of_assortment"/>
     <div class="text-containing-element">
@@ -70,7 +70,7 @@
     </div>
 </section>
 
-<section class="goods_container">
+<section class="goods_container animate__animated  animate__delay-4s animate__backInLeft" >
     <h3 class="full_assortment">Полный Ассортимент</h3>
         <div class="goods_wrapper">
             <hr>
@@ -153,6 +153,24 @@
 
 
     }
+</script>
+<script>
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       0,          // distance to the element when triggering the animation (default is 0)
+            mobile:       true,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
 </script>
 <script src="//code-ya.jivosite.com/widget/z9Rog8jtXf" async></script>
 @endsection
