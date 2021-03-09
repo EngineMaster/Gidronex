@@ -623,6 +623,7 @@ nav .nav_wrapper .contacts_top {
 
 .assortment {
   min-height: 480px;
+  margin-bottom: 0;
 }
 .assortment .content-wrapper {
   margin: 0 auto;
@@ -718,7 +719,7 @@ hr {
 .goods_container .goods_wrapper {
   margin: 0 auto;
   width: 1140px;
-  height: 1008px;
+  min-height: 600px;
 }
 .goods_container .goods_wrapper ul {
   list-style-type: none;
@@ -831,7 +832,7 @@ hr {
 @media screen and (max-width: 1000px) {
   .news {
     width: 90%;
-    margin: 0 auto;
+    margin: 15px auto;
     background-color: #F2F2F2;
   }
 }
