@@ -940,7 +940,7 @@ hr {
 
 @media screen and (max-width: 1000px) {
   .news {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     background-color: #F2F2F2;
   }
@@ -948,7 +948,7 @@ hr {
 
 .news .first_row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -968,7 +968,7 @@ hr {
 }
 
 .news .first_row .first_row_card .image_news:hover {
-  transform: scale(0.8) translate(-20%, 10%);
+  transform: scale(1.02);
 }
 
 @media screen and (max-width: 1000px) {
