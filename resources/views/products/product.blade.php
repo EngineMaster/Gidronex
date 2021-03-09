@@ -3,7 +3,9 @@
 @section('content')
     <body>
         @include('includes.header')
-
+        <div class="articles_cont">
+            <p class="articles_cont_article"> {{$product->index}}</p>
+        </div>
             <section class="product_card">
                  <div class="product_card_description">
                      <div>
