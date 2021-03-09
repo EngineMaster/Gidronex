@@ -30,7 +30,7 @@ class BasketController extends Controller
         $orderId = $this->sessionBegin();
         \Cart::session($orderId);
         $products  = Product::all();
-        $prods  = Product::where('price','>','1000')->inRandomOrder()->paginate(14);
+        $prods  = Product::where('price','>','1000')->paginate(14);
         $items = \Cart::getContent();
         $total = \Cart::session($orderId)->getTotal();
         return view('basket.basket', compact('items', 'total','products','prods'));
