@@ -45,7 +45,7 @@
     </div>
 </section>
 
-<section class="about_company animate__animated animate__fadeInUp animate__delay-2s"  >
+<section class="about_company animate__animated animate__flipInX animate__delay-2s"  >
     <div class="wrapping">
     <div class="text_container">
         <h3 class="about_us">О компании</h3>
