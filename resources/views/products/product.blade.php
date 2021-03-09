@@ -12,7 +12,11 @@
                     <h1>{{$product->name}}</h1>
                         <p class="first_p">{{$product->description}} <br><br><br> @if($product->price == 0) Цена по Запросу  @else {{$product->price}} &#8381     @endif</p>
                          @if($product->price > 16000 && $product->price <85000 )
-                             <p class="second_p">Лидер продаж</p>
+                             <p class="second_p">Лидер продаж
+                                 <span class="material-icons" style="font-size: 20px">
+                                     wb_sunny
+                                 </span>
+                             </p>
                              @endif
                      </div>
                      <div class="product_card_image">

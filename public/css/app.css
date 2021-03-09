@@ -1718,6 +1718,9 @@ footer .footer-wrap .column_of_footer_down2 p {
   background-color: #FCB026;
   transition: 0.35s all;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product_card .product_card_description .second_p:hover {
