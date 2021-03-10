@@ -1,11 +1,7 @@
 <nav>
-    <div class="nav_wrapper">
         <a href="/" class="contacts_top"> <span class="material-icons call">call</span>+7 (922) 698-40-41</a>
-        <div class="nav_wrapper_social_links">
 
-        </div>
         <a href="/" class="contacts_top"><span class="material-icons mail">email</span>gidro_nex@mail.ru</a>
-    </div>
 </nav>
 
 <section class="navbar">

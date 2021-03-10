@@ -99,6 +99,7 @@ class AdminController extends Controller
                 $insertion = DB::table('categories')->insert($insertProduct);
                 return redirect()->route('admin')->with('message_success', 'Удачно');
             }
+            else return response('wrong');
 
 
         }
