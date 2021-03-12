@@ -59,7 +59,7 @@
     </div>
 </section>
 
-<section class="assortment animate__animated animate__flipInX animate__delay-3s">
+<section class="assortment animate__animated animate__fadeInUp animate__delay-3s">
     <div class="content-wrapper">
             <img src="https://static.baza.drom.ru/drom/1482814825168_bulletin" alt="" class="image_of_assortment"/>
     <div class="text-containing-element">
@@ -70,7 +70,7 @@
     </div>
 </section>
 
-<section class="goods_container animate__animated  animate__delay-4s animate__backInLeft" >
+<section class="goods_container animate__animated  animate__delay-4s animate__fadeInUp" >
     <h3 class="full_assortment">Полный Ассортимент</h3>
         <div class="goods_wrapper">
             <hr>
