@@ -1,5 +1,5 @@
 @extends('includes.head')
-@section('title','article')
+@section('title','section')
 @section('content')
     <body>
     @include('includes.header')

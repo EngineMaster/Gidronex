@@ -2919,7 +2919,7 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 .pagination li {
   transition: 0.2s all;
-  padding: 15px;
+  padding: 5px;
   margin: 4px;
 }
 .pagination li a {
