@@ -3,7 +3,7 @@
         <div class="column_of_footer">
             <ul>
                 <li><span class="footer_nav">Запчасти для экскаваторов:</span></li>
-                <li><a href="{{route('category',[\App\Models\Category::where('id','1')])}}">ЭО-хххх, ЭО-хххх</a></li>
+                <li><a href="{{route('categories')}}">ЭО-хххх, ЭО-хххх</a></li>
                 <li> <a href="{{route('categories')}}">ЭЭО-хуху, ЭО-хуху, ЭО-хуху1</a></li>
                 <li> <a href="">ЭЭО-дддд, ЭО-дддд1 </a></li>
                 <li><a href="">ЭЭО-уууу, ЭО-ууууу</a></li>
