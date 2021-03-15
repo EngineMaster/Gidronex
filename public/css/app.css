@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3367,15 +3368,15 @@ footer .footer-wrap .column_of_footer_down2 p {
 
 .pagination li {
   transition: 0.2s all;
-  padding: 15px;
+  padding: 5px;
   margin: 4px;
 }
 
 .pagination li a {
   text-decoration: none;
-  font-size: 15px;
-  padding: 15px;
-  margin: 2px;
+  font-size: 12px;
+  padding: 8px;
+  margin: 4px;
   transition: 0.3s all;
 }
 
