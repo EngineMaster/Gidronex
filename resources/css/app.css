@@ -2924,9 +2924,9 @@ footer .footer-wrap .column_of_footer_down2 p {
 }
 .pagination li a {
   text-decoration: none;
-  font-size: 15px;
-  padding: 15px;
-  margin: 2px;
+  font-size: 12px;
+  padding: 8px;
+  margin: 4px;
   transition: 0.3s all;
 }
 .pagination li a:hover {
