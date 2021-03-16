@@ -30,12 +30,23 @@
             </section>
 
              <section class="option_and_buy">
-                     @isset($product->link)
+                     @isset($product)
                     <ul style="list-style-type:none;">
-                        <li><h4> Комплект поставки {{$product->name}} включает в себя</h4><br>{{$product->link}}</li>
+                        <li><h4> Комплект поставки {{$product->name}} включает в себя</h4><br> -{{$product->link}}</li>
                         <br>
                         <li><h4>Характеристики</h4><br>{{$product->link2}}</li>
+                        -
                         <br>
+                        <ul>
+                                @if(($childProducts->count() > 0 ))
+                                    В наличии следующие продукты {{$product->name}} :
+                                @endif
+                                    @foreach($childProducts as $child)
+                                <li>
+                                    {{$child->name}}
+                                </li>
+                                    @endforeach
+                        </ul>
                     </ul>
                      @endisset
                  <form action="{{route('basket-add', $product->id)}}" method="POST">

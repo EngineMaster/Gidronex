@@ -84,7 +84,7 @@ class ShopController extends Controller
         $category = Category::where('id',$id)->first();
         $sections = Category::where('name',$section_name)->first();
         $clientsCategory = Category::where('parent_id','0')->limit(5)->get();
-        $produs = Product::where('category_id',$sections->id)->get();
+        $produs = Product::where('category_id',$sections->id)->where('parent_id','=','0')->orWhere('parent_id','=', 'null')->get();
         $items = \Cart::getContent();
         return view('section', compact('category', 'sections','items','produs','clientsCategory'));
     }
@@ -92,9 +92,10 @@ class ShopController extends Controller
 
     public function product($category,$sections, $product = null){
         $product = Product::where('name',$product)->first();
+        $childProducts = Product::where('parent_id' , $product->id)->get();
         $clientsCategory = Category::where('parent_id','0')->limit(5)->get();
         $productsOther = Product::where('category_id', $product->category_id)->inRandomOrder()->limit(5)->get();
-        return view('products.product',['product'=>$product,'productsOther'=>$productsOther,'clientsCategory'=>$clientsCategory]);
+        return view('products.product',['product'=>$product,'productsOther'=>$productsOther,'clientsCategory'=>$clientsCategory,'childProducts'=> $childProducts]);
     }
 
     public function productList(){
