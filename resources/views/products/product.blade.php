@@ -44,7 +44,7 @@
                                     @foreach($childProducts as $child)
                                 <li>
                                     {{$child->name}}
-                                    <ol>{{$child->price}}</ol>
+                                    <ol style="color:black">Цена : {{$child->price}} </ol>
                                 </li>
                                     @endforeach
                         </ul>
