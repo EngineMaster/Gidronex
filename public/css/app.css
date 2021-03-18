@@ -3401,5 +3401,8 @@ footer .footer-wrap .column_of_footer_down2 p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 2px solid black;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
 }
 
