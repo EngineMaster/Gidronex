@@ -3405,7 +3405,6 @@ footer .footer-wrap .column_of_footer_down2 p {
 .tabled_prod {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   padding: 5px;
   border-radius: 8px;
   text-align: center;
