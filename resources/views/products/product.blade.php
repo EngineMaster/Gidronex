@@ -42,8 +42,8 @@
                                    <p> В наличии следующие продукты {{$product->name}} :</p>
                                 @endif
                                     @foreach($childProducts as $child)
-                                <li>
-                                    {{$child->name}}
+                                <li >
+                                    <p style="color: black;font-weight: 500">{{$child->name}}</p>
                                     <ol style="color:black">Цена : {{$child->price}}₽</ol>
                                 </li>
                                     @endforeach
