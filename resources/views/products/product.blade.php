@@ -37,7 +37,7 @@
                         <li><h4>Характеристики</h4><br>{{$product->link2}}</li>
                         -
                         <br>
-                        <ul>
+                        <ul class="tabled">
                                 @if(($childProducts->count() > 0 ))
                                        <p> В наличии следующие продукты <br>
                                            {{$product->name}} :
