@@ -2952,11 +2952,12 @@ footer .footer-wrap .column_of_footer_down2 p {
   border: 3px solid black;
 }
 .tabled_prod {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 5px;
   border-radius: 8px;
   text-align: center;
+  border-left: 2px solid black;
 }
 
 /*# sourceMappingURL=app.css.map */
