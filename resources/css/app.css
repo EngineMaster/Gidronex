@@ -2947,4 +2947,10 @@ footer .footer-wrap .column_of_footer_down2 p {
   text-align: center;
 }
 
+.tabled_prod {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid black;
+}
+
 /*# sourceMappingURL=app.css.map */

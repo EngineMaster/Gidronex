@@ -39,12 +39,14 @@
                         <br>
                         <ul>
                                 @if(($childProducts->count() > 0 ))
-                                   <p> В наличии следующие продукты {{$product->name}} :</p>
+                                       <p> В наличии следующие продукты <br>
+                                           {{$product->name}} :
+                                       </p>
                                 @endif
                                     @foreach($childProducts as $child)
-                                <li >
+                                <li class="tabled_prod">
                                     <p style="color: black;font-weight: 500">{{$child->name}}</p>
-                                    <ol style="color:black">Цена : {{$child->price}}₽</ol>
+                                        <ol style="color:black">Цена : {{$child->price}}₽</ol>
                                 </li>
                                     @endforeach
                         </ul>
