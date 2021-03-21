@@ -46,7 +46,7 @@
                                     @foreach($childProducts as $child)
                                 <li class="tabled_prod">
                                     <p style="color: black;font-weight: 500">{{$child->name}}</p>
-                                        <ol style="color:black">Цена : {{$child->price}}₽</ol>
+                                        <ol style="color:black">Цена : @if($child->price == 0) Цена по запросу @else {{$child->price}} ₽ @endif  </ol>
                                 </li>
                                     @endforeach
                         </ul>
