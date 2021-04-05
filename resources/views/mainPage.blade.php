@@ -41,7 +41,7 @@
             Мы предоставляем огромный выбор запчастей и оборудования для отечественных экскаваторов и драглайнов
         </p>
         <button class="btn_shopping_details2"><a href="/1">Запчасти</a></button>
-        <button class="btn_shopping_details2"><a href="/28">Оборудование</a></button>
+        <button class="btn_shopping_details2"><a href="/45">Оборудование</a></button>
     </div>
 </section>
 
