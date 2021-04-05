@@ -3,40 +3,23 @@
         <div class="column_of_footer">
             <ul>
                 <li><span class="footer_nav">Запчасти для экскаваторов:</span></li>
-                <li><a href="{{route('categories')}}">ЭО-хххх, ЭО-хххх</a></li>
-                <li> <a href="{{route('categories')}}">ЭЭО-хуху, ЭО-хуху, ЭО-хуху1</a></li>
-                <li> <a href="{{route('categories')}}">ЭЭО-дддд, ЭО-дддд1 </a></li>
-                <li><a href="{{route('categories')}}">ЭЭО-уууу, ЭО-ууууу</a></li>
-                <li><a href="{{route('categories')}}">ЭЭО-цццц, ЭО-ц1ц1</a></li>
-                <li><a href="{{route('categories')}}">ЭЭО-мммм, ЭО-мм11</a></li>
-                <li><a href="{{route('categories')}}">ЭЕК-12, ЕК-14, ЕК-18</a></li>
-                <li><a href="{{route('categories')}}"><span class="footer_nav">Запчасти для драглайнов:</span></a></li>
-                <li><a href="{{route('categories')}}">ЭЭО-ххху</a></li>
-                <li><a href="{{route('categories')}}">ЭЭО-хххх</a></li>
-                <li><a href="{{route('categories')}}">ЭЭО-хххх</a></li>
+                <li><a href="/1">ЭО-хххх, ЭО-хххх</a></li>
             </ul>
         </div>
 
         <div class="column_of_footer">
             <ul>
-                <li><span class="footer_nav">Фильтры:</span></li>
-                <li><a href="{{route('categories')}}">Маслянные</a></li>
-                <li> <a href="{{route('categories')}}">Воздушные</a></li>
-                <li> <a href="{{route('categories')}}">Топливные </a></li>
-                <li><a href="{{route('categories')}}"><span class="footer_nav">Гидроматоры</span></a></li>
-                <li><a href="{{route('categories')}}"><span class="footer_nav">Гидроматоры</span></a></li>
-                <li><a href="{{route('categories')}}"><span class="footer_nav">Гидроматоры</span></a></li>
-                <li><a href="{{route('categories')}}"><span class="footer_nav">Гидроматоры</span></a></li>
+                <li><a href="/28"><span class="footer_nav">Гидромоторы</span></a></li>
                 <li><a href="{{route('categories')}}"><span class="footer_nav">Запчасти для драглайнов:</span></a></li>
             </ul>
         </div>
         <div class="column_of_footer">
             <ul>
                 <li><span class="footer_nav">Гидроаппаратура:</span></li>
-                <li><a href="{{route('categories')}}">Блоки управления</a></li>
-                <li> <a href="{{route('categories')}}">Гидроклапана</a></li>
-                <li> <a href="{{route('categories')}}">Гидрорасприделители</a></li>
-                <li><a href="{{route('categories')}}">Гидрорули</a></li>
+                <li><a href="/28">Блоки управления</a></li>
+                <li> <a href="/28">Гидроклапана</a></li>
+                <li> <a href="/28">Гидрорасприделители</a></li>
+                <li><a href="/28">Гидрорули</a></li>
                 <li><a href="{{route('categories')}}">Гидробуры</a></li>
                 <li><a href="{{route('categories')}}">IMPULSE</a></li>
                 <li><a href="{{route('categories')}}">DELTA</a></li>
